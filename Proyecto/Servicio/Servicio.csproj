@@ -75,6 +75,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_data\SGCPA2.mdf" />
+    <Content Include="App_data\SGCPA2_log.ldf">
+      <DependentUpon>SGCPA2.mdf</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="SGCPA.asmx" />
   </ItemGroup>
@@ -87,6 +91,7 @@
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
