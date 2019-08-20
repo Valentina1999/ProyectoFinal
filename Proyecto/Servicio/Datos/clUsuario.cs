@@ -25,5 +25,15 @@ namespace Servicio.Datos
             return resultado;
 
         }
+
+        public int mtdEditarUsuario(clUsuario objUsu)
+        {
+            string consulta = "Update Usuario set Documento = '" + objUsu.Documento + "', Nombre = '" + objUsu.Nombre + "', " +
+                "Apellido = '" + objUsu.Apellido + "', Correo = '" + objUsu.Correo + "', Clave = '" + objUsu.Clave + "', Numero = '" + objUsu.Numero + "' " +
+                "where IdUsuario = '" + objUsu.IdUsuario + "'";
+            clConexion objConexion = new clConexion();
+            int resultado = objConexion.mtdConectado(consulta);
+            return resultado;
+        }
     }
 }
