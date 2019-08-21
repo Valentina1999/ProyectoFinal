@@ -8,8 +8,8 @@ namespace Servicio.Datos
     public class clTerreno
     {
         public int IdTerreno { get; set; }
-        public float Largo { get; set; }
-        public float Ancho { get; set; }
+        public double Largo { get; set; }
+        public double Ancho { get; set; }
         public int IdUsuario { get; set; }
 
         clConexion objConexion = new clConexion();

@@ -25,5 +25,13 @@ namespace Servicio
             int result = objUsuarios.mtdEditarUsuario(objUsuarios);
             return result;
         }
+
+        [WebMethod]
+        public int mtdRegistrarTerreno(clTerreno objTerr)
+        {
+            clTerreno objTerreno = new clTerreno();
+            int result = objTerreno.mtdRegistrarTerreno(objTerreno);
+            return result;
+        }
     }
 }

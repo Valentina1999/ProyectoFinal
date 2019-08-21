@@ -68,10 +68,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ServicioOscar\SGCPA.wsdl" />
+    <Content Include="Connected Services\ServicioOscar\Web.ServicioOscar.mtdEditarUsuariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioOscar\Web.ServicioOscar.mtdRegistrarTerrenoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServicioUsuario\SGCPA.disco" />
     <None Include="Connected Services\ServicioUsuario\configuration91.svcinfo" />
     <None Include="Connected Services\ServicioUsuario\configuration.svcinfo" />
     <None Include="Connected Services\ServicioUsuario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServicioOscar\SGCPA.disco" />
+    <None Include="Connected Services\ServicioOscar\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioOscar\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioOscar\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -154,6 +168,7 @@
     <None Include="packages.config" />
     <Content Include="form.html" />
     <Content Include="Global.asax" />
+    <Content Include="images\icon\logo1.jpg" />
     <Content Include="Presentacion\Login\Login.aspx" />
     <Content Include="Presentacion\Master\ValidaL.aspx" />
     <Content Include="Presentacion\Terreno\Terreno.aspx" />
@@ -327,6 +342,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ServicioOscar\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServicioUsuario\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -395,7 +415,14 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServicioOscar\" />
     <WCFMetadataStorage Include="Connected Services\ServicioUsuario\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Servicio\Servicio.csproj">
+      <Project>{E1458AAA-390A-4462-8E1F-81267A94CDDE}</Project>
+      <Name>Servicio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
