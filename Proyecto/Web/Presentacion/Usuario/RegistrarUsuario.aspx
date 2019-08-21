@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrarUsuario.aspx.cs" Inherits="Web.Presentacion.Usuarios.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrarUsuario.aspx.cs" Inherits="Web.Presentacion.Usuario.WebForm1" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +52,7 @@
                                 </div>
                         </div>
                         <div class="login-form">
-                            <form action="" method="post">
+                            <form id="form1" runat="server">
                                 <div class="form-group">
                                     <input class="au-input au-input--full" type="number" id="Documento" name="Documento" placeholder="Documento" required>
                                 </div>
@@ -72,13 +72,12 @@
                                     <input class="au-input au-input--full" type="number" id="telefono" name="Telefono" placeholder="Telefono" required>
                                 </div>
                                 <div class="form-group">
-                                        <select name="select" id="select" class="form-control">
-                                            <option value="0">Seleccione un Rol</option>
-                                            <option value="1">Administrador</option>
-                                            <option value="2">Cultivador</option>
-                                        </select>
+                                       
+                                    <asp:DropDownList  class="au-input au-input--full" ID="hola" Font-Names="hola" runat="server" Height="45px" Width="482px">
+                                    </asp:DropDownList>
+                                       
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" id="Enviar" name="Enviar" type="submit">Registrar</button>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20" id="Enviar" runat="server" onserverclick="btnRegistrar" name="Enviar" type="button">Registrar</button>
                             </form>
                             <div class="register-link">
                                 <p>

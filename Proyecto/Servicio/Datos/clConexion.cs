@@ -38,6 +38,7 @@ namespace Servicio.Datos
             SqlDataAdapter adaptador = new SqlDataAdapter(consulta, objConexion);
             DataSet dsDatos = new DataSet();
             adaptador.Fill(dsDatos, "tblDatos");
+            string options = string.Empty;
             objConexion.Close();
             return dsDatos;
         }

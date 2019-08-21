@@ -9,152 +9,152 @@
 //------------------------------------------------------------------------------
 
 namespace Web.ServicioUsuario {
-    using System.Runtime.Serialization;
-    using System;
+    using System.Data;
     
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="clUsuario", Namespace="http://tempuri.org/")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServicioUsuario.WebService1Soap")]
+    public interface WebService1Soap {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarRol", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarRol();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarRol", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarRolAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarUsuario", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdRegistrarUsuario(Web.ServicioUsuario.clUsuario objUsu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarUsuario", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdRegistrarUsuarioAsync(Web.ServicioUsuario.clUsuario objUsu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarUsuarios", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdEditarUsuarios(Web.ServicioUsuario.clUsuario objUsu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarUsuarios", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdEditarUsuariosAsync(Web.ServicioUsuario.clUsuario objUsu);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    public partial class clUsuario : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class clUsuario : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        private int idUsuarioField;
         
-        private int IdUsuarioField;
+        private string documentoField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DocumentoField;
+        private string nombreField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
+        private string apellidoField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApellidoField;
+        private string correoField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CorreoField;
+        private string claveField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ClaveField;
+        private string numeroField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NumeroField;
+        private int idRolField;
         
-        private int IdRolField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public int IdUsuario {
             get {
-                return this.IdUsuarioField;
+                return this.idUsuarioField;
             }
             set {
-                if ((this.IdUsuarioField.Equals(value) != true)) {
-                    this.IdUsuarioField = value;
-                    this.RaisePropertyChanged("IdUsuario");
-                }
+                this.idUsuarioField = value;
+                this.RaisePropertyChanged("IdUsuario");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string Documento {
             get {
-                return this.DocumentoField;
+                return this.documentoField;
             }
             set {
-                if ((object.ReferenceEquals(this.DocumentoField, value) != true)) {
-                    this.DocumentoField = value;
-                    this.RaisePropertyChanged("Documento");
-                }
+                this.documentoField = value;
+                this.RaisePropertyChanged("Documento");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string Nombre {
             get {
-                return this.NombreField;
+                return this.nombreField;
             }
             set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
+                this.nombreField = value;
+                this.RaisePropertyChanged("Nombre");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string Apellido {
             get {
-                return this.ApellidoField;
+                return this.apellidoField;
             }
             set {
-                if ((object.ReferenceEquals(this.ApellidoField, value) != true)) {
-                    this.ApellidoField = value;
-                    this.RaisePropertyChanged("Apellido");
-                }
+                this.apellidoField = value;
+                this.RaisePropertyChanged("Apellido");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public string Correo {
             get {
-                return this.CorreoField;
+                return this.correoField;
             }
             set {
-                if ((object.ReferenceEquals(this.CorreoField, value) != true)) {
-                    this.CorreoField = value;
-                    this.RaisePropertyChanged("Correo");
-                }
+                this.correoField = value;
+                this.RaisePropertyChanged("Correo");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string Clave {
             get {
-                return this.ClaveField;
+                return this.claveField;
             }
             set {
-                if ((object.ReferenceEquals(this.ClaveField, value) != true)) {
-                    this.ClaveField = value;
-                    this.RaisePropertyChanged("Clave");
-                }
+                this.claveField = value;
+                this.RaisePropertyChanged("Clave");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public string Numero {
             get {
-                return this.NumeroField;
+                return this.numeroField;
             }
             set {
-                if ((object.ReferenceEquals(this.NumeroField, value) != true)) {
-                    this.NumeroField = value;
-                    this.RaisePropertyChanged("Numero");
-                }
+                this.numeroField = value;
+                this.RaisePropertyChanged("Numero");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public int IdRol {
             get {
-                return this.IdRolField;
+                return this.idRolField;
             }
             set {
-                if ((this.IdRolField.Equals(value) != true)) {
-                    this.IdRolField = value;
-                    this.RaisePropertyChanged("IdRol");
-                }
+                this.idRolField = value;
+                this.RaisePropertyChanged("IdRol");
             }
         }
         
@@ -165,86 +165,6 @@ namespace Web.ServicioUsuario {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServicioUsuario.WebService1Soap")]
-    public interface WebService1Soap {
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento objUsu del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarUsuarios", ReplyAction="*")]
-        Web.ServicioUsuario.mtdEditarUsuariosResponse mtdEditarUsuarios(Web.ServicioUsuario.mtdEditarUsuariosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarUsuarios", ReplyAction="*")]
-        System.Threading.Tasks.Task<Web.ServicioUsuario.mtdEditarUsuariosResponse> mtdEditarUsuariosAsync(Web.ServicioUsuario.mtdEditarUsuariosRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class mtdEditarUsuariosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="mtdEditarUsuarios", Namespace="http://tempuri.org/", Order=0)]
-        public Web.ServicioUsuario.mtdEditarUsuariosRequestBody Body;
-        
-        public mtdEditarUsuariosRequest() {
-        }
-        
-        public mtdEditarUsuariosRequest(Web.ServicioUsuario.mtdEditarUsuariosRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class mtdEditarUsuariosRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Web.ServicioUsuario.clUsuario objUsu;
-        
-        public mtdEditarUsuariosRequestBody() {
-        }
-        
-        public mtdEditarUsuariosRequestBody(Web.ServicioUsuario.clUsuario objUsu) {
-            this.objUsu = objUsu;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class mtdEditarUsuariosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="mtdEditarUsuariosResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Web.ServicioUsuario.mtdEditarUsuariosResponseBody Body;
-        
-        public mtdEditarUsuariosResponse() {
-        }
-        
-        public mtdEditarUsuariosResponse(Web.ServicioUsuario.mtdEditarUsuariosResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class mtdEditarUsuariosResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int mtdEditarUsuariosResult;
-        
-        public mtdEditarUsuariosResponseBody() {
-        }
-        
-        public mtdEditarUsuariosResponseBody(int mtdEditarUsuariosResult) {
-            this.mtdEditarUsuariosResult = mtdEditarUsuariosResult;
         }
     }
     
@@ -275,29 +195,28 @@ namespace Web.ServicioUsuario {
                 base(binding, remoteAddress) {
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Web.ServicioUsuario.mtdEditarUsuariosResponse Web.ServicioUsuario.WebService1Soap.mtdEditarUsuarios(Web.ServicioUsuario.mtdEditarUsuariosRequest request) {
-            return base.Channel.mtdEditarUsuarios(request);
+        public System.Data.DataSet mtdListarRol() {
+            return base.Channel.mtdListarRol();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarRolAsync() {
+            return base.Channel.mtdListarRolAsync();
+        }
+        
+        public int mtdRegistrarUsuario(Web.ServicioUsuario.clUsuario objUsu) {
+            return base.Channel.mtdRegistrarUsuario(objUsu);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdRegistrarUsuarioAsync(Web.ServicioUsuario.clUsuario objUsu) {
+            return base.Channel.mtdRegistrarUsuarioAsync(objUsu);
         }
         
         public int mtdEditarUsuarios(Web.ServicioUsuario.clUsuario objUsu) {
-            Web.ServicioUsuario.mtdEditarUsuariosRequest inValue = new Web.ServicioUsuario.mtdEditarUsuariosRequest();
-            inValue.Body = new Web.ServicioUsuario.mtdEditarUsuariosRequestBody();
-            inValue.Body.objUsu = objUsu;
-            Web.ServicioUsuario.mtdEditarUsuariosResponse retVal = ((Web.ServicioUsuario.WebService1Soap)(this)).mtdEditarUsuarios(inValue);
-            return retVal.Body.mtdEditarUsuariosResult;
+            return base.Channel.mtdEditarUsuarios(objUsu);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Web.ServicioUsuario.mtdEditarUsuariosResponse> Web.ServicioUsuario.WebService1Soap.mtdEditarUsuariosAsync(Web.ServicioUsuario.mtdEditarUsuariosRequest request) {
-            return base.Channel.mtdEditarUsuariosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Web.ServicioUsuario.mtdEditarUsuariosResponse> mtdEditarUsuariosAsync(Web.ServicioUsuario.clUsuario objUsu) {
-            Web.ServicioUsuario.mtdEditarUsuariosRequest inValue = new Web.ServicioUsuario.mtdEditarUsuariosRequest();
-            inValue.Body = new Web.ServicioUsuario.mtdEditarUsuariosRequestBody();
-            inValue.Body.objUsu = objUsu;
-            return ((Web.ServicioUsuario.WebService1Soap)(this)).mtdEditarUsuariosAsync(inValue);
+        public System.Threading.Tasks.Task<int> mtdEditarUsuariosAsync(Web.ServicioUsuario.clUsuario objUsu) {
+            return base.Channel.mtdEditarUsuariosAsync(objUsu);
         }
     }
 }

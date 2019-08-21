@@ -2,7 +2,24 @@
 <wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
-      <s:element name="mtdEditarUsuarios">
+      <s:element name="mtdListarRol">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarRolResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdRegistrarUsuario">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="objUsu" type="tns:clUsuario" />
@@ -21,6 +38,20 @@
           <s:element minOccurs="1" maxOccurs="1" name="IdRol" type="s:int" />
         </s:sequence>
       </s:complexType>
+      <s:element name="mtdRegistrarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdRegistrarUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEditarUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objUsu" type="tns:clUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="mtdEditarUsuariosResponse">
         <s:complexType>
           <s:sequence>
@@ -30,6 +61,18 @@
       </s:element>
     </s:schema>
   </wsdl:types>
+  <wsdl:message name="mtdListarRolSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarRol" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarRolSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarUsuarioResponse" />
+  </wsdl:message>
   <wsdl:message name="mtdEditarUsuariosSoapIn">
     <wsdl:part name="parameters" element="tns:mtdEditarUsuarios" />
   </wsdl:message>
@@ -37,6 +80,14 @@
     <wsdl:part name="parameters" element="tns:mtdEditarUsuariosResponse" />
   </wsdl:message>
   <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="mtdListarRol">
+      <wsdl:input message="tns:mtdListarRolSoapIn" />
+      <wsdl:output message="tns:mtdListarRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarUsuario">
+      <wsdl:input message="tns:mtdRegistrarUsuarioSoapIn" />
+      <wsdl:output message="tns:mtdRegistrarUsuarioSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="mtdEditarUsuarios">
       <wsdl:input message="tns:mtdEditarUsuariosSoapIn" />
       <wsdl:output message="tns:mtdEditarUsuariosSoapOut" />
@@ -44,6 +95,24 @@
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mtdListarRol">
+      <soap:operation soapAction="http://tempuri.org/mtdListarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarUsuario">
+      <soap:operation soapAction="http://tempuri.org/mtdRegistrarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="mtdEditarUsuarios">
       <soap:operation soapAction="http://tempuri.org/mtdEditarUsuarios" style="document" />
       <wsdl:input>
@@ -56,6 +125,24 @@
   </wsdl:binding>
   <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mtdListarRol">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/mtdRegistrarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="mtdEditarUsuarios">
       <soap12:operation soapAction="http://tempuri.org/mtdEditarUsuarios" style="document" />
       <wsdl:input>
