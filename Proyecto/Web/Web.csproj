@@ -68,13 +68,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServicioLogin\configuration.svcinfo" />
-    <Content Include="Connected Services\ServicioLogin\configuration91.svcinfo.xml" />
-    <None Include="Connected Services\ServicioLogin\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference1.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\ServicioLogin\SGCPA.disco" />
     <None Include="Connected Services\ServicioUsuario\SGCPA.disco" />
     <None Include="Connected Services\ServicioUsuario\configuration91.svcinfo" />
     <None Include="Connected Services\ServicioUsuario\configuration.svcinfo" />
@@ -154,15 +147,15 @@
     <Content Include="fonts\poppins\poppins-v5-latin-regular.ttf" />
     <Content Include="fonts\poppins\poppins-v5-latin-regular.woff" />
     <Content Include="fonts\poppins\poppins-v5-latin-regular.woff2" />
-    <None Include="Connected Services\ServicioLogin\SGCPA.wsdl" />
-    <Content Include="Connected Services\ServicioLogin\Web.ServicioLogin.mtdLogiResponse.datasource" />
     <None Include="Connected Services\ServicioUsuario\SGCPA.wsdl" />
     <Content Include="Connected Services\ServicioUsuario\Web.ServicioUsuario.mtdEditarUsuariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="form.html" />
+    <Content Include="Global.asax" />
     <Content Include="Presentacion\Login\Login.aspx" />
+    <Content Include="Presentacion\Master\ValidaL.aspx" />
     <Content Include="Presentacion\Terreno\Terreno.aspx" />
     <Content Include="Presentacion\Index\Index.aspx" />
     <Content Include="Presentacion\Usuario\EditarUsuario.aspx" />
@@ -199,6 +192,17 @@
     <Content Include="vendor\slick\slick.less" />
     <Content Include="vendor\slick\slick.scss" />
     <Content Include="Presentacion\Master\Site1.Master" />
+    <Content Include="Presentacion\Master\DataLogin.xsc">
+      <DependentUpon>DataLogin.xsd</DependentUpon>
+    </Content>
+    <None Include="Presentacion\Master\DataLogin.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataLogin.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Presentacion\Master\DataLogin.xss">
+      <DependentUpon>DataLogin.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -323,16 +327,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ServicioLogin\Reference.cs" />
-    <Compile Include="Connected Services\ServicioLogin\Reference1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\ServicioUsuario\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -340,6 +341,18 @@
     </Compile>
     <Compile Include="Presentacion\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Master\DataLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataLogin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Master\ValidaL.aspx.cs">
+      <DependentUpon>ValidaL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Master\ValidaL.aspx.designer.cs">
+      <DependentUpon>ValidaL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Terreno\Terreno.aspx.cs">
       <DependentUpon>Terreno.aspx</DependentUpon>
