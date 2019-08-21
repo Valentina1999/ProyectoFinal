@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Web.Presentacion.Login.WebForm1" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+</script>
+
 <html lang="en">
 
 <head>
@@ -47,7 +53,7 @@
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="../Login/Login.aspx" method="post">
+                            <form action="../Master/ValidaL.aspx" method="post">
                                 <div class="form-group">
                                     <label>CorreoElectronico</label>
                                     <input id="email" class="au-input au-input--full" type="email" name="email" placeholder="Correo" required="" runat="server">
@@ -56,7 +62,9 @@
                                     <label>Contraseña</label>
                                     <input id="password" class="au-input au-input--full" type="password" name="password" placeholder="Contraseña" runat="server">
                                 </div>
-                                <div class="login-checkbox">
+                              
+                                <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
+                                </div>
                                     <label>
                                         <input type="checkbox" name="remember">Recuerdame
                                     </label>
@@ -103,6 +111,8 @@
     <script src="../../js/main.js"></script>
 
 </body>
+
+
 
 </html>
 <!-- end document-->

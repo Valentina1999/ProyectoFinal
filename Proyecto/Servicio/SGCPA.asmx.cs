@@ -1,7 +1,6 @@
 ﻿using Servicio.Datos;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
@@ -18,23 +17,6 @@ namespace Servicio
     // [System.Web.Script.Services.ScriptService]
     public class WebService1 : System.Web.Services.WebService
     {
-        [WebMethod]
-        public DataSet mtdListarRol()
-        {
-            DataSet dsRol = new DataSet();
-            clRol objRol = new clRol();
-            dsRol = objRol.mtdListarRol();
-            return dsRol;
-        }
-
-        [WebMethod]
-        public int mtdRegistrarUsuario(clUsuario objUsu)
-        {
-            clUsuario objClUsuario = new clUsuario();
-            int resul = objClUsuario.mtdRegistrarUsuario(objUsu);
-            return resul;
-        }
-
 
         [WebMethod]
         public int mtdEditarUsuarios(clUsuario objUsu)
