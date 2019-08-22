@@ -47,7 +47,7 @@ namespace Servicio
         public int mtdRegistrarTerreno(clTerreno objTerr)
         {
             clTerreno objTerreno = new clTerreno();
-            int result = objTerreno.mtdRegistrarTerreno(objTerreno);
+            int result = objTerreno.mtdRegistrarTerreno(objTerr);
             return result;
         }
     }

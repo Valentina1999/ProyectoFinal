@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button id="guardarT" name="guardarT" onserverclick="btnRegistrarTerreno" runat="server" type="submit" class="btn btn-success btn-sm">
+                    <button id="guardarT" onserverclick="btnRegistrarTerreno" runat="server" type="submit" class="btn btn-success btn-sm">
                         <i class="fa fa-check"></i>Guardar
                     </button>
                     <button id="editarT" name="editarT" type="button" class="btn btn-secondary btn-sm">

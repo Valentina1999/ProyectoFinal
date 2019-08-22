@@ -34,22 +34,21 @@
 
     <!-- Main CSS-->
     <link href="../../css/theme.css" rel="stylesheet" media="all">
-
 </head>
 
 <body class="animsition">
     <div class="page-wrapper">
-        <div class="page-content--bge5">
+        <div class="page-content--bgf7">
             <div class="container">
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="../../images/icon/logo.png" alt="CoolAdmin">
+                                <img src="../../images/icon/logo1.jpg" width="179" height="52" alt="CoolAdmin">
                             </a>
                             <div>
-                                    <h3>REGISTRAR USUARIO</h3>
-                                </div>
+                                <h3>REGISTRAR USUARIO</h3>
+                            </div>
                         </div>
                         <div class="login-form">
                             <form id="form1" runat="server">
@@ -72,10 +71,8 @@
                                     <input class="au-input au-input--full" type="number" id="telefono" name="Telefono" placeholder="Telefono" required>
                                 </div>
                                 <div class="form-group">
-                                       
-                                    <asp:DropDownList  class="au-input au-input--full" ID="hola" Font-Names="hola" runat="server" Height="45px" Width="482px">
+                                    <asp:DropDownList class="au-input au-input--full" ID="hola" Font-Names="hola" runat="server" Height="45px" Width="482px">
                                     </asp:DropDownList>
-                                       
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" id="Enviar" runat="server" onserverclick="btnRegistrar" name="Enviar" type="button">Registrar</button>
                             </form>
@@ -90,7 +87,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- Jquery JS-->

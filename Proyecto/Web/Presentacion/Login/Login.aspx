@@ -49,13 +49,13 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="../../images/icon/logo.png" alt="CoolAdmin">
+                                <img src="../../images/icon/logo1.jpg" alt="CoolAdmin">
                             </a>
                         </div>
                         <div class="login-form">
                             <form action="../Master/ValidaL.aspx" method="post">
                                 <div class="form-group">
-                                    <label>CorreoElectronico</label>
+                                    <label>Correo Electronico</label>
                                     <input id="email" class="au-input au-input--full" type="email" name="email" placeholder="Correo" required="" runat="server">
                                 </div>
                                 <div class="form-group">
@@ -77,7 +77,7 @@
                             <div class="register-link">
                                 <p>
                                     No posee una cuenta?
-                                    <a href="#">Registrate aca</a>
+                                    <a href="../Usuario/RegistrarUsuario.aspx">Registrate aca</a>
                                 </p>
                        </div>
                 </div>

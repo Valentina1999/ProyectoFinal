@@ -16,7 +16,7 @@ namespace Servicio.Datos
 
         public int mtdRegistrarTerreno(clTerreno objTerreno)
         {
-            string consulta = "insert into Terrenoo(Largo, Ancho, IdUsuario)";
+            string consulta = "Insert Into Terreno(Largo, Ancho, IdUsuario)values("+objTerreno.Largo+","+objTerreno.Ancho+","+objTerreno.IdUsuario+")";
             int Resultado = objConexion.mtdConectado(consulta);
             return Resultado;
         }

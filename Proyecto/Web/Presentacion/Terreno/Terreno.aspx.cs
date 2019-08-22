@@ -9,8 +9,7 @@ using System.Web.UI.WebControls;
 namespace Web
 {
     public partial class Formulario_web11 : System.Web.UI.Page
-    {
-        clTerreno objTerreno = new clTerreno();
+    {   
         ServicioOscar.WebService1SoapClient servicio = new ServicioOscar.WebService1SoapClient();
         ServicioOscar.clTerreno objclTerreno = new ServicioOscar.clTerreno();
 
@@ -44,9 +43,9 @@ namespace Web
 
         protected void btnRegistrarTerreno(object sender, EventArgs e)
         {
-            objTerreno.Ancho = double.Parse(Request.Form["Largo"]);
-            objTerreno.Largo = double.Parse(Request.Form["Ancho"]);
-            objTerreno.IdUsuario = int.Parse(Request.Form["IdUsuario"]);
+            objclTerreno.Ancho = double.Parse(Request.Form["Largo"]);
+            objclTerreno.Largo = double.Parse(Request.Form["Ancho"]);
+            objclTerreno.IdUsuario = 12; //int.Parse(Request.Form["IdUsuario"]);
             
             int resultado = servicio.mtdRegistrarTerreno(objclTerreno);
 
