@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <script runat="server">
-
+    
 </script>
 
 <html lang="en">
@@ -14,7 +14,7 @@
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
-
+    
     <!-- Title Page-->
     <title>Login</title>
 
@@ -53,14 +53,12 @@
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="../Master/ValidaL.aspx" method="post">
+                            <form  runat="server">
                                 <div class="form-group">
-                                    <label>Correo Electronico</label>
-                                    <input id="email" class="au-input au-input--full" type="email" name="email" placeholder="Correo" required="" runat="server">
+                                   <asp:TextBox ID="txtCorreo" runat="server" CssClass="au-input au-input--full"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label>Contraseña</label>
-                                    <input id="password" class="au-input au-input--full" type="password" name="password" placeholder="Contraseña" runat="server">
+                                    <asp:TextBox ID="txtClave" runat="server" CssClass="au-input au-input--full" TextMode="Password"></asp:TextBox>
                                 </div>
                               
                                 <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
@@ -72,7 +70,12 @@
                                         <a href="#">Contrasela olvidada?</a>
                                     </label>
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" name="Entrar" value="entrar" type="submit" id="btnEntrar">Entrar</button>
+                    
+                                <div class="form-group">
+                                <asp:Button ID="BtnEntrar" runat="server"  CssClass ="au-btn au-btn--block au-btn--green m-b-20" Text="Entrar" OnClick="BtnEntrar_Click"  />
+                                </div>
+
+                                
                             </form>
                             <div class="register-link">
                                 <p>

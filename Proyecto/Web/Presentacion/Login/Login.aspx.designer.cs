@@ -13,22 +13,22 @@ namespace Web.Presentacion.Login {
     public partial class WebForm1 {
         
         /// <summary>
-        /// Control email.
+        /// Control txtCorreo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl email;
+        protected global::System.Web.UI.WebControls.TextBox txtCorreo;
         
         /// <summary>
-        /// Control password.
+        /// Control txtClave.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
+        protected global::System.Web.UI.WebControls.TextBox txtClave;
         
         /// <summary>
         /// Control lblMensaje.
@@ -38,5 +38,14 @@ namespace Web.Presentacion.Login {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensaje;
+        
+        /// <summary>
+        /// Control BtnEntrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnEntrar;
     }
 }
