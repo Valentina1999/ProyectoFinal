@@ -20,25 +20,20 @@ namespace Web.Presentacion.Login
 
         protected void BtnEntrar_Click(object sender, EventArgs e)
         {
-            
-            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SGCPA2ConnectionString1"].ConnectionString)) {
+            string usu = txtCorreo.Text;
+            string cla = txtClave.Text;
 
-                con.Open();
-                SqlCommand cmd = new SqlCommand("Select IdUsuario,Nombre,Correo from Usuario where Correo= '" + txtCorreo.Text+ "' and Clave= '"+txtClave.Text+"' " ,con);
-                SqlDataReader dr = cmd.ExecuteReader();
+            ServicioUsuario.WebService1SoapClient Con = new ServicioUsuario.WebService1SoapClient();
+
+            int resultado = Con.mtdLogin(usu, cla); 
+    
                
-                if (dr.HasRows == true)
+                if (resultado > 0)
                 {
-                    dr.Read();
-                    Session["NombreUsuario"] = dr["Nombre"].ToString();
-                    Session["id"] = dr["IdUsuario"];
-                    Nombre = Session["NombreUsuario"].ToString();
-                    Id = int.Parse(Session["id"].ToString());
-                    Response.Redirect("../Index/Index.aspx");
+                Application["IdUsuario"] = resultado;
+                Response.Redirect("../Index/Index.aspx");
                     
-                }
-                else
-                {
+                }else{
                     ScriptManager.RegisterStartupScript(Page, Page.GetType(), "popup", "alert('Correo y/o Contraseña Incorrecta')", true);
                 }
 
@@ -48,4 +43,3 @@ namespace Web.Presentacion.Login
                 
         }
     }
-}

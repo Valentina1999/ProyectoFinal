@@ -8,7 +8,7 @@
                 <strong>ESTUDIO DE SUELOS</strong> 
             </div>
             <div class="card-body card-block">
-                <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                <form action="" method="post" enctype="multipart/form-data" class="form-horizontal" runat="server">
                    
                     <div class="row form-group">
                         <div class="col col-md-1">
@@ -142,7 +142,6 @@
                         <input type="text" id="RManganeso" name="RManganeso" class="form-control" hidden/>
                     </div>
                         </div>
-
                         <div class="row form-group">
                         <div class="col-13 col-md-1">
                             <label for="text-input" class=" form-control-label">Boro</label>
@@ -154,18 +153,10 @@
                         <input type="text" id="RBoro" name="RBoro" class="form-control" hidden/>
                     </div>
                         </div>
-
-
-                              <div class="row form-group">
-                        <div class="col-20 col-md-4">
-                            <select name="IdRol" id="IdRol" class="form-control"  required="required">
-                                <option value="">Seleccione Un tipo de suelo</option>
-                                <option value="1"> Limosos </option>
-                                <option value="2"> Profundos </option>
-                                 <option value="2"> Franco limosos </option>
-                            </select>
-                        </div>
-                    </div>
+                              <div class="form-group">
+                                    <asp:DropDownList class="au-input au-input--full" ID="TipoSuelo" Font-Names="TipoSuelo" runat="server" Height="45px" Width="482px">
+                                    </asp:DropDownList>
+                                </div>
 
                         <div class="row form-group">
                         <div class="col-18 col-md-4">
@@ -177,7 +168,7 @@
 
 
                     <div class="card-footer">
-                <button type="submit" id="btnRegistrar" name="btnRegistrar" class="btn btn-primary btn-sm">
+                <button type="submit" id="btnRegistrar" name="btnRegistrar" class="btn btn-primary btn-sm" runat="server" onserverclick="btnRegistrarSuelos">
                     <i class="fa fa-dot-circle-o"></i> Registrar
                 </button>
                 <button type="reset" id="btnCalcular" name="btnCalcular" class="btn btn-danger btn-sm">

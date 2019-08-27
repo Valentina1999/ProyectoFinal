@@ -50,5 +50,30 @@ namespace Servicio
             int result = objTerreno.mtdRegistrarTerreno(objTerr);
             return result;
         }
+
+        [WebMethod]
+        public int mtdRegistrarSuelos(clSuelos objSuelos)
+        {
+            clSuelos objSuelo = new clSuelos();
+            int result = objSuelo.mtdRegistrarSuelo(objSuelos);
+            return result;
+        }
+
+        [WebMethod]
+        public DataSet mtdListarSuelo()
+        {
+            DataSet dsSuelo = new DataSet();
+            clTipoSuelo objTSuelo = new clTipoSuelo();
+            dsSuelo = objTSuelo.mtdListarSuelo();
+            return dsSuelo;
+        }
+
+        [WebMethod]
+        public int mtdLogin(string Correo , string Clave)
+        {
+            clConexion objC = new clConexion();
+            int result = objC.mtdLogin(Correo,Clave);
+            return result;
+        }
     }
 }

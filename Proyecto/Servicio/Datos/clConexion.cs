@@ -41,6 +41,36 @@ namespace Servicio.Datos
             objConexion.Close();
             return dsDatos;
         }
+
+        public int mtdLogin(string Correo, string Clave)
+        {
+            clConexion objCo = new clConexion();
+
+            Int32 IdUsuario = 0;
+                SqlCommand Dat = new SqlCommand("Select IdUsuario,Nombre,Correo from Usuario where Correo= @correo and Clave= @clave " , objConexion);
+            Dat.Parameters.AddWithValue("@correo", Correo);
+            Dat.Parameters.AddWithValue("@clave", Clave);
+
+            try
+            {
+                objConexion.Open();
+                IdUsuario = (Int32)Dat.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+            
+
+            SqlDataAdapter adapta = new SqlDataAdapter(Dat);
+            DataTable Lo = new DataTable();
+            adapta.Fill(Lo);
+            int res = Lo.Rows.Count;
+
+            objConexion.Close();
+            return (int)IdUsuario;
+        }
     }
 
 }
