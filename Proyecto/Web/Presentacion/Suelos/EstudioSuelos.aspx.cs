@@ -13,17 +13,33 @@ namespace Web.Presentacion.Suelos
     public partial class EstudioSuelos : System.Web.UI.Page
     {
 
-        
+        int Id = 0;
+        ServicioUsuario.WebService1SoapClient Servicio = new ServicioUsuario.WebService1SoapClient();
+        ServicioUsuario.clTerreno obj = new ServicioUsuario.clTerreno();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataSet listar = new DataSet();
+            Id = int.Parse(Application["IdUsuario"].ToString());
+            obj.IdUsuario = Id;
 
-            listar = ServicioJ.mtdListarSuelo();
-            TipoSuelo.DataSource = listar.Tables["tblDatos"];
+            DataSet enviar = Servicio.mtdEnviarID(Id);
+
+            DataSet listar = new DataSet();
+            listar = enviar;
+            Terreno.DataSource = listar.Tables["tblDatos"];
+            Terreno.DataTextField = "NombreTerreno";
+            Terreno.DataValueField = "IdTerreno";
+            Terreno.DataBind();
+
+            DataSet listarT = new DataSet();
+            
+            TipoSuelo.DataSource = listarT.Tables["tblDatos"];
             TipoSuelo.DataTextField = "TipoSuelo";
             TipoSuelo.DataValueField = "IdtipoSuelo";
             TipoSuelo.DataBind();
-            }
+
+
+        }
 
 
         
@@ -46,7 +62,7 @@ namespace Web.Presentacion.Suelos
             objSuelos.Boro = double.Parse(Request.Form["Boro"]);
             objSuelos.IdTipoSuelo = int.Parse(TipoSuelo.SelectedValue);
             objSuelos.IdCultivo = 2;
-            objSuelos.IdTerreno = 3;
+            //objSuelos.IdTerreno = int.Parse(Terreno.SelectedValue);
 
 
 
@@ -57,9 +73,12 @@ namespace Web.Presentacion.Suelos
             {
                 if (objSuelos.Aluminio < 0.2)
                 {
-                    if (objSuelos.Nitrógeno == 60)
+                    if (objSuelos.Nitrógeno == 60 )// traer los datos de terreno
                     {
-                       
+                        //if (objSuelos.Potasio)
+                        //{
+
+                        //}
                     }
                 }
             }else

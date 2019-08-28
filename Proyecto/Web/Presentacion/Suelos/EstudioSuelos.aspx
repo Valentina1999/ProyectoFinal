@@ -154,7 +154,11 @@
                     </div>
                         </div>
                               <div class="form-group">
-                                    <asp:DropDownList class="au-input au-input--full" ID="TipoSuelo" Font-Names="TipoSuelo" runat="server" Height="45px" Width="482px">
+                                    <asp:DropDownList class="au-input au-input--full" ID="Terreno" Font-Names="Terreno" runat="server" Height="40px" Width="300px">
+                                    </asp:DropDownList>
+                                </div>
+                             <div class="form-group">
+                                    <asp:DropDownList class="au-input au-input--full" ID="TipoSuelo" Font-Names="TipoSuelo" runat="server" Height="40px" Width="300px">
                                     </asp:DropDownList>
                                 </div>
 

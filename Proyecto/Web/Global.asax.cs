@@ -12,7 +12,7 @@ namespace Web
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            //Application["msj"] = "";
+            Application["IdUsuario"] = "";
         }
 
         protected void Session_Start(object sender, EventArgs e)

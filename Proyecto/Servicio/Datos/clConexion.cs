@@ -61,8 +61,6 @@ namespace Servicio.Datos
 
                 Console.WriteLine(ex.Message);
             }
-            
-
             SqlDataAdapter adapta = new SqlDataAdapter(Dat);
             DataTable Lo = new DataTable();
             adapta.Fill(Lo);

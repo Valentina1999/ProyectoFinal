@@ -75,5 +75,14 @@ namespace Servicio
             int result = objC.mtdLogin(Correo,Clave);
             return result;
         }
+
+        [WebMethod]
+        public DataSet mtdEnviarID(int x)
+        {
+            DataSet dsRol = new DataSet();
+            clTerreno objRol = new clTerreno();
+            dsRol = objRol.mtdListarT(x);
+            return dsRol;
+        }
     }
 }
