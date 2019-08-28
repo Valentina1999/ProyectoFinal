@@ -11,6 +11,14 @@
             <form action="Terreno.aspx" method="post" runat="server">
                 <div class="row form-group">
                     <div class="col col-md-1">
+                        <label for="text-input" class=" form-control-label">Nombre</label>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" id="txtNombreT" name="txtNombreT" class="form-control" required="required" runat="server">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-1">
                         <label for="text-input" class=" form-control-label">Largo</label>
                     </div>
                     <div class="col-12 col-md-4">
