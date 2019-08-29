@@ -9,6 +9,7 @@ namespace Servicio.Datos
     public class clTerreno
     {
         public int IdTerreno { get; set; }
+        public string NombreTerreno { get; set; }
         public double Largo { get; set; }
         public double Ancho { get; set; }
         public int IdUsuario { get; set; }
@@ -19,7 +20,7 @@ namespace Servicio.Datos
 
         public int mtdRegistrarTerreno(clTerreno objTerreno)
         {
-            string consulta = "Insert Into Terreno(Largo, Ancho, IdUsuario)values("+objTerreno.Largo+","+objTerreno.Ancho+","+objTerreno.IdUsuario+")";
+            string consulta = "Insert Into Terreno(NombreTerreno, Largo, Ancho, IdUsuario)values('"+objTerreno.NombreTerreno+"',"+objTerreno.Largo+","+objTerreno.Ancho+","+objTerreno.IdUsuario+")";
             int Resultado = objConexion.mtdConectado(consulta);
             return Resultado;
         }

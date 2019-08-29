@@ -18,6 +18,7 @@ namespace Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
+           
             Ancho = Request.Form["Ancho"];
             Largo = Request.Form["Largo"];
         }
@@ -39,13 +40,15 @@ namespace Web
             Label1.Text = res.ToString();
         }
 
-
+       
 
         protected void btnRegistrarTerreno(object sender, EventArgs e)
         {
+            int IdUsuario = int.Parse(Application["IdUsuario"].ToString());
+            objclTerreno.NombreTerreno = Request.Form["NombreTerreno"];
             objclTerreno.Ancho = double.Parse(Request.Form["Largo"]);
             objclTerreno.Largo = double.Parse(Request.Form["Ancho"]);
-            objclTerreno.IdUsuario = 12; //int.Parse(Request.Form["IdUsuario"]);
+            objclTerreno.IdUsuario = IdUsuario;
             
             int resultado = servicio.mtdRegistrarTerreno(objclTerreno);
 
