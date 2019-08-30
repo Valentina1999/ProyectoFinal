@@ -13,14 +13,14 @@ namespace Web.Presentacion.Suelos
     public partial class EstudioSuelos : System.Web.UI.Page
     {
 
-        int Id = 0;
+        int Id;
         ServicioUsuario.WebService1SoapClient Servicio = new ServicioUsuario.WebService1SoapClient();
         ServicioUsuario.clTerreno obj = new ServicioUsuario.clTerreno();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             Id = int.Parse(Application["IdUsuario"].ToString());
-           
+
 
             DataSet enviar = Servicio.mtdEnviarID(Id);
 
@@ -38,11 +38,15 @@ namespace Web.Presentacion.Suelos
             TipoSuelo.DataValueField = "IdtipoSuelo";
             TipoSuelo.DataBind();
 
+        }
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            
 
         }
 
 
-        
+
         ServicioUsuario.WebService1SoapClient ServicioJ = new ServicioUsuario.WebService1SoapClient();
         ServicioUsuario.clSuelos objSuelos = new ServicioUsuario.clSuelos();
 
@@ -61,69 +65,9 @@ namespace Web.Presentacion.Suelos
             objSuelos.Manganeso = double.Parse(Request.Form["Manganeso"]);
             objSuelos.Boro = double.Parse(Request.Form["Boro"]);
             objSuelos.IdTipoSuelo = int.Parse(TipoSuelo.SelectedValue);
-            objSuelos.IdCultivo = 2;
-            objSuelos.IdTerreno = 4;/*int.Parse(Terreno.SelectedValue)*/
+            objSuelos.IdCultivo = 1;
+            objSuelos.IdTerreno = int.Parse(Terreno.SelectedValue);
 
-
-            //int VarPotacio = int.Parse(TipoSuelo.SelectedValue);
-            //int var1m = 0;
-            //int var1M = 0;
-
-            //if (VarPotacio == 1)
-            //{
-            //    var1m = 294;
-            //    var1M = 350;
-            //}
-            //else if (VarPotacio == 2)
-            //{
-            //    var1m = 252;
-            //    var1M = 308;
-            //}
-            //else if (VarPotacio == 3)
-            //{
-            //    var1m = 168;
-            //    var1M = 280;
-            //}
-            //else if (VarPotacio == 4)
-            //{
-            //    var1m = 366;
-            //    var1M = 420;
-            //}
-            //else if (VarPotacio == 5)
-            //{
-            //    var1m = 420;
-            //    var1M = 504;
-            //}
-
-            //int VarFosforo = int.Parse(TipoSuelo.SelectedValue);
-            //int var2m = 0;
-            //int var2M = 0;
-
-            //if (VarFosforo == 1)
-            //{
-            //    var2m = 77;
-            //    var2M = 98;
-            //}
-            //else if (VarFosforo == 2)
-            //{
-            //    var2m = 105;
-            //    var2M = 140;
-            //}
-            //else if (VarFosforo == 3)
-            //{
-            //    var2m = 56;
-            //    var2M = 98;
-            //}
-            //else if (VarFosforo == 4)
-            //{
-            //    var2m = 70;
-            //    var2M = 98;
-            //}
-            //else if (VarFosforo == 5)
-            //{
-            //    var2m = 56;
-            //    var2M = 84;
-            //}
 
             int resultado = ServicioJ.mtdRegistrarSuelos(objSuelos);
 
@@ -135,7 +79,7 @@ namespace Web.Presentacion.Suelos
                     {
                         if (objSuelos.Potasio >= 0.03 && 0.03 <= 0.80)
                         {
-                            if (objSuelos.Fósforo >= 2.30 && 2.30 <= 28.70)
+                            if (objSuelos.Fósforo >= 15 && 15 <= 20)
                             {
                                 if (objSuelos.Calcio >= 0.10 && 0.10 <= 0.30)
                                 {
@@ -145,42 +89,49 @@ namespace Web.Presentacion.Suelos
                                         {
                                             if (objSuelos.Cobre >= 3 && 3 <= 20)
                                             {
-                                                if (objSuelos.Cinc >= 6 && 6 <= 30)
+                                                if (objSuelos.Cinc >= 6 && 6 <= 36)
                                                 {
-                                                    if (objSuelos.Boro >= 1.2 && 1.2 <= 5.73)
+                                                    if (objSuelos.Manganeso >= 60 && 60 <= 100)
                                                     {
-                                                        if (resultado == 1)
+                                                        if (objSuelos.Boro >= 1.2 && 1.2 <= 5.73)
                                                         {
-                                                            string script = @"<script type='text/javascript'>
-                                                            alert('Se ha Registrado Exitosamente El Suelo');
-                                                            </script>";
+                                                            if (resultado == 1)
+                                                            {
+                                                                string script = @"<script type='text/javascript'>
+                                                                alert('Se ha Registrado Exitosamente El Suelo');
+                                                                </script>";
 
-                                                            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                                                                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                                                            }
                                                         }
+                                                        else { RBoro.Text = "El nivel de Boro debe comprender valores de 1.2meq/100g a 5.73meq/100g para iniciar con el proceso"; }
                                                     }
-                                                    else { }
-                                                }
-                                                else { }
+                                                    else { RManganeso.Text = "El nivel de Manganeso debe comprender valores de 60ppm a 100ppm para iniciar con el proceso"; }
+                                                 }
+                                                else { RCinc.Text = "El nivel de Cinc debe comprender valores de 6ppm a 36ppm para iniciar con el proceso"; }
                                             }
-                                            else { }
+                                            else { RCobre.Text = "El nivel de Cobre debe comprender valores de 3ppm a 20ppm para iniciar con el proceso"; }
                                         }
-                                        else { }
+                                        else { RAzufre.Text = "El nivel de Azufre debe comprender valores de 20ppm a 80ppm para iniciar con el proceso"; }
                                     }
-                                    else { }
+                                    else { RMagnesion.Text = "El nivel de Magnesio debe comprender valores de 60ppm a 100ppm para iniciar con el proceso"; }
                                 }
-                                else { }
+                                else { RCalcio.Text = "El nivel de Calcio debe comprender valores de 0.10meq/100g a 0.30ppm para iniciar con el proceso"; }
                             }
                             else
-                            { }
+                            { RFosforo.Text = "El nivel de Fosforo debe comprender valores de 15ppm a 20ppm para iniciar con el proceso"; }
                         }
-                        else { }
-                        
+                        else
+                        { RPotasion.Text = "El nivel de Potasio debe comprender valores de 0,3meq/100g a 80meq/100 para iniciar con el proceso"; }  
                     }
-                    else { }
+                    else
+                    { RNitrogeno.Text = "El nivel de Nitrogeno debe comprender valores de 2.1N a 2.4N para iniciar con el proceso"; }
                 }
-                else { }
+                else
+                { RAluminio.Text = "El nivel de Aluminio debe comprender valores de <0.2 meq/100g para iniciar con el proceso"; }
             }
-            else { }
+            else
+            { RAcidezAl.Text = "El nivel de Aluminio debe comprender valores de 5.5 PH a 5.9 PH para iniciar con el proceso"; }
                     
         }
     }

@@ -18,8 +18,9 @@
                             <input type="number" id="AcidezAl" name="AcidezAl"  class="form-control" required>
                         </div>
                          <div class="col-18 col-md-4">
-                              <asp:TextBox ID="RAcidezAl" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RAcidezAl" name="RAcidezAl" class="form-control" />--%>
+                         <asp:TextBox ID="RAcidezAl" runat="server" CssClass="form-control" Visible="false" ReadOnly="true" ValidationGroup="N1"></asp:TextBox>
+                             <%--<asp:RequiredFieldValidator ID="Val1" runat="server" ErrorMessage="Valor Numerico Requerido" ControlToValidate="RAcidezAl" CssClass="mensajeError"></asp:RequiredFieldValidator>--%>
+                        
                     </div>
                     </div>
 
@@ -31,8 +32,9 @@
                             <input type="number" id="Aluminio" name="Aluminio" class="form-control" required>
                         </div>
                         <div class="col-18 col-md-4">
-                        <asp:TextBox ID="RAluminio" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RAluminio" name="RAluminio" class="form-control" hidden/>--%>
+                        <asp:TextBox ID="RAluminio" runat="server" CssClass="form-control" Visible="False" ReadOnly="True" ValidationGroup="N2"></asp:TextBox>
+                            <%-- <asp:RequiredFieldValidator ID="Val2" runat="server" ErrorMessage="Valor Numerico Requerido" ControlToValidate="RAluminio" CssClass="mensajeError" ValidationGroup="N2"></asp:RequiredFieldValidator>--%>
+                       
                     </div>
                         </div>
 
@@ -41,11 +43,12 @@
                             <label for="text-input" class=" form-control-label">Nitrogeno</label>
                         </div>
                         <div class="col-12 col-md-4">
-                            <input type="number" id="Nitrogeno" name="Nitrogeno" placeholder="" class="form-control" required>
+                            <input type="number" id="Nitrogeno" name="Nitrogeno" class="form-control" required>
                         </div>
                              <div class="col-18 col-md-4">
-                             <asp:TextBox ID="RNitrogeno" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RNitrogeno" name="RNitrogeno" class="form-control" hidden/>--%>
+                             <asp:TextBox ID="RNitrogeno" runat="server" CssClass="form-control" Visible="False" ReadOnly="True" ValidationGroup="N3"></asp:TextBox>
+                                 <%--<asp:RequiredFieldValidator ID="Val3" runat="server" ErrorMessage="Valor Numerico Requerido" ControlToValidate="RNitrogeno" CssClass="mensajeError" ValidationGroup="N3"></asp:RequiredFieldValidator>--%>
+                       
                     </div>
                     </div>
                     
@@ -58,7 +61,7 @@
                         </div>
                         <div class="col-18 col-md-4">
                         <asp:TextBox ID="RPotasion" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RPotasion" name="RPotasion" class="form-control" hidden/>--%>
+                        
                     </div>
                         </div>
 
@@ -71,7 +74,7 @@
                         </div>
                              <div class="col-18 col-md-4">
                         <asp:TextBox ID="RFosforo" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RFosforo" name="RFosforo" class="form-control" hidden/>--%>
+                        
                     </div>
                     </div>
                     
@@ -84,7 +87,7 @@
                         </div>
                          <div class="col-18 col-md-4">
                         <asp:TextBox ID="RCalcio" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RCalcio" name="RCalcio" class="form-control" hidden/>--%>
+                        
                     </div>
                         </div>
 
@@ -97,7 +100,7 @@
                         </div>
                               <div class="col-18 col-md-4">
                         <asp:TextBox ID="RMagnesion" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RMagnesion" name="RMagnesio" class="form-control" hidden/>--%>
+                        
                     </div>
                          </div>
 
@@ -111,7 +114,7 @@
                         </div>
                          <div class="col-18 col-md-4">
                         <asp:TextBox ID="RAzufre" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RAzufre" name="RAzufre" class="form-control" hidden/>--%>
+                       
                     </div>
                         </div>
 
@@ -124,7 +127,7 @@
                         </div>
                               <div class="col-18 col-md-4">
                         <asp:TextBox ID="RCobre" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RCobre" name="RCobre" class="form-control" hidden/>--%>
+                       
                     </div>
                     </div>
                     
@@ -137,7 +140,7 @@
                         </div>
                          <div class="col-18 col-md-4">
                         <asp:TextBox ID="RCinc" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RCinc" name="RCinc" class="form-control" hidden/>--%>
+                        
                     </div>
                         </div>
 
@@ -150,7 +153,7 @@
                         </div>
                               <div class="col-18 col-md-4">
                         <asp:TextBox ID="RManganeso" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                        <%--<input type="text" id="RManganeso" name="RManganeso" class="form-control" hidden/>--%>
+                        
                     </div>
                         </div>
                         <div class="row form-group">
@@ -162,7 +165,7 @@
                         </div>
                                 <div class="col-18 col-md-4">
                         <asp:TextBox ID="RBoro" runat="server" CssClass="form-control" Visible="False" ReadOnly="True"></asp:TextBox>
-                       <%-- <input type="text" id="RBoro" name="RBoro" class="form-control" hidden/>--%>
+                       
                     </div>
                         </div>
                               <div class="form-group">
