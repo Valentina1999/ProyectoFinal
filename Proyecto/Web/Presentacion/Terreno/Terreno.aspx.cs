@@ -46,8 +46,8 @@ namespace Web
         {
             int IdUsuario = int.Parse(Application["IdUsuario"].ToString());
             objclTerreno.NombreTerreno = Request.Form["NombreTerreno"];
-            objclTerreno.Ancho = double.Parse(Request.Form["Largo"]);
-            objclTerreno.Largo = double.Parse(Request.Form["Ancho"]);
+            objclTerreno.Ancho = decimal.Parse(Request.Form["Largo"]);
+            objclTerreno.Largo = decimal.Parse(Request.Form["Ancho"]);
             objclTerreno.IdUsuario = IdUsuario;
             
             int resultado = servicio.mtdRegistrarTerreno(objclTerreno);

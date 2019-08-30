@@ -10,8 +10,8 @@ namespace Servicio.Datos
     {
         public int IdTerreno { get; set; }
         public string NombreTerreno { get; set; }
-        public double Largo { get; set; }
-        public double Ancho { get; set; }
+        public decimal Largo { get; set; }
+        public decimal Ancho { get; set; }
         public int IdUsuario { get; set; }
 
         

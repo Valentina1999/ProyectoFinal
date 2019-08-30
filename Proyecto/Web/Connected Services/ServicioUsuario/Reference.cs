@@ -36,10 +36,45 @@ namespace Web.ServicioUsuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarUsuarios", ReplyAction="*")]
         System.Threading.Tasks.Task<int> mtdEditarUsuariosAsync(Web.ServicioUsuario.clUsuario objUsu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarTerreno", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdRegistrarTerreno(Web.ServicioUsuario.clTerreno objTerr);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarTerreno", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdRegistrarTerrenoAsync(Web.ServicioUsuario.clTerreno objTerr);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarSuelos", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdRegistrarSuelos(Web.ServicioUsuario.clSuelos objSuelos);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarSuelos", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdRegistrarSuelosAsync(Web.ServicioUsuario.clSuelos objSuelos);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarSuelo", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarSuelo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarSuelo", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarSueloAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLogin", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdLogin(string Correo, string Clave);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLogin", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdLoginAsync(string Correo, string Clave);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEnviarID", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdEnviarID(int x);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEnviarID", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdEnviarIDAsync(int x);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -168,6 +203,322 @@ namespace Web.ServicioUsuario {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class clSuelos : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private double acidezOalcalinidadField;
+        
+        private double aluminioField;
+        
+        private double nitrógenoField;
+        
+        private double potasioField;
+        
+        private double fósforoField;
+        
+        private double calcioField;
+        
+        private double magnesioField;
+        
+        private double azufreField;
+        
+        private double cobreField;
+        
+        private double cincField;
+        
+        private double manganesoField;
+        
+        private double boroField;
+        
+        private int idTipoSueloField;
+        
+        private int idCultivoField;
+        
+        private int idTerrenoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public double AcidezOalcalinidad {
+            get {
+                return this.acidezOalcalinidadField;
+            }
+            set {
+                this.acidezOalcalinidadField = value;
+                this.RaisePropertyChanged("AcidezOalcalinidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public double Aluminio {
+            get {
+                return this.aluminioField;
+            }
+            set {
+                this.aluminioField = value;
+                this.RaisePropertyChanged("Aluminio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public double Nitrógeno {
+            get {
+                return this.nitrógenoField;
+            }
+            set {
+                this.nitrógenoField = value;
+                this.RaisePropertyChanged("Nitrógeno");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public double Potasio {
+            get {
+                return this.potasioField;
+            }
+            set {
+                this.potasioField = value;
+                this.RaisePropertyChanged("Potasio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public double Fósforo {
+            get {
+                return this.fósforoField;
+            }
+            set {
+                this.fósforoField = value;
+                this.RaisePropertyChanged("Fósforo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public double Calcio {
+            get {
+                return this.calcioField;
+            }
+            set {
+                this.calcioField = value;
+                this.RaisePropertyChanged("Calcio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public double Magnesio {
+            get {
+                return this.magnesioField;
+            }
+            set {
+                this.magnesioField = value;
+                this.RaisePropertyChanged("Magnesio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public double Azufre {
+            get {
+                return this.azufreField;
+            }
+            set {
+                this.azufreField = value;
+                this.RaisePropertyChanged("Azufre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public double Cobre {
+            get {
+                return this.cobreField;
+            }
+            set {
+                this.cobreField = value;
+                this.RaisePropertyChanged("Cobre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public double Cinc {
+            get {
+                return this.cincField;
+            }
+            set {
+                this.cincField = value;
+                this.RaisePropertyChanged("Cinc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public double Manganeso {
+            get {
+                return this.manganesoField;
+            }
+            set {
+                this.manganesoField = value;
+                this.RaisePropertyChanged("Manganeso");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public double Boro {
+            get {
+                return this.boroField;
+            }
+            set {
+                this.boroField = value;
+                this.RaisePropertyChanged("Boro");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public int IdTipoSuelo {
+            get {
+                return this.idTipoSueloField;
+            }
+            set {
+                this.idTipoSueloField = value;
+                this.RaisePropertyChanged("IdTipoSuelo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public int IdCultivo {
+            get {
+                return this.idCultivoField;
+            }
+            set {
+                this.idCultivoField = value;
+                this.RaisePropertyChanged("IdCultivo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public int IdTerreno {
+            get {
+                return this.idTerrenoField;
+            }
+            set {
+                this.idTerrenoField = value;
+                this.RaisePropertyChanged("IdTerreno");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class clTerreno : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idTerrenoField;
+        
+        private double nombreTerrenoField;
+        
+        private double largoField;
+        
+        private double anchoField;
+        
+        private int idUsuarioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int IdTerreno {
+            get {
+                return this.idTerrenoField;
+            }
+            set {
+                this.idTerrenoField = value;
+                this.RaisePropertyChanged("IdTerreno");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public double NombreTerreno {
+            get {
+                return this.nombreTerrenoField;
+            }
+            set {
+                this.nombreTerrenoField = value;
+                this.RaisePropertyChanged("NombreTerreno");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public double Largo {
+            get {
+                return this.largoField;
+            }
+            set {
+                this.largoField = value;
+                this.RaisePropertyChanged("Largo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public double Ancho {
+            get {
+                return this.anchoField;
+            }
+            set {
+                this.anchoField = value;
+                this.RaisePropertyChanged("Ancho");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public int IdUsuario {
+            get {
+                return this.idUsuarioField;
+            }
+            set {
+                this.idUsuarioField = value;
+                this.RaisePropertyChanged("IdUsuario");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WebService1SoapChannel : Web.ServicioUsuario.WebService1Soap, System.ServiceModel.IClientChannel {
     }
@@ -217,6 +568,46 @@ namespace Web.ServicioUsuario {
         
         public System.Threading.Tasks.Task<int> mtdEditarUsuariosAsync(Web.ServicioUsuario.clUsuario objUsu) {
             return base.Channel.mtdEditarUsuariosAsync(objUsu);
+        }
+        
+        public int mtdRegistrarTerreno(Web.ServicioUsuario.clTerreno objTerr) {
+            return base.Channel.mtdRegistrarTerreno(objTerr);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdRegistrarTerrenoAsync(Web.ServicioUsuario.clTerreno objTerr) {
+            return base.Channel.mtdRegistrarTerrenoAsync(objTerr);
+        }
+        
+        public int mtdRegistrarSuelos(Web.ServicioUsuario.clSuelos objSuelos) {
+            return base.Channel.mtdRegistrarSuelos(objSuelos);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdRegistrarSuelosAsync(Web.ServicioUsuario.clSuelos objSuelos) {
+            return base.Channel.mtdRegistrarSuelosAsync(objSuelos);
+        }
+        
+        public System.Data.DataSet mtdListarSuelo() {
+            return base.Channel.mtdListarSuelo();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarSueloAsync() {
+            return base.Channel.mtdListarSueloAsync();
+        }
+        
+        public int mtdLogin(string Correo, string Clave) {
+            return base.Channel.mtdLogin(Correo, Clave);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdLoginAsync(string Correo, string Clave) {
+            return base.Channel.mtdLoginAsync(Correo, Clave);
+        }
+        
+        public System.Data.DataSet mtdEnviarID(int x) {
+            return base.Channel.mtdEnviarID(x);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdEnviarIDAsync(int x) {
+            return base.Channel.mtdEnviarIDAsync(x);
         }
     }
 }

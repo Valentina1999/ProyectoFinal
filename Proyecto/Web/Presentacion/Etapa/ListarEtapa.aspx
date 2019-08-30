@@ -3,7 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-lg-12">
+
+    <style>
+        #ico{
+            float:left;
+        }
+
+        #cont{
+            align="center";
+        }
+    </style>
+
+    <div class="col-lg-8" id="cont">
         <div>
             <h3><strong>Lista de Etapas</strong></h3>
             <br/>
@@ -13,24 +24,14 @@
                 <thead>
                     <tr>
                         <th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th>Foto</th>
-                        <th>Duracion</th>
-                        <th>Opciones</th>
+                        <th>Ver</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Prueba</td>
-                        <td>Prueba</td>
-                        <td>foto.jpg</td>
-                        <td>4 meses</td>
-                        <td>
-                            <div class="table-data-feature">
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="Seleccionar">
-                                    <i class="fa fa-hand-o-up">
-                                    </i>
-                                </button>
+                        <td >
+                            <div class="table-data-feature" id="ico">
                                 <a class="item" data-toggle="tooltip" href="VerEtapa.aspx" data-placement="top" title="Ver">
                                     <i class="fa fa-eye">
                                     </i>

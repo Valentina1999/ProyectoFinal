@@ -69,12 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServicioOscar\SGCPA.wsdl" />
-    <Content Include="Connected Services\ServicioOscar\Web.ServicioOscar.mtdEditarUsuariosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioOscar\Web.ServicioOscar.mtdRegistrarTerrenoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\ServicioUsuario\SGCPA.disco" />
     <None Include="Connected Services\ServicioUsuario\configuration91.svcinfo" />
     <None Include="Connected Services\ServicioUsuario\configuration.svcinfo" />
@@ -162,15 +156,14 @@
     <Content Include="fonts\poppins\poppins-v5-latin-regular.woff" />
     <Content Include="fonts\poppins\poppins-v5-latin-regular.woff2" />
     <None Include="Connected Services\ServicioUsuario\SGCPA.wsdl" />
-    <Content Include="Connected Services\ServicioUsuario\Web.ServicioUsuario.mtdEditarUsuariosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <Content Include="form.html" />
     <Content Include="Global.asax" />
     <Content Include="images\icon\logo1.jpg" />
+    <Content Include="Presentacion\Etapa\ListarEtapa.aspx" />
+    <Content Include="Presentacion\Etapa\VerEtapa.aspx" />
     <Content Include="Presentacion\Login\Login.aspx" />
-    <Content Include="Presentacion\Master\ValidaL.aspx" />
+    <Content Include="Presentacion\Suelos\EstudioSuelos.aspx" />
     <Content Include="Presentacion\Terreno\Terreno.aspx" />
     <Content Include="Presentacion\Index\Index.aspx" />
     <Content Include="Presentacion\Usuario\EditarUsuario.aspx" />
@@ -207,17 +200,7 @@
     <Content Include="vendor\slick\slick.less" />
     <Content Include="vendor\slick\slick.scss" />
     <Content Include="Presentacion\Master\Site1.Master" />
-    <Content Include="Presentacion\Master\DataLogin.xsc">
-      <DependentUpon>DataLogin.xsd</DependentUpon>
-    </Content>
-    <None Include="Presentacion\Master\DataLogin.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataLogin.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Presentacion\Master\DataLogin.xss">
-      <DependentUpon>DataLogin.xsd</DependentUpon>
-    </Content>
+    <Content Include="System.Data.DataSet1.datasource" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -355,6 +338,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Etapa\ListarEtapa.aspx.cs">
+      <DependentUpon>ListarEtapa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Etapa\ListarEtapa.aspx.designer.cs">
+      <DependentUpon>ListarEtapa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Etapa\VerEtapa.aspx.cs">
+      <DependentUpon>VerEtapa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Etapa\VerEtapa.aspx.designer.cs">
+      <DependentUpon>VerEtapa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -362,17 +359,12 @@
     <Compile Include="Presentacion\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Master\DataLogin.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataLogin.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\Master\ValidaL.aspx.cs">
-      <DependentUpon>ValidaL.aspx</DependentUpon>
+    <Compile Include="Presentacion\Suelos\EstudioSuelos.aspx.cs">
+      <DependentUpon>EstudioSuelos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\Master\ValidaL.aspx.designer.cs">
-      <DependentUpon>ValidaL.aspx</DependentUpon>
+    <Compile Include="Presentacion\Suelos\EstudioSuelos.aspx.designer.cs">
+      <DependentUpon>EstudioSuelos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Terreno\Terreno.aspx.cs">
       <DependentUpon>Terreno.aspx</DependentUpon>
