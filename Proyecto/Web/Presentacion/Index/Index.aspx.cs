@@ -11,7 +11,9 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string txtFech = System.DateTime.Now.ToShortDateString();
 
+            Label1.Text = txtFech;
         }
     }
 }
