@@ -44,12 +44,11 @@ namespace Web
 
         protected void btnRegistrarTerreno(object sender, EventArgs e)
         {
-            //int IdUsuario = int.Parse(Application["IdUsuario"].ToString());
+            int IdUsuario = int.Parse(Application["IdUsuario"].ToString());
             objclTerreno.NombreTerreno = Request.Form["NombreTerreno"];
-            objclTerreno.Largo = double.Parse(Request.Form["Largo"]);
-            objclTerreno.Ancho = double.Parse(Request.Form["Ancho"]);
-           
-            objclTerreno.IdUsuario = 12;//IdUsuario;
+            objclTerreno.Ancho = decimal.Parse(Request.Form["Largo"]);
+            objclTerreno.Largo = decimal.Parse(Request.Form["Ancho"]);
+            objclTerreno.IdUsuario = IdUsuario;
             
             int resultado = servicio.mtdRegistrarTerreno(objclTerreno);
 

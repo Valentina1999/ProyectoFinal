@@ -71,13 +71,6 @@ namespace Web.ServicioUsuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEnviarID", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdEnviarIDAsync(int x);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdBuscar", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet mtdBuscar(Web.ServicioUsuario.clUsuario objUsua);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdBuscar", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> mtdBuscarAsync(Web.ServicioUsuario.clUsuario objUsua);
     }
     
     /// <remarks/>
@@ -448,11 +441,11 @@ namespace Web.ServicioUsuario {
         
         private int idTerrenoField;
         
-        private string nombreTerrenoField;
+        private double nombreTerrenoField;
         
-        private decimal largoField;
+        private double largoField;
         
-        private decimal anchoField;
+        private double anchoField;
         
         private int idUsuarioField;
         
@@ -470,7 +463,7 @@ namespace Web.ServicioUsuario {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string NombreTerreno {
+        public double NombreTerreno {
             get {
                 return this.nombreTerrenoField;
             }
@@ -482,7 +475,7 @@ namespace Web.ServicioUsuario {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public decimal Largo {
+        public double Largo {
             get {
                 return this.largoField;
             }
@@ -494,7 +487,7 @@ namespace Web.ServicioUsuario {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public decimal Ancho {
+        public double Ancho {
             get {
                 return this.anchoField;
             }
@@ -615,14 +608,6 @@ namespace Web.ServicioUsuario {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdEnviarIDAsync(int x) {
             return base.Channel.mtdEnviarIDAsync(x);
-        }
-        
-        public System.Data.DataSet mtdBuscar(Web.ServicioUsuario.clUsuario objUsua) {
-            return base.Channel.mtdBuscar(objUsua);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> mtdBuscarAsync(Web.ServicioUsuario.clUsuario objUsua) {
-            return base.Channel.mtdBuscarAsync(objUsua);
         }
     }
 }
