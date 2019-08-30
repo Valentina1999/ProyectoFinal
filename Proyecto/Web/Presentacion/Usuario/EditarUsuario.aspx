@@ -9,42 +9,42 @@
                 <strong>EDITAR USUARIO</strong>
             </div>
             <div class="card-body card-block">
-                <form action="EditarUsuario.aspx" method="post" enctype="multipart/form-data" class="form-horizontal">
+                <form action="EditarUsuario.aspx" method="post" runat="server">
                     <div class="row form-group">
-                        <div class="col-12 col-md-1">
+                        <div class="col col-md-1">
                             <label for="text-input" class=" form-control-label">Documento</label>
                         </div>
                         <div class="col-12 col-md-4">
-                            <input type="number" id="Documento" name="Documento" class="form-control" required>
+                            <input type="number" id="txtDocumento" name="txtDocumento" class="form-control" required="required" runat="server">
                         </div>
                     </div>
                     <div class="row form-group">
-                        <div class="col-12 col-md-1">
+                        <div class="col col-md-1">
                             <label for="text-input" class=" form-control-label">Nombre</label>
                         </div>
                         <div class="col-12 col-md-4">
-                            <input type="text" id="Nombre" name="Nombre" placeholder="" class="form-control" required>
+                            <input type="text" id="txtNombre" name="txtNombre" placeholder="" class="form-control" required="required" runat="server">
                         </div>
-                        <div class="col-20 col-md-1">
+                        <div class="col-13 col-md-1">
                             <label for="text-input" class=" form-control-label">Apellido</label>
                         </div>
                         <div class="col-20 col-md-4">
-                            <input type="text" id="Apellido" name="Apellido" placeholder="" class="form-control" required>
+                            <input type="text" id="txtApellido" name="txtApellido" placeholder="" class="form-control" required="required" runat="server">
                         </div>
                     </div>
 
                     <div class="row form-group">
-                        <div class="col-12 col-md-1">
+                        <div class="col col-md-1">
                             <label for="email-input" class=" form-control-label">Correo</label>
                         </div>
                         <div class="col-12 col-md-4">
-                            <input type="email" id="Correo" name="Correo" placeholder="" class="form-control" required>
+                            <input type="email" id="txtCorreo" name="txtCorreo" placeholder="" class="form-control" required="required" runat="server">
                         </div>
                         <div class="col-13 col-md-1">
-                            <label for="password-input" class=" form-control-label">Clave</label>
+                            <label for="password-input" class=" form-control-label">Contraseña</label>
                         </div>
                         <div class="col-20 col-md-4">
-                            <input type="password" id="Clave" name="Clave" placeholder="" class="form-control" required>
+                            <input type="password" id="txtClave" name="txtClave" placeholder="" class="form-control" required runat="server">
                         </div>
                     </div>
 
@@ -53,21 +53,17 @@
                             <label for="text-input" class=" form-control-label">Telefono</label>
                         </div>
                         <div class="col-20 col-md-4">
-                            <input type="number" id="Telefono" name="Telefono" class="form-control" required>
+                            <input type="number" id="txtTelefono" name="txtTelefono" class="form-control" required="required" runat="server">
                         </div>
                         <div class="col-13 col-md-1">
                             <label for="select" class=" form-control-label">Rol</label>
                         </div>
                         <div class="col-20 col-md-4">
-                            <select name="IdRol" id="IdRol" class="form-control" required="required">
-                                <option value="">Seleccione Un Rol</option>
-                                <option value="1">Administrador</option>
-                                <option value="2">Cultivador</option>
-                            </select>
+                            <input type="text" id="txtRol" name="txtRol" class="form-control" runat="server" readonly="readonly">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" id="btnEditar" name="btnEditar" class="btn btn-primary btn-sm">
+                        <button type="button" id="Editar" class="btn btn-primary btn-sm" onserverclick="btnEditar" runat="server">
                             <i class="fa fa-dot-circle-o"></i>Editar
                         </button>
                         <button type="reset" id="btnCancelar" name="btnCancelar" class="btn btn-danger btn-sm">
@@ -75,7 +71,7 @@
                         </button>
                     </div>
                 </form>
-            </div>
+          </div>
         </div>
     </div>
 </asp:Content>

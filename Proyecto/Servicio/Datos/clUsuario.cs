@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -34,6 +35,16 @@ namespace Servicio.Datos
             clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;
+        }
+
+        public DataSet mtdBuscar(clUsuario objUsu)
+        {
+            string consulta = "Select Documento,Nombre, Apellido, Correo, Clave, Numero, Rol From Usuario inner join Rol on Usuario.IdRol = Rol.IdRol " +
+                "Where IdUsuario = '"+objUsu.IdUsuario+"'";
+            DataSet dsUsuario = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsUsuario = objConexion.mtdDesconectado(consulta);
+            return dsUsuario;
         }
     }
 }
