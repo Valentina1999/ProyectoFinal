@@ -70,8 +70,8 @@
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="IdTerreno" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="NombreTerreno" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="Largo" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="Ancho" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Largo" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ancho" type="s:double" />
           <s:element minOccurs="1" maxOccurs="1" name="IdUsuario" type="s:int" />
         </s:sequence>
       </s:complexType>
@@ -168,6 +168,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdBuscar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objUsua" type="tns:clUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdBuscarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdBuscarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="mtdListarRolSoapIn">
@@ -218,6 +239,12 @@
   <wsdl:message name="mtdEnviarIDSoapOut">
     <wsdl:part name="parameters" element="tns:mtdEnviarIDResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdBuscarSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdBuscar" />
+  </wsdl:message>
+  <wsdl:message name="mtdBuscarSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdBuscarResponse" />
+  </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="mtdListarRol">
       <wsdl:input message="tns:mtdListarRolSoapIn" />
@@ -250,6 +277,10 @@
     <wsdl:operation name="mtdEnviarID">
       <wsdl:input message="tns:mtdEnviarIDSoapIn" />
       <wsdl:output message="tns:mtdEnviarIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdBuscar">
+      <wsdl:input message="tns:mtdBuscarSoapIn" />
+      <wsdl:output message="tns:mtdBuscarSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -326,6 +357,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdBuscar">
+      <soap:operation soapAction="http://tempuri.org/mtdBuscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -394,6 +434,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdEnviarID">
       <soap12:operation soapAction="http://tempuri.org/mtdEnviarID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdBuscar">
+      <soap12:operation soapAction="http://tempuri.org/mtdBuscar" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
