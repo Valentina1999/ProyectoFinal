@@ -39,7 +39,7 @@ namespace Servicio
         public int mtdEditarUsuarios(clUsuario objUsu)
         {
             clUsuario objUsuarios = new clUsuario();
-            int result = objUsuarios.mtdEditarUsuario(objUsuarios);
+            int result = objUsuarios.mtdEditarUsuario(objUsu);
             return result;
         }
 
@@ -83,6 +83,15 @@ namespace Servicio
             clTerreno objRol = new clTerreno();
             dsRol = objRol.mtdListarT(x);
             return dsRol;
+        }
+
+        [WebMethod]
+        public DataSet mtdBuscar(clUsuario objUsua)
+        {
+            DataSet dsUsuario = new DataSet();
+            clUsuario objUsuario = new clUsuario();
+            dsUsuario = objUsuario.mtdBuscar(objUsua);
+            return dsUsuario;
         }
     }
 }

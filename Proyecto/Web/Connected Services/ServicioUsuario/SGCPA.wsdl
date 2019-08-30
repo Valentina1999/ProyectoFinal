@@ -59,115 +59,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="mtdRegistrarTerreno">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="objTerr" type="tns:clTerreno" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="clTerreno">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="IdTerreno" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="NombreTerreno" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Largo" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Ancho" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="IdUsuario" type="s:int" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="mtdRegistrarTerrenoResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="mtdRegistrarTerrenoResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="mtdRegistrarSuelos">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="objSuelos" type="tns:clSuelos" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="clSuelos">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="AcidezOalcalinidad" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Aluminio" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Nitrógeno" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Potasio" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Fósforo" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Calcio" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Magnesio" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Azufre" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Cobre" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Cinc" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Manganeso" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="Boro" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="IdTipoSuelo" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="IdCultivo" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="IdTerreno" type="s:int" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="mtdRegistrarSuelosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="mtdRegistrarSuelosResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="mtdListarSuelo">
-        <s:complexType />
-      </s:element>
-      <s:element name="mtdListarSueloResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="mtdListarSueloResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="mtdLogin">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="mtdLoginResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="mtdLoginResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="mtdEnviarID">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="mtdEnviarIDResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="mtdEnviarIDResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="mtdListarRolSoapIn">
@@ -188,36 +79,6 @@
   <wsdl:message name="mtdEditarUsuariosSoapOut">
     <wsdl:part name="parameters" element="tns:mtdEditarUsuariosResponse" />
   </wsdl:message>
-  <wsdl:message name="mtdRegistrarTerrenoSoapIn">
-    <wsdl:part name="parameters" element="tns:mtdRegistrarTerreno" />
-  </wsdl:message>
-  <wsdl:message name="mtdRegistrarTerrenoSoapOut">
-    <wsdl:part name="parameters" element="tns:mtdRegistrarTerrenoResponse" />
-  </wsdl:message>
-  <wsdl:message name="mtdRegistrarSuelosSoapIn">
-    <wsdl:part name="parameters" element="tns:mtdRegistrarSuelos" />
-  </wsdl:message>
-  <wsdl:message name="mtdRegistrarSuelosSoapOut">
-    <wsdl:part name="parameters" element="tns:mtdRegistrarSuelosResponse" />
-  </wsdl:message>
-  <wsdl:message name="mtdListarSueloSoapIn">
-    <wsdl:part name="parameters" element="tns:mtdListarSuelo" />
-  </wsdl:message>
-  <wsdl:message name="mtdListarSueloSoapOut">
-    <wsdl:part name="parameters" element="tns:mtdListarSueloResponse" />
-  </wsdl:message>
-  <wsdl:message name="mtdLoginSoapIn">
-    <wsdl:part name="parameters" element="tns:mtdLogin" />
-  </wsdl:message>
-  <wsdl:message name="mtdLoginSoapOut">
-    <wsdl:part name="parameters" element="tns:mtdLoginResponse" />
-  </wsdl:message>
-  <wsdl:message name="mtdEnviarIDSoapIn">
-    <wsdl:part name="parameters" element="tns:mtdEnviarID" />
-  </wsdl:message>
-  <wsdl:message name="mtdEnviarIDSoapOut">
-    <wsdl:part name="parameters" element="tns:mtdEnviarIDResponse" />
-  </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="mtdListarRol">
       <wsdl:input message="tns:mtdListarRolSoapIn" />
@@ -230,26 +91,6 @@
     <wsdl:operation name="mtdEditarUsuarios">
       <wsdl:input message="tns:mtdEditarUsuariosSoapIn" />
       <wsdl:output message="tns:mtdEditarUsuariosSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="mtdRegistrarTerreno">
-      <wsdl:input message="tns:mtdRegistrarTerrenoSoapIn" />
-      <wsdl:output message="tns:mtdRegistrarTerrenoSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="mtdRegistrarSuelos">
-      <wsdl:input message="tns:mtdRegistrarSuelosSoapIn" />
-      <wsdl:output message="tns:mtdRegistrarSuelosSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="mtdListarSuelo">
-      <wsdl:input message="tns:mtdListarSueloSoapIn" />
-      <wsdl:output message="tns:mtdListarSueloSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="mtdLogin">
-      <wsdl:input message="tns:mtdLoginSoapIn" />
-      <wsdl:output message="tns:mtdLoginSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="mtdEnviarID">
-      <wsdl:input message="tns:mtdEnviarIDSoapIn" />
-      <wsdl:output message="tns:mtdEnviarIDSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -281,51 +122,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="mtdRegistrarTerreno">
-      <soap:operation soapAction="http://tempuri.org/mtdRegistrarTerreno" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdRegistrarSuelos">
-      <soap:operation soapAction="http://tempuri.org/mtdRegistrarSuelos" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdListarSuelo">
-      <soap:operation soapAction="http://tempuri.org/mtdListarSuelo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdLogin">
-      <soap:operation soapAction="http://tempuri.org/mtdLogin" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdEnviarID">
-      <soap:operation soapAction="http://tempuri.org/mtdEnviarID" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -349,51 +145,6 @@
     </wsdl:operation>
     <wsdl:operation name="mtdEditarUsuarios">
       <soap12:operation soapAction="http://tempuri.org/mtdEditarUsuarios" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdRegistrarTerreno">
-      <soap12:operation soapAction="http://tempuri.org/mtdRegistrarTerreno" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdRegistrarSuelos">
-      <soap12:operation soapAction="http://tempuri.org/mtdRegistrarSuelos" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdListarSuelo">
-      <soap12:operation soapAction="http://tempuri.org/mtdListarSuelo" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdLogin">
-      <soap12:operation soapAction="http://tempuri.org/mtdLogin" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdEnviarID">
-      <soap12:operation soapAction="http://tempuri.org/mtdEnviarID" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
