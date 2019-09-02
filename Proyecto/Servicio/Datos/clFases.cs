@@ -27,5 +27,14 @@ namespace Servicio.Datos
             return dsFase;
         }
 
+        public int mtdEditarFase(clFases objFases)
+        {
+            string consulta = "update terreno set FechaInicio='"+objFases.FechaInicio+"', FechaFinal='"+objFases.FechaFinal+"'";
+            clConexion objConexion = new clConexion();
+            int resultado = objConexion.mtdConectado(consulta);
+            return resultado;
+
+        }
+
     }
 }

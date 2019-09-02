@@ -1,4 +1,4 @@
-﻿    using Servicio.Datos;
+﻿using Servicio.Datos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -109,6 +109,14 @@ namespace Servicio
             clFases objFase = new clFases();
             dsFase = objFase.mtdListar();
             return dsFase;
+        }
+
+        [WebMethod]
+        public int mtdEditarFase(clFases objFas)
+        {
+            clFases objFases = new clFases();
+            int result = objFases.mtdEditarFase(objFas);
+            return result;
         }
     }
 }

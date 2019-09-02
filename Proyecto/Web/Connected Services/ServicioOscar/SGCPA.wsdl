@@ -70,8 +70,8 @@
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="IdTerreno" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="NombreTerreno" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="Largo" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="Ancho" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Largo" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ancho" type="s:double" />
           <s:element minOccurs="1" maxOccurs="1" name="IdUsuario" type="s:int" />
         </s:sequence>
       </s:complexType>
@@ -168,6 +168,92 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdBuscar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objUsua" type="tns:clUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdBuscarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdBuscarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdRegistrarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objPro" type="tns:clProducto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clProducto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdProducto" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdEtapa" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mtdRegistrarProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdRegistrarProductoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarFases">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarFasesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarFasesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEditarFase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFas" type="tns:clFases" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clFases">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdFase" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Foto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Duracion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaInicio" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaFinal" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdEtapas" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mtdEditarFaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdEditarFaseResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="mtdListarRolSoapIn">
@@ -218,6 +304,30 @@
   <wsdl:message name="mtdEnviarIDSoapOut">
     <wsdl:part name="parameters" element="tns:mtdEnviarIDResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdBuscarSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdBuscar" />
+  </wsdl:message>
+  <wsdl:message name="mtdBuscarSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdBuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarProducto" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarFasesSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarFases" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarFasesSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarFasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdEditarFaseSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdEditarFase" />
+  </wsdl:message>
+  <wsdl:message name="mtdEditarFaseSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdEditarFaseResponse" />
+  </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="mtdListarRol">
       <wsdl:input message="tns:mtdListarRolSoapIn" />
@@ -250,6 +360,22 @@
     <wsdl:operation name="mtdEnviarID">
       <wsdl:input message="tns:mtdEnviarIDSoapIn" />
       <wsdl:output message="tns:mtdEnviarIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdBuscar">
+      <wsdl:input message="tns:mtdBuscarSoapIn" />
+      <wsdl:output message="tns:mtdBuscarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarProducto">
+      <wsdl:input message="tns:mtdRegistrarProductoSoapIn" />
+      <wsdl:output message="tns:mtdRegistrarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarFases">
+      <wsdl:input message="tns:mtdListarFasesSoapIn" />
+      <wsdl:output message="tns:mtdListarFasesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdEditarFase">
+      <wsdl:input message="tns:mtdEditarFaseSoapIn" />
+      <wsdl:output message="tns:mtdEditarFaseSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -326,6 +452,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdBuscar">
+      <soap:operation soapAction="http://tempuri.org/mtdBuscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarProducto">
+      <soap:operation soapAction="http://tempuri.org/mtdRegistrarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarFases">
+      <soap:operation soapAction="http://tempuri.org/mtdListarFases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdEditarFase">
+      <soap:operation soapAction="http://tempuri.org/mtdEditarFase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -394,6 +556,42 @@
     </wsdl:operation>
     <wsdl:operation name="mtdEnviarID">
       <soap12:operation soapAction="http://tempuri.org/mtdEnviarID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdBuscar">
+      <soap12:operation soapAction="http://tempuri.org/mtdBuscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarProducto">
+      <soap12:operation soapAction="http://tempuri.org/mtdRegistrarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarFases">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarFases" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdEditarFase">
+      <soap12:operation soapAction="http://tempuri.org/mtdEditarFase" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
