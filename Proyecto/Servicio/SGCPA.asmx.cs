@@ -1,4 +1,4 @@
-﻿using Servicio.Datos;
+﻿    using Servicio.Datos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -92,6 +92,14 @@ namespace Servicio
             clUsuario objUsuario = new clUsuario();
             dsUsuario = objUsuario.mtdBuscar(objUsua);
             return dsUsuario;
+        }
+
+        [WebMethod]
+        public int mtdRegistrarProducto(clProducto objPro)
+        {
+            clProducto objClProducto = new clProducto();
+            int resul = objClProducto.mtdRegistrarProducto(objPro);
+            return resul;
         }
     }
 }

@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clProducto.cs" />
     <Compile Include="Datos\clRol.cs" />
     <Compile Include="Datos\clSuelos.cs" />
     <Compile Include="Datos\clTerreno.cs" />
