@@ -19,33 +19,38 @@ namespace Web.Presentacion.Suelos
 
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+
+        }
+
+        protected void Page_Init(object sender, EventArgs e) {
+
+            mtdCargarTerreno();
+            mtdCargarTipoSuelo();
+        }
+       
+        public void mtdCargarTerreno()
+        {
             Id = int.Parse(Application["IdUsuario"].ToString());
-
-
             DataSet enviar = Servicio.mtdEnviarID(Id);
-
             DataSet listar = new DataSet();
             listar = enviar;
             Terreno.DataSource = listar.Tables["tblDatos"];
             Terreno.DataTextField = "NombreTerreno";
             Terreno.DataValueField = "IdTerreno";
             Terreno.DataBind();
+        }
 
+        public void mtdCargarTipoSuelo()
+        {
             DataSet listarT = new DataSet();
             listarT = ServicioJ.mtdListarSuelo();
             TipoSuelo.DataSource = listarT.Tables["tblDatos"];
             TipoSuelo.DataTextField = "TipoSuelo";
             TipoSuelo.DataValueField = "IdtipoSuelo";
             TipoSuelo.DataBind();
-
         }
-        protected void Page_PreInit(object sender, EventArgs e)
-        {
-            
-
-        }
-
-
+        
 
         ServicioUsuario.WebService1SoapClient ServicioJ = new ServicioUsuario.WebService1SoapClient();
         ServicioUsuario.clSuelos objSuelos = new ServicioUsuario.clSuelos();
@@ -75,25 +80,25 @@ namespace Web.Presentacion.Suelos
             {
                 if (objSuelos.Aluminio < 0.2)
                 {
-                    if (objSuelos.Nitrógeno >= 2.1 && 2.1 <= 2.4)
+                    if (objSuelos.Nitrógeno == 2.1 && 2.1 <= 2.4)
                     {
-                        if (objSuelos.Potasio >= 0.03 && 0.03 <= 0.80)
+                        if (objSuelos.Potasio == 0.03 && 0.03 <= 0.80)
                         {
-                            if (objSuelos.Fósforo >= 15 && 15 <= 20)
+                            if (objSuelos.Fósforo == 15 && 15 <= 20)
                             {
-                                if (objSuelos.Calcio >= 0.10 && 0.10 <= 0.30)
+                                if (objSuelos.Calcio == 0.10 && 0.10 <= 0.30)
                                 {
-                                    if (objSuelos.Magnesio >= 0.05 && 0.05 <= 0.20)
+                                    if (objSuelos.Magnesio == 0.05 && 0.05 <= 0.20)
                                     {
-                                        if (objSuelos.Azufre >= 20 && 20 <= 80)
+                                        if (objSuelos.Azufre == 20 && 20 <= 80)
                                         {
-                                            if (objSuelos.Cobre >= 3 && 3 <= 20)
+                                            if (objSuelos.Cobre == 3 && 3 <= 20)
                                             {
-                                                if (objSuelos.Cinc >= 6 && 6 <= 36)
+                                                if (objSuelos.Cinc == 6 && 6 <= 36)
                                                 {
-                                                    if (objSuelos.Manganeso >= 60 && 60 <= 100)
+                                                    if (objSuelos.Manganeso == 60 && 60 <= 100)
                                                     {
-                                                        if (objSuelos.Boro >= 1.2 && 1.2 <= 5.73)
+                                                        if (objSuelos.Boro == 1.2 && 1.2 <= 5.73)
                                                         {
                                                             if (resultado == 1)
                                                             {
@@ -104,7 +109,8 @@ namespace Web.Presentacion.Suelos
                                                                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
                                                             }
                                                         }
-                                                        else { RBoro.Text = "El nivel de Boro debe comprender valores de 1.2meq/100g a 5.73meq/100g para iniciar con el proceso"; }
+                                                        else {RBoro.Visible = true; RBoro.Text = "El nivel de Boro debe comprender valores de 1.2meq/100g a 5.73meq/100g para iniciar con el proceso";
+                                                        }
                                                     }
                                                     else { RManganeso.Text = "El nivel de Manganeso debe comprender valores de 60ppm a 100ppm para iniciar con el proceso"; }
                                                  }
