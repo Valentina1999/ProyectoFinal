@@ -101,5 +101,14 @@ namespace Servicio
             int resul = objClProducto.mtdRegistrarProducto(objPro);
             return resul;
         }
+
+        [WebMethod]
+        public DataSet mtdListarFases()
+        {
+            DataSet dsFase = new DataSet();
+            clFases objFase = new clFases();
+            dsFase = objFase.mtdListar();
+            return dsFase;
+        }
     }
 }
