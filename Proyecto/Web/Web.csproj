@@ -162,6 +162,11 @@
     <Content Include="images\icon\logo1.jpg" />
     <Content Include="Presentacion\Etapa\ListarEtapa.aspx" />
     <Content Include="Presentacion\Etapa\VerEtapa.aspx" />
+    <Content Include="Presentacion\Foro\cssForo\styleForo.css" />
+    <Content Include="Presentacion\Foro\Foro.html" />
+    <Content Include="Presentacion\Foro\ImagenesForo\fondo.jpg" />
+    <Content Include="Presentacion\Foro\jsForo\jquery.js" />
+    <Content Include="Presentacion\Foro\jsForo\script.js" />
     <Content Include="Presentacion\Login\Login.aspx" />
     <Content Include="Presentacion\Suelos\EstudioSuelos.aspx" />
     <Content Include="Presentacion\Terreno\Terreno.aspx" />
