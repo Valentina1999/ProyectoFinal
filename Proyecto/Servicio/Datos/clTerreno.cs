@@ -34,5 +34,24 @@ namespace Servicio.Datos
             return ds;
 
         }
+
+        public int mtdEditarTerreno(clTerreno objT)
+        {
+            string consulta = "Update Terreno set NombreTerreno = '" + objT.NombreTerreno + "', Largo = '" + objT.Largo + "', " +
+                "Ancho = '" + objT.Ancho + "'where IdUsuario = '" + objT.IdUsuario + "'";
+            clConexion objConexion = new clConexion();
+            int resultado = objConexion.mtdConectado(consulta);
+            return resultado;
+        }
+
+
+        public DataSet mtdBuscar(clTerreno objTerreno)
+        {
+            string consulta = "Select NombreTerreno,Largo,Ancho From Terreno Where IdUsuario = '" + objTerreno.IdUsuario + "' and IdTerreno = '"+objTerreno.IdTerreno+"' ";
+            DataSet dsTerreno = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsTerreno = objConexion.mtdDesconectado(consulta);
+            return dsTerreno;
+        }
     }
 }
