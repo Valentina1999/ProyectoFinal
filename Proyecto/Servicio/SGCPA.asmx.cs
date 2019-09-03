@@ -1,4 +1,4 @@
-﻿using Servicio.Datos;
+﻿    using Servicio.Datos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -77,7 +77,7 @@ namespace Servicio
         }
 
         [WebMethod]
-        public DataSet mtdEnviarID(int x)
+        public DataSet mtdEnviarID(int x,int y)
         {
             DataSet dsRol = new DataSet();
             clTerreno objRol = new clTerreno();
@@ -112,11 +112,19 @@ namespace Servicio
         }
 
         [WebMethod]
-        public int mtdEditarFase(clFases objFas)
+        public int mtdEditarTerreno(clTerreno objT)
         {
-            clFases objFases = new clFases();
-            int result = objFases.mtdEditarFase(objFas);
+            clTerreno objTe = new clTerreno();
+            int result = objTe.mtdEditarTerreno(objT);
             return result;
+        }
+        [WebMethod]
+        public DataSet mtdBuscarTerreno(clTerreno objTerreno)
+        {
+            DataSet dsTerreno = new DataSet();
+            clTerreno objTerr = new clTerreno();
+            dsTerreno = objTerr.mtdBuscar(objTerreno);
+            return dsTerreno;
         }
     }
 }
