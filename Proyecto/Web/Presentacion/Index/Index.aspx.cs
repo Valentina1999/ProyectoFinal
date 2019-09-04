@@ -14,6 +14,8 @@ namespace Web
             string txtFech = System.DateTime.Now.ToShortDateString();
 
             Label1.Text = txtFech;
+            string a = Label1.Text;
+
         }
     }
 }
