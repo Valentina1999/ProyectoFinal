@@ -143,5 +143,14 @@ namespace Servicio
             dsFase = objFase.mtdfecha();
             return dsFase;
         }
+        [WebMethod]
+        public DataSet mtdListarTipoInsumo()
+        {
+            DataSet dsTipo = new DataSet();
+            clRol objTipo = new clRol();
+            dsTipo = objTipo.mtdListarRol();
+            return dsTipo;
+        }
+
     }
 }
