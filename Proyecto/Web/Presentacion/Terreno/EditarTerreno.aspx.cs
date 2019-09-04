@@ -15,9 +15,6 @@ namespace Web.Presentacion.Terreno
 
         int Id;
         int IdTipoTerreno;
-        string Ancho;
-        string Largo;
-
 
         protected void Page_Load(object sender, EventArgs e)
         {
