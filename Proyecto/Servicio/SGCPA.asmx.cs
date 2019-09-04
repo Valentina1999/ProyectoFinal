@@ -143,6 +143,7 @@ namespace Servicio
             dsFase = objFase.mtdfecha();
             return dsFase;
         }
+
         [WebMethod]
         public DataSet mtdListarTipoInsumo()
         {
@@ -150,6 +151,23 @@ namespace Servicio
             clRol objTipo = new clRol();
             dsTipo = objTipo.mtdListarRol();
             return dsTipo;
+        }
+
+        [WebMethod]
+        public int mtdRegistrarPregunta(clPregunta objPre)
+        {
+            clPregunta objPregunta = new clPregunta();
+            int resultado = objPregunta.mtdRegistrarPregunta(objPre);
+            return resultado;
+        }
+
+        [WebMethod]
+        public DataSet mtdListarPregunta()
+        {
+            DataSet dsPregunta = new DataSet();
+            clPregunta objPregunta = new clPregunta();
+            dsPregunta = objPregunta.mtdListarPregunta();
+            return dsPregunta;
         }
 
     }
