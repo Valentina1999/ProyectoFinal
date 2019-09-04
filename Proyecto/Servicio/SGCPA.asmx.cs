@@ -135,5 +135,13 @@ namespace Servicio
             dsTerreno = objTerr.mtdBuscar(objTerreno);
             return dsTerreno;
         }
+        [WebMethod]
+        public DataSet mtdfecha()
+        {
+            DataSet dsFase = new DataSet();
+            clFases objFase = new clFases();
+            dsFase = objFase.mtdfecha();
+            return dsFase;
+        }
     }
 }

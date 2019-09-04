@@ -36,7 +36,16 @@ namespace Servicio.Datos
             int resultado = objConexion.mtdConectado(consulta);
 
             return resultado;
+        }
 
+        public DataSet mtdfecha()
+        {
+            string consulta = "select top 1 IdFase from Fase where FechaInicio Is Not NULL  order by IdFase desc";
+            DataSet dsFase = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsFase = objConexion.mtdDesconectado(consulta);
+
+            return dsFase;
         }
 
     }
