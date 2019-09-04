@@ -77,7 +77,7 @@ namespace Servicio
         }
 
         [WebMethod]
-        public DataSet mtdEnviarID(int x,int y)
+        public DataSet mtdEnviarID(int x)
         {
             DataSet dsRol = new DataSet();
             clTerreno objRol = new clTerreno();
@@ -112,14 +112,21 @@ namespace Servicio
         }
 
         [WebMethod]
-        public int mtdEditarTerreno(clTerreno objT)
+        public int mtdEditarFase(clFases objFas)
         {
             clFases objFase = new clFases();
             int result = objFase.mtdEditarFase(objFas);
+            return result;
+        }
+
+        [WebMethod]
+        public int mtdEditarTerreno(clTerreno objT)
+        {
             clTerreno objTe = new clTerreno();
             int result = objTe.mtdEditarTerreno(objT);
             return result;
         }
+
         [WebMethod]
         public DataSet mtdBuscarTerreno(clTerreno objTerreno)
         {

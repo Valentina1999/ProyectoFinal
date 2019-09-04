@@ -10,7 +10,7 @@
         }
 
         #cont{
-            align="center";
+            align:"center";
         }
     </style>
 
