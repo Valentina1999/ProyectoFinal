@@ -114,8 +114,8 @@ namespace Servicio
         [WebMethod]
         public int mtdEditarFase(clFases objFas)
         {
-            clFases objFases = new clFases();
-            int result = objFases.mtdEditarFase(objFas);
+            clFases objFase = new clFases();
+            int result = objFase.mtdEditarFase(objFas);
             return result;
         }
     }

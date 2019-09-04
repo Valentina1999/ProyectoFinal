@@ -13,8 +13,8 @@ namespace Servicio.Datos
         public string Descripcion { get; set; }
         public string Foto { get; set; }
         public string Duracion { get; set; }
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaFinal { get; set; }
+        public string FechaInicio { get; set; }
+        public string FechaFinal { get; set; }
         public int IdEtapas { get; set; }
 
         public DataSet mtdListar()
@@ -27,11 +27,14 @@ namespace Servicio.Datos
             return dsFase;
         }
 
-        public int mtdEditarFase(clFases objFases)
+        public int mtdEditarFase(clFases objFase)
         {
-            string consulta = "update terreno set FechaInicio='"+objFases.FechaInicio+"', FechaFinal='"+objFases.FechaFinal+"'";
+            string consulta = "update Fase set FechaInicio='"+objFase.FechaInicio+"', FechaFinal='"+objFase.FechaFinal+"' where IdFase='"+objFase.IdFase+"'";
+
             clConexion objConexion = new clConexion();
+
             int resultado = objConexion.mtdConectado(consulta);
+
             return resultado;
 
         }
