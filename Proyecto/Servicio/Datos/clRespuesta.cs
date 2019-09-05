@@ -10,15 +10,18 @@ namespace Servicio.Datos
         public int IdRespuesta { get; set; }
         public string Respuesta { get; set; }
         public string FechaR { get; set; }
+        public int IdUsuario { get; set; }
         public int IdPregunta { get; set; }
 
         clConexion objConexion = new clConexion();
 
         public int mtdRegistrarRespuesta(clRespuesta objRespuesta)
         {
-            string consulta = "Insert Into Respuesta(Respuesta, FechaR, IdPregunta) values ('" + objRespuesta.Respuesta + "', '" + objRespuesta.FechaR + "'," + objRespuesta.IdPregunta + ")";
+            string consulta = "Insert Into Respuesta(Respuesta, FechaR, IdUsuario, IdPregunta) values ('" + objRespuesta.Respuesta + "', '" + objRespuesta.FechaR + "', " + objRespuesta.IdUsuario + "," + objRespuesta.IdPregunta + ")";
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;
         }
+
+
     }
 }

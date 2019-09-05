@@ -30,7 +30,7 @@
             <a class="volver" href="../Index/Index.aspx">Volver</a>
         </div>
         <br />
-        <br />
+--        <br />
         <br />
         <asp:Repeater ID="repeater1" runat="server">
             <ItemTemplate>
@@ -41,7 +41,7 @@
                                 <h4><%#Eval("Nombre")%> <%#Eval("Apellido")%></h4>
                                 <h5><%#Eval("FechaP") %></h5>
                             </div>
-                            <input id="idPregunta" value="<%#Eval("IdPregunta") %>" hidden="hidden" />
+                            <input id="IdPregunta"  value="<%#Eval("IdPregunta") %>" hidden="hidden" />
                             <p>
                                 <%#Eval("Pregunta")%>
                             </p>
@@ -52,50 +52,55 @@
                         </div>
                     </div>
                 </div>
+                <asp:Repeater ID="repeater2" runat="server">
+                    <ItemTemplate>
+                        <div class="container-comments-request">
+                            <div class="comments-request">
+                                <div class="info-comments-request">
+                                    <div class="header">
+                                    <h4>Oscar Cruz</h4>
+                                    <h5>31-Agosto-2019</h5>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus iste qui porro et, nihil
+                                        fugit dolores modi nisi animi illo quaerat blanditiis. Quia deserunt vitae deleniti quod ipsa,
+                                        animi fuga!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+                </main>
             </ItemTemplate>
         </asp:Repeater>
-        <div class="container-comments-request">
-            <div class="comments-request">
-                <div class="info-comments-request">
-                    <div class="header">
-                        <h4>Oscar Cruz</h4>
-                        <h5>31-Agosto-2019</h5>
-                    </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus iste qui porro et, nihil
-                        fugit dolores modi nisi animi illo quaerat blanditiis. Quia deserunt vitae deleniti quod ipsa,
-                        animi fuga!
-                    </p>
+
+
+        <div class="capa-data"></div>
+
+        <form action="Foro.aspx" runat="server" method="post">
+            <div class="container-data">
+                <strong>Respuesta</strong>
+                <div class="photo-input">
+                    <input type="text" id="NombreP" name="NombreP" placeholder="Nombre" readonly="readonly" />
                 </div>
+                <textarea class="mensaje" placeholder="Esciba su sugerencia al problema" name="respuesta" id="respuesta" cols="30" rows="10"></textarea>
+                <button type="button" runat="server" onserverclick="mtdRegistrarRespuesta" id="enviarR" name="enviarP" class="btn-comment">Responder</button>
             </div>
-        </div>
-    </main>
 
-    <div class="capa-data"></div>
+            <div class="capa-pregunta"></div>
 
-    <form action="Foro.aspx" runat="server" method="post">
-        <div class="container-data">
-            <strong>SUGERENCIAS</strong>
-            <div class="photo-input">
-                <input type="text" id="NombreP" name="NombreP" placeholder="Nombre" readonly="readonly" />
+            <div class="container-pregunta">
+                <strong>PREGUNTA</strong>
+                <div class="photo-input">
+                    <input type="text" name="nombreP" id="nombreP" placeholder="Nombre" readonly="readonly" />
+                </div>
+                <textarea class="mensaje" placeholder="Esciba su Pregunta" name="pregunta" id="pregunta" cols="30" rows="10"></textarea>
+                <button type="button" runat="server" onserverclick="mtdRegistrarPregunta" id="btnpregunta" class="btn-comment">Publicar Pregunta</button>
             </div>
-            <textarea class="mensaje" placeholder="Esciba su sugerencia al problema" name="respuesta" id="respuesta" cols="30" rows="10"></textarea>
-            <button type="button" runat="server" id="enviarR" name="enviarP" class="btn-comment">Responder</button>
-        </div>
-
-        <div class="capa-pregunta"></div>
-
-        <div class="container-pregunta">
-            <strong>PREGUNTA</strong>
-            <div class="photo-input">
-                <input type="text" name="nombreP" id="nombreP" placeholder="Nombre" readonly="readonly" />
-            </div>
-            <textarea class="mensaje" placeholder="Esciba su Pregunta" name="pregunta" id="pregunta" cols="30" rows="10"></textarea>
-            <button type="button" runat="server" onserverclick="mtdRegistrarPregunta" id="btnpregunta" class="btn-comment">Publicar Pregunta</button>
-        </div>
-    </form>
-    <script src="jsForo/jquery.js"></script>
-    <script src="jsForo/script.js"></script>
+        </form>
+        <script src="jsForo/jquery.js"></script>
+        <script src="jsForo/script.js"></script>
 </body>
 
 </html>

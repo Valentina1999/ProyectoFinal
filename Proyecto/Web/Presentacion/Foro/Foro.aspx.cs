@@ -22,12 +22,12 @@ namespace Web.Presentacion.Foro
 
         protected void mtdRegistrarPregunta(object sender, EventArgs e)
         {
-            string Fecha = System.DateTime.Now.ToShortDateString();
-            int IdUsuario = int.Parse(Application["IdUsuario"].ToString());
+            string Fecha = System.DateTime.Now.ToString();
+            //int IdUsuario = int.Parse(Application["IdUsuario"].ToString());
 
             objPregunta.Pregunta = Request.Form["pregunta"];
             objPregunta.FechaP = Fecha;
-            objPregunta.IdUsuario = IdUsuario;
+            objPregunta.IdUsuario = 12;// IdUsuario;
 
             int resultado = ServicioZ.mtdRegistrarPregunta(objPregunta);
 
@@ -60,11 +60,33 @@ namespace Web.Presentacion.Foro
 
         protected void mtdRegistrarRespuesta(object sender, EventArgs e)
         {
-            string Fecha = System.DateTime.Now.ToShortDateString();
+            string Fecha = System.DateTime.Now.ToString();
+            //int IdUsuario = int.Parse(Application["IdUsuario"].ToString());
 
             objRespuesta.Respuesta = Request.Form["respuesta"];
             objRespuesta.FechaR = Fecha;
-            objRespuesta.IdPregunta =
+            objRespuesta.IdUsuario = 12; // IdUsuario;
+            objRespuesta.IdPregunta = int.Parse(Request.Form["IdPregunta"]);
+
+            int Resultado = ServicioZ.mtdRegistrarRespuesta(objRespuesta);
+
+            if (Resultado == 1)
+            {
+                string script = @"<script type='text/javascript'>
+                            alert('Se ha Registrado Exitosamente');
+                        </script>";
+
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                mtdListarPregunta();
+            }
+            else
+            {
+                string script = @"<script type='text/javascript'>
+                            alert('Hubo un error en el Registro');
+                        </script>";
+
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+            }
         }
     }
 }
