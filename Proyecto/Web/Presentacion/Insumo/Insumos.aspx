@@ -14,7 +14,7 @@
                         <label for="text-input" class="form-control-label">Nombre</label>
                     </div>
                     <div class="col-12 col-md-4">
-                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" required="required" runat="server" />
+                        <input type="text" id="txtNombre" class="form-control" required="required" runat="server" />
                     </div>
                     <div class="col col-md-1">
                         <label for="text-input" class="form-control-label">Foto</label>
@@ -30,7 +30,7 @@
                         <label for="text-input" class="form-control-label">Descripcion</label>
                     </div>
                     <div class="col-12 col-md-4">
-                        <textarea class="form-control" id="txtDescripcion" runat="server" required="required" name="txtDescripcion"></textarea>
+                        <textarea  id="txtDescripcion"  type="text" class="form-control"  runat="server" required="required"></textarea>
                     </div>
 
                     <div class="col col-md-1">

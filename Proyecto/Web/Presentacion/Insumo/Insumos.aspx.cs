@@ -52,7 +52,11 @@ namespace Web.Presentacion.Insumos
             {
                 Response.Write("Seleccione una imagen");
             }
+
             string nom2 = FileImage.FileName;
+
+            string n = Request.Form["txtNombre"];
+            string d = Request.Form["txtDescripcion"];
 
             objIns.Nombre = Request.Form["txtNombre"];
             objIns.Foto = nom2;
