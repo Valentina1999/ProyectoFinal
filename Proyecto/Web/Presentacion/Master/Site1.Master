@@ -165,7 +165,7 @@
                                 <i class="fa fa-plus-circle"></i>Insumos</a>
                         </li>
                         <li id="menForo1" runat="server">
-                            <a href="#">
+                            <a href="../Foro/Foro.aspx">
                                 <i class="fa fa-pencil-square-o"></i>Foro</a>
                         </li>
                         <%--<li>

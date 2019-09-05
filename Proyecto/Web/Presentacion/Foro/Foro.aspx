@@ -38,9 +38,10 @@
                     <div class="comments">
                         <div class="info-comments">
                             <div class="header">
-                                <h4>Oscar Cruz</h4>
-                                <h5>31-Agosto-2019</h5>
+                                <h4><%#Eval("Nombre")%> <%#Eval("Apellido")%></h4>
+                                <h5><%#Eval("FechaP") %></h5>
                             </div>
+                            <input id="idPregunta" value="<%#Eval("IdPregunta") %>" hidden="hidden" />
                             <p>
                                 <%#Eval("Pregunta")%>
                             </p>
@@ -51,7 +52,6 @@
                         </div>
                     </div>
                 </div>
-
             </ItemTemplate>
         </asp:Repeater>
         <div class="container-comments-request">
@@ -78,10 +78,9 @@
             <strong>SUGERENCIAS</strong>
             <div class="photo-input">
                 <input type="text" id="NombreP" name="NombreP" placeholder="Nombre" readonly="readonly" />
-                <input type="text" id="FechaP" name="FechaP" hidden="hidden" />
             </div>
             <textarea class="mensaje" placeholder="Esciba su sugerencia al problema" name="respuesta" id="respuesta" cols="30" rows="10"></textarea>
-            <button type="submit" id="enviarR" name="enviarP" class="btn-comment">Responder</button>
+            <button type="button" runat="server" id="enviarR" name="enviarP" class="btn-comment">Responder</button>
         </div>
 
         <div class="capa-pregunta"></div>
@@ -89,11 +88,9 @@
         <div class="container-pregunta">
             <strong>PREGUNTA</strong>
             <div class="photo-input">
-                <input type="text" runat="server" name="nombreP" id="nombreP" placeholder="Nombre" readonly="readonly" />
-                <input type="text" runat="server" name="id" id="id" hidden="hidden" />
-                <input type="text" runat="server" name="fechaP" id="fechaP" value="" hidden="hidden" />
+                <input type="text" name="nombreP" id="nombreP" placeholder="Nombre" readonly="readonly" />
             </div>
-            <textarea class="mensaje" placeholder="Esciba su Pregunta" runat="server" name="pregunta" id="pregunta" cols="30" rows="10"></textarea>
+            <textarea class="mensaje" placeholder="Esciba su Pregunta" name="pregunta" id="pregunta" cols="30" rows="10"></textarea>
             <button type="button" runat="server" onserverclick="mtdRegistrarPregunta" id="btnpregunta" class="btn-comment">Publicar Pregunta</button>
         </div>
     </form>

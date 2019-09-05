@@ -22,40 +22,13 @@ namespace Web.Presentacion.Foro {
         protected global::System.Web.UI.WebControls.Repeater repeater1;
         
         /// <summary>
-        /// Control nombreP.
+        /// Control enviarR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText nombreP;
-        
-        /// <summary>
-        /// Control id.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText id;
-        
-        /// <summary>
-        /// Control fechaP.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText fechaP;
-        
-        /// <summary>
-        /// Control pregunta.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea pregunta;
+        protected global::System.Web.UI.HtmlControls.HtmlButton enviarR;
         
         /// <summary>
         /// Control btnpregunta.

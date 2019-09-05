@@ -170,5 +170,13 @@ namespace Servicio
             return dsPregunta;
         }
 
+        [WebMethod]
+        public int mtdRegistrarRespuesta(clRespuesta objRes)
+        {
+            clRespuesta objRespuesta = new clRespuesta();
+            int resultado = objRespuesta.mtdRegistrarRespuesta(objRes);
+            return resultado;
+        }
+
     }
 }

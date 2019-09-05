@@ -13,6 +13,7 @@ namespace Web.Presentacion.Foro
     {
         ServicioUsuario.WebService1SoapClient ServicioZ = new ServicioUsuario.WebService1SoapClient();
         ServicioUsuario.clPregunta objPregunta = new ServicioUsuario.clPregunta();
+        ServicioUsuario.clRespuesta objRespuesta = new ServicioUsuario.clRespuesta();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,11 +23,11 @@ namespace Web.Presentacion.Foro
         protected void mtdRegistrarPregunta(object sender, EventArgs e)
         {
             string Fecha = System.DateTime.Now.ToShortDateString();
-            //int IdUsuario = int.Parse(Application["IdUsuario"].ToString());
+            int IdUsuario = int.Parse(Application["IdUsuario"].ToString());
 
             objPregunta.Pregunta = Request.Form["pregunta"];
             objPregunta.FechaP = Fecha;
-            objPregunta.IdUsuario = 12;// IdUsuario;
+            objPregunta.IdUsuario = IdUsuario;
 
             int resultado = ServicioZ.mtdRegistrarPregunta(objPregunta);
 
@@ -37,6 +38,7 @@ namespace Web.Presentacion.Foro
                         </script>";
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                mtdListarPregunta();
             }
             else
             {
@@ -54,6 +56,15 @@ namespace Web.Presentacion.Foro
             dsListar = ServicioZ.mtdListarPregunta();
             repeater1.DataSource = dsListar;
             repeater1.DataBind();
+        }
+
+        protected void mtdRegistrarRespuesta(object sender, EventArgs e)
+        {
+            string Fecha = System.DateTime.Now.ToShortDateString();
+
+            objRespuesta.Respuesta = Request.Form["respuesta"];
+            objRespuesta.FechaR = Fecha;
+            objRespuesta.IdPregunta =
         }
     }
 }

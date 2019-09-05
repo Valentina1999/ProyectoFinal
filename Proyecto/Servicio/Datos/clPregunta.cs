@@ -24,7 +24,7 @@ namespace Servicio.Datos
 
         public DataSet mtdListarPregunta()
         {
-            string consulta = "Select Pregunta, FechaP, IdUsuarios from Pregunta";
+            string consulta = "select IdPregunta, Pregunta, FechaP, Nombre, Apellido  from Pregunta inner join Usuario on Pregunta.IdUsuario = Usuario.IdUsuario;";
             DataSet dsPregunta = new DataSet();
             clConexion objConexion = new clConexion();
             dsPregunta = objConexion.mtdDesconectado(consulta);
