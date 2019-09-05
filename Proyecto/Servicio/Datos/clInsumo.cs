@@ -13,7 +13,7 @@ namespace Servicio.Datos
         public string Descripcion { get; set; }
         public int IdTipoInsumo { get; set; }
 
-        public int mtdRegistrarUsuario(clInsumo objClInsumo)
+        public int mtdRegistraInsumo(clInsumo objClInsumo)
         {
             string consulta = "Insert Into Insumos(Nombre,Foto,Descripcion,IdTipoInsumo)values('" + objClInsumo.Nombre + "' , '" + objClInsumo.Foto + "' , '" + objClInsumo.Descripcion + "' , '" + objClInsumo.IdTipoInsumo + "')";
             clConexion clConexion = new clConexion();
