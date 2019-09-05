@@ -14,6 +14,20 @@
                         <asp:Label ID="Label1" runat="server" Text="---"></asp:Label>
                     </div>
                 </div>
+
+                <asp:Repeater ID ="Repeater" runat="server">
+                        <ItemTemplate>
+                    <div class="row form-group">
+                    <div class="col col-md-1">
+                        <label for="text-input" class=" form-control-label">FechaInicio</label>
+                    </div>
+                   <div class="col-4 col-md-1">
+                        <asp:Label ID="FechaInicio"<%#Eval("FechaInicio")  %> runat="server" Text="---"></asp:Label>
+                    </div>
+                </div>
+                        </ItemTemplate>
+                            </asp:Repeater>
+                   
             </form>
         </div>
     </div>

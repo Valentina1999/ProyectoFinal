@@ -4,6 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <form id="form1" runat="server">
+
     <style>
         #ico{
             float:left;
@@ -12,35 +14,37 @@
         #cont{
             align:"center";
         }
+        .auto-style1 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -ms-flex: 0 0 66.666667%;
+            flex: 0 0 66.666667%;
+            max-width: 66.666667%;
+            left: 0px;
+            top: 0px;
+            height: 180px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .auto-style2 {
+            width: 637px;
+            height: 26px;
+        }
+        .auto-style3 {
+            position: absolute;
+            left: 122px;
+            top: 69px;
+        }
     </style>
 
-    <div class="col-lg-8" id="cont">
-        <div>
+    <div class="auto-style1" id="cont">
+        <div class="auto-style2">
             <h3><strong>Lista de Etapas</strong></h3>
+            <asp:DetailsView ID="dvListarEtapas" runat="server" CssClass="auto-style3" Height="93px" Width="248px">
+            </asp:DetailsView>
             <br/>
         </div>
-        <div class="table-responsive table--no-card m-b-30">
-            <table class="table table-borderless table-striped table-earning">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Ver</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Prueba</td>
-                        <td >
-                            <div class="table-data-feature" id="ico">
-                                <a class="item" data-toggle="tooltip" href="VerEtapa.aspx" data-placement="top" title="Ver">
-                                    <i class="fa fa-eye">
-                                    </i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
+    </form>
 </asp:Content>
