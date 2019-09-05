@@ -148,16 +148,9 @@ namespace Servicio
         public DataSet mtdListarTipoInsumo()
         {
             DataSet dsTipo = new DataSet();
-            clTipoInsumo objTipo = new clTipoInsumo();
-            dsTipo = objTipo.mtdListarInsumo();
+            clRol objTipo = new clRol();
+            dsTipo = objTipo.mtdListarRol();
             return dsTipo;
-        }
-        [WebMethod]
-        public int mtdRegistrarInsumo(clInsumo objIns)
-        {
-            clInsumo objPregunta = new clInsumo();
-            int resultado = objPregunta.mtdRegistraInsumo(objIns);
-            return resultado;
         }
 
         [WebMethod]
@@ -183,6 +176,15 @@ namespace Servicio
             clRespuesta objRespuesta = new clRespuesta();
             int resultado = objRespuesta.mtdRegistrarRespuesta(objRes);
             return resultado;
+        }
+
+        [WebMethod]
+        public DataSet mtdListarEtapa()
+        {
+            DataSet dsEtapa = new DataSet();
+            clEtapas objClEtapa = new clEtapas();
+            dsEtapa = objClEtapa.mtdListar();
+            return dsEtapa;
         }
 
     }

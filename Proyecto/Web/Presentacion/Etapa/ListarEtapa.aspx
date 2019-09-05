@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Master/Site1.Master" AutoEventWireup="true" CodeBehind="ListarEtapa.aspx.cs" Inherits="Web.Presentacion.Master.Formulario_web13" %>
-AutoEventWireup="true" CodeFile="test.aspx.cs"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Master/Site1.Master" AutoEventWireup="true" CodeBehind="ListarEtapa.aspx.cs"  EnableEventValidation="false" Inherits="Web.Presentacion.Master.Formulario_web13" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -28,20 +28,21 @@ AutoEventWireup="true" CodeFile="test.aspx.cs"
                         <th>Ver</th>
                     </tr>
                 </thead>
-                <asp:Repeater ID="Repeater1" runat="server">
+                <asp:Repeater ID="Repeater1" runat="server"   
+                   OnItemCommand="Repeater1_ItemCommand" OnItemDataBound="Repeater1_ItemDataBound">
                 <ItemTemplate>
-
+                   
                 <tbody>
                     <tr>
                         <td class="property-title"   >
-                        <asp:Label ID="lblEtapa" runat="server" Text='<%# Eval("Etapa")%>'></asp:Label>
-
+                     <asp:Label ID="Etapa" Text='<%# Eval("Etapa") %>' runat="server"/>
                                 </td>
                         
                         <td >
                             <div class="table-data-feature" id="ico">
-                                 <button type="button" id="mostrar" name="mostrar" onserverclick="mostrar" runat="server">
-                           <i class="fa fa-eye">
+                            
+            <asp:Button ID="btn" CommandName="Click" Text="ver" runat="server"
+                        CommandArgument='<%# Eval("IdEtapa") %>' />
                         </button>               
                                     </i>
                                 </a>
