@@ -8,7 +8,7 @@
             <strong>INSUMOS</strong>
         </div>
         <div class="card-body card-block">
-            <form action="" method="post" runat="server">
+            <form action="Insumos.aspx" method="post" runat="server">
                 <div class="row form-group">
                     <div class="col col-md-2">
                         <label for="text-input" class="form-control-label">Nombre</label>
@@ -20,7 +20,8 @@
                         <label for="text-input" class="form-control-label">Foto</label>
                     </div>
                     <div class="col-12 col-md-4">
-                        <input type="file" id="txtImg" name="txtImg" required="required" runat="server" class="form-control-file"/>
+                        <asp:FileUpload ID="FileImage" runat="server" accept=".jpg,.pnj" CssClass="form-control-file"/>
+                       <%-- <input type="file" id="txtImg" name="txtImg" required="required" runat="server" class="form-control-file"/>--%>
                     </div>
                 </div>
 
@@ -42,7 +43,7 @@
 
                 <div class="row form-group">
                     <div class="col col-md-2">
-                        <button type="button" id="btnRegistrar" name="btnRegistrar" class="btn btn-success btn-sm" runat="server">
+                        <button type="button" id="btnRegistrar" name="btnRegistrar" class="btn btn-success btn-sm" runat="server" onserverclick="BtnGuardar">
                             <i class="fa fa-check-square"> Registrar</i>
                         </button>
                     </div>

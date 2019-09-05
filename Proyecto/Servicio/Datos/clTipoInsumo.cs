@@ -12,7 +12,7 @@ namespace Servicio.Datos
         public string Tipo { get; set; }
 
 
-        public DataSet mtdListarRol()
+        public DataSet mtdListarInsumo()
         {
             string consulta = "select * from TipoInsumo";
             DataSet dsInsumo = new DataSet();
