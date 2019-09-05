@@ -14,14 +14,13 @@
                         <label for="text-input" class="form-control-label">Nombre</label>
                     </div>
                     <div class="col-12 col-md-4">
-                        <input type="text" id="txtNombre" class="form-control" required="required" runat="server" />
+                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="col col-md-1">
                         <label for="text-input" class="form-control-label">Foto</label>
                     </div>
                     <div class="col-12 col-md-4">
                         <asp:FileUpload ID="FileImage" runat="server" accept=".jpg,.pnj" CssClass="form-control-file"/>
-                       <%-- <input type="file" id="txtImg" name="txtImg" required="required" runat="server" class="form-control-file"/>--%>
                     </div>
                 </div>
 
@@ -30,7 +29,7 @@
                         <label for="text-input" class="form-control-label">Descripcion</label>
                     </div>
                     <div class="col-12 col-md-4">
-                        <textarea  id="txtDescripcion"  type="text" class="form-control"  runat="server" required="required"></textarea>
+                        <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
 
                     <div class="col col-md-1">

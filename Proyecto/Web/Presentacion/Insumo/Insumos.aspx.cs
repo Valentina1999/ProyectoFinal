@@ -55,12 +55,9 @@ namespace Web.Presentacion.Insumos
 
             string nom2 = FileImage.FileName;
 
-            string n = Request.Form["txtNombre"];
-            string d = Request.Form["txtDescripcion"];
-
-            objIns.Nombre = Request.Form["txtNombre"];
+            objIns.Nombre = txtNombre.Text;
             objIns.Foto = nom2;
-            objIns.Descripcion = Request.Form["txtDescripcion"];
+            objIns.Descripcion = txtDescripcion.Text;
             objIns.IdTipoInsumo = int.Parse(ddlTipoInsumo.SelectedValue);
 
 
