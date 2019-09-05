@@ -178,5 +178,14 @@ namespace Servicio
             return resultado;
         }
 
+        [WebMethod]
+        public DataSet mtdListarEtapa()
+        {
+            DataSet dsEtapa = new DataSet();
+            clEtapas objClEtapa = new clEtapas();
+            dsEtapa = objClEtapa.mtdListar();
+            return dsEtapa;
+        }
+
     }
 }

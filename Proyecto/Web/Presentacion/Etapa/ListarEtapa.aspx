@@ -1,10 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Master/Site1.Master" AutoEventWireup="true" CodeBehind="ListarEtapa.aspx.cs" Inherits="Web.Presentacion.Master.Formulario_web13" %>
-
+AutoEventWireup="true" CodeFile="test.aspx.cs"
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <form id="form1" runat="server">
 
     <style>
         #ico{
@@ -12,39 +10,49 @@
         }
 
         #cont{
-            align:"center";
-        }
-        .auto-style1 {
-            position: relative;
-            width: 100%;
-            min-height: 1px;
-            -ms-flex: 0 0 66.666667%;
-            flex: 0 0 66.666667%;
-            max-width: 66.666667%;
-            left: 0px;
-            top: 0px;
-            height: 180px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        .auto-style2 {
-            width: 637px;
-            height: 26px;
-        }
-        .auto-style3 {
-            position: absolute;
-            left: 122px;
-            top: 69px;
+            align="center";
         }
     </style>
-
-    <div class="auto-style1" id="cont">
-        <div class="auto-style2">
+        <form action="ListarEtapa.aspx" method="post" runat="server">
+    <div class="col-lg-8" id="cont">
+        <div>
             <h3><strong>Lista de Etapas</strong></h3>
-            <asp:DetailsView ID="dvListarEtapas" runat="server" CssClass="auto-style3" Height="93px" Width="248px">
-            </asp:DetailsView>
             <br/>
         </div>
+        <div class="table-responsive table--no-card m-b-30">
+            <table class="table table-borderless table-striped table-earning">
+               
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Ver</th>
+                    </tr>
+                </thead>
+                <asp:Repeater ID="Repeater1" runat="server">
+                <ItemTemplate>
+
+                <tbody>
+                    <tr>
+                        <td class="property-title"   >
+                        <asp:Label ID="lblEtapa" runat="server" Text='<%# Eval("Etapa")%>'></asp:Label>
+
+                                </td>
+                        
+                        <td >
+                            <div class="table-data-feature" id="ico">
+                                 <button type="button" id="mostrar" name="mostrar" onserverclick="mostrar" runat="server">
+                           <i class="fa fa-eye">
+                        </button>               
+                                    </i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                </ItemTemplate>
+                    </asp:Repeater>
+            </table>
+        </div>
     </div>
-    </form>
+     </form>
 </asp:Content>

@@ -17,13 +17,16 @@ namespace Web.Presentacion.Master
         protected void Page_Load(object sender, EventArgs e)
         {
             DataSet dsListar = new DataSet();
-            dsListar = miServicio.mtdListarEtapas();
-            Reapeter1.DataSource = dsListar;
+            dsListar = miServicio.mtdListarEtapa();
+            Repeater1.DataSource = dsListar;
             //int a = int.Parse(Request.Form["IdEtapa"]);
             //int x = a;
-            Reapeter1.DataBind();
-           
+            Repeater1.DataBind();
+
+            Control txtMiControl = (Label)this.Page.Master.FindControl("Content").FindControl("lblEtapa");
             
+
+
         }
         protected void mostrar(object sender, EventArgs e)
         {

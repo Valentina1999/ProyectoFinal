@@ -13,12 +13,12 @@ namespace Web.Presentacion.Master {
     public partial class Formulario_web13 {
         
         /// <summary>
-        /// Control Reapeter1.
+        /// Control Repeater1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Reapeter1;
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
     }
 }
