@@ -15,7 +15,7 @@ namespace Servicio.Datos
 
         public int mtdRegistraInsumo(clInsumo objClInsumo)
         {
-            string consulta = "Insert Into Insumos(Nombre,Foto,Descripcion,IdTipoInsumo)values('" + objClInsumo.Nombre + "' , '" + objClInsumo.Foto + "' , '" + objClInsumo.Descripcion + "' , '" + objClInsumo.IdTipoInsumo + "')";
+            string consulta = "Insert Into Insumos(Nombre,Foto,Descripcion,IdTipoInsumo)values('" + objClInsumo.Nombre + "' , '" + objClInsumo.Foto + "' , '" + objClInsumo.Descripcion + "' , " + objClInsumo.IdTipoInsumo + ")";
             clConexion clConexion = new clConexion();
             int resultado = clConexion.mtdConectado(consulta);
             return resultado;
