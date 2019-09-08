@@ -13,6 +13,15 @@ namespace Web.Presentacion.Fases {
     public partial class ListaFases {
         
         /// <summary>
+        /// Control f0.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f0;
+        
+        /// <summary>
         /// Control id0.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa0;
+        
+        /// <summary>
+        /// Control f1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f1;
         
         /// <summary>
         /// Control id1.
@@ -130,6 +148,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa1;
         
         /// <summary>
+        /// Control f2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f2;
+        
+        /// <summary>
         /// Control id2.
         /// </summary>
         /// <remarks>
@@ -200,6 +227,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa2;
+        
+        /// <summary>
+        /// Control f3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f3;
         
         /// <summary>
         /// Control id3.
@@ -274,6 +310,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa3;
         
         /// <summary>
+        /// Control f4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f4;
+        
+        /// <summary>
         /// Control id4.
         /// </summary>
         /// <remarks>
@@ -344,6 +389,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa4;
+        
+        /// <summary>
+        /// Control f5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f5;
         
         /// <summary>
         /// Control id5.
@@ -418,6 +472,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa5;
         
         /// <summary>
+        /// Control f6.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f6;
+        
+        /// <summary>
         /// Control id6.
         /// </summary>
         /// <remarks>
@@ -488,6 +551,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa6;
+        
+        /// <summary>
+        /// Control f7.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f7;
         
         /// <summary>
         /// Control id7.
@@ -562,6 +634,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa7;
         
         /// <summary>
+        /// Control f8.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f8;
+        
+        /// <summary>
         /// Control id8.
         /// </summary>
         /// <remarks>
@@ -632,6 +713,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa8;
+        
+        /// <summary>
+        /// Control f9.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f9;
         
         /// <summary>
         /// Control id9.
@@ -706,6 +796,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa9;
         
         /// <summary>
+        /// Control f10.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f10;
+        
+        /// <summary>
         /// Control id10.
         /// </summary>
         /// <remarks>
@@ -776,6 +875,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa10;
+        
+        /// <summary>
+        /// Control f11.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f11;
         
         /// <summary>
         /// Control id11.
@@ -850,6 +958,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa11;
         
         /// <summary>
+        /// Control f12.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f12;
+        
+        /// <summary>
         /// Control id12.
         /// </summary>
         /// <remarks>
@@ -920,6 +1037,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa12;
+        
+        /// <summary>
+        /// Control f13.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f13;
         
         /// <summary>
         /// Control id13.
@@ -994,6 +1120,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa13;
         
         /// <summary>
+        /// Control f14.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f14;
+        
+        /// <summary>
         /// Control id14.
         /// </summary>
         /// <remarks>
@@ -1064,6 +1199,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa14;
+        
+        /// <summary>
+        /// Control f15.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f15;
         
         /// <summary>
         /// Control id15.
@@ -1138,6 +1282,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa15;
         
         /// <summary>
+        /// Control f16.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f16;
+        
+        /// <summary>
         /// Control id16.
         /// </summary>
         /// <remarks>
@@ -1208,6 +1361,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa16;
+        
+        /// <summary>
+        /// Control f17.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f17;
         
         /// <summary>
         /// Control id17.
@@ -1282,6 +1444,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa17;
         
         /// <summary>
+        /// Control f18.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f18;
+        
+        /// <summary>
         /// Control id18.
         /// </summary>
         /// <remarks>
@@ -1352,6 +1523,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa18;
+        
+        /// <summary>
+        /// Control f19.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f19;
         
         /// <summary>
         /// Control id19.
@@ -1426,6 +1606,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa19;
         
         /// <summary>
+        /// Control f20.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f20;
+        
+        /// <summary>
         /// Control id20.
         /// </summary>
         /// <remarks>
@@ -1498,6 +1687,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa20;
         
         /// <summary>
+        /// Control f21.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f21;
+        
+        /// <summary>
         /// Control id21.
         /// </summary>
         /// <remarks>
@@ -1559,6 +1757,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa21;
+        
+        /// <summary>
+        /// Control f22.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f22;
         
         /// <summary>
         /// Control id22.
@@ -1633,6 +1840,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa22;
         
         /// <summary>
+        /// Control f23.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f23;
+        
+        /// <summary>
         /// Control id23.
         /// </summary>
         /// <remarks>
@@ -1703,6 +1919,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa23;
+        
+        /// <summary>
+        /// Control f24.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f24;
         
         /// <summary>
         /// Control id24.
@@ -1777,6 +2002,15 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa24;
         
         /// <summary>
+        /// Control f25.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f25;
+        
+        /// <summary>
         /// Control id25.
         /// </summary>
         /// <remarks>
@@ -1847,6 +2081,15 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Etapa25;
+        
+        /// <summary>
+        /// Control f26.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl f26;
         
         /// <summary>
         /// Control id26.

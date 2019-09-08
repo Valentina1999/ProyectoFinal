@@ -6,11 +6,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Web.Presentacion.Fases;
 
 namespace Web.Presentacion.Fases
-{
+{ 
     public partial class ListaFases : System.Web.UI.Page
     {
+        int IdE = int.Parse(listarEtapa.somedata.toString());
         ServicioUsuario.WebService1SoapClient servicioU = new ServicioUsuario.WebService1SoapClient();
         ServicioUsuario.clFases objFases = new ServicioUsuario.clFases();
 
@@ -19,6 +21,258 @@ namespace Web.Presentacion.Fases
         protected void Page_Load(object sender, EventArgs e)
         {
             listar();
+            mostrarFase();
+        }
+
+        protected void mostrarFase()
+        {
+            try
+            {
+                if (IdE == 1)
+                {
+                    f0.Visible = true;
+                    f1.Visible = false;
+                    f2.Visible = false;
+                    f3.Visible = false;
+                    f4.Visible = false;
+                    f5.Visible = false;
+                    f6.Visible = false;
+                    f7.Visible = false;
+                    f8.Visible = false;
+                    f9.Visible = false;
+                    f10.Visible = false;
+                    f11.Visible = false;
+                    f12.Visible = false;
+                    f13.Visible = false;
+                    f14.Visible = false;
+                    f15.Visible = false;
+                    f16.Visible = false;
+                    f17.Visible = false;
+                    f18.Visible = false;
+                    f19.Visible = false;
+                    f20.Visible = false;
+                    f21.Visible = false;
+                    f22.Visible = false;
+                    f23.Visible = false;
+                    f24.Visible = false;
+                    f25.Visible = false;
+                    f26.Visible = false;
+                }
+                else if (IdE == 2)
+                {
+                    f0.Visible = false;
+                    f1.Visible = true;
+                    f2.Visible = true;
+                    f3.Visible = true;
+                    f4.Visible = true;
+                    f5.Visible = false;
+                    f6.Visible = false;
+                    f7.Visible = false;
+                    f8.Visible = false;
+                    f9.Visible = false;
+                    f10.Visible = false;
+                    f11.Visible = false;
+                    f12.Visible = false;
+                    f13.Visible = false;
+                    f14.Visible = false;
+                    f15.Visible = false;
+                    f16.Visible = false;
+                    f17.Visible = false;
+                    f18.Visible = false;
+                    f19.Visible = false;
+                    f20.Visible = false;
+                    f21.Visible = false;
+                    f22.Visible = false;
+                    f23.Visible = false;
+                    f24.Visible = false;
+                    f25.Visible = false;
+                    f26.Visible = false;
+                }
+                else if (IdE == 11)
+                {
+                    f0.Visible = false;
+                    f1.Visible = false;
+                    f2.Visible = false;
+                    f3.Visible = false;
+                    f4.Visible = false;
+                    f5.Visible = true;
+                    f6.Visible = true;
+                    f7.Visible = true;
+                    f8.Visible = false;
+                    f9.Visible = false;
+                    f10.Visible = false;
+                    f11.Visible = false;
+                    f12.Visible = false;
+                    f13.Visible = false;
+                    f14.Visible = false;
+                    f15.Visible = false;
+                    f16.Visible = false;
+                    f17.Visible = false;
+                    f18.Visible = false;
+                    f19.Visible = false;
+                    f20.Visible = false;
+                    f21.Visible = false;
+                    f22.Visible = false;
+                    f23.Visible = false;
+                    f24.Visible = false;
+                    f25.Visible = false;
+                    f26.Visible = false;
+                }
+                else if (IdE == 13)
+                {
+                    f0.Visible = false;
+                    f1.Visible = false;
+                    f2.Visible = false;
+                    f3.Visible = false;
+                    f4.Visible = false;
+                    f5.Visible = false;
+                    f6.Visible = false;
+                    f7.Visible = false;
+                    f8.Visible = true;
+                    f9.Visible = true;
+                    f10.Visible = true;
+                    f11.Visible = true;
+                    f12.Visible = true;
+                    f13.Visible = false;
+                    f14.Visible = false;
+                    f15.Visible = false;
+                    f16.Visible = false;
+                    f17.Visible = false;
+                    f18.Visible = false;
+                    f19.Visible = false;
+                    f20.Visible = false;
+                    f21.Visible = false;
+                    f22.Visible = false;
+                    f23.Visible = false;
+                    f24.Visible = false;
+                    f25.Visible = false;
+                    f26.Visible = false;
+                }
+                else if (IdE == 16)
+                {
+                    f0.Visible = false;
+                    f1.Visible = false;
+                    f2.Visible = false;
+                    f3.Visible = false;
+                    f4.Visible = false;
+                    f5.Visible = false;
+                    f6.Visible = false;
+                    f7.Visible = false;
+                    f8.Visible = false;
+                    f9.Visible = false;
+                    f10.Visible = false;
+                    f11.Visible = false;
+                    f12.Visible = false;
+                    f13.Visible = true;
+                    f14.Visible = true;
+                    f15.Visible = true;
+                    f16.Visible = true;
+                    f17.Visible = true;
+                    f18.Visible = false;
+                    f19.Visible = false;
+                    f20.Visible = false;
+                    f21.Visible = false;
+                    f22.Visible = false;
+                    f23.Visible = false;
+                    f24.Visible = false;
+                    f25.Visible = false;
+                    f26.Visible = false;
+                }
+                else if (IdE == 17)
+                {
+                    f0.Visible = false;
+                    f1.Visible = false;
+                    f2.Visible = false;
+                    f3.Visible = false;
+                    f4.Visible = false;
+                    f5.Visible = false;
+                    f6.Visible = false;
+                    f7.Visible = false;
+                    f8.Visible = false;
+                    f9.Visible = false;
+                    f10.Visible = false;
+                    f11.Visible = false;
+                    f12.Visible = false;
+                    f13.Visible = false;
+                    f14.Visible = false;
+                    f15.Visible = false;
+                    f16.Visible = false;
+                    f17.Visible = false;
+                    f18.Visible = true;
+                    f19.Visible = true;
+                    f20.Visible = true;
+                    f21.Visible = true;
+                    f22.Visible = false;
+                    f23.Visible = false;
+                    f24.Visible = false;
+                    f25.Visible = false;
+                    f26.Visible = false;
+                }
+                else if (IdE == 18)
+                {
+                    f0.Visible = false;
+                    f1.Visible = false;
+                    f2.Visible = false;
+                    f3.Visible = false;
+                    f4.Visible = false;
+                    f5.Visible = false;
+                    f6.Visible = false;
+                    f7.Visible = false;
+                    f8.Visible = false;
+                    f9.Visible = false;
+                    f10.Visible = false;
+                    f11.Visible = false;
+                    f12.Visible = false;
+                    f13.Visible = false;
+                    f14.Visible = false;
+                    f15.Visible = false;
+                    f16.Visible = false;
+                    f17.Visible = false;
+                    f18.Visible = false;
+                    f19.Visible = false;
+                    f20.Visible = false;
+                    f21.Visible = false;
+                    f22.Visible = true;
+                    f23.Visible = true;
+                    f24.Visible = true;
+                    f25.Visible = true;
+                    f26.Visible = false;
+                }
+                else if (IdE == 19)
+                {
+                    f0.Visible = false;
+                    f1.Visible = false;
+                    f2.Visible = false;
+                    f3.Visible = false;
+                    f4.Visible = false;
+                    f5.Visible = false;
+                    f6.Visible = false;
+                    f7.Visible = false;
+                    f8.Visible = false;
+                    f9.Visible = false;
+                    f10.Visible = false;
+                    f11.Visible = false;
+                    f12.Visible = false;
+                    f13.Visible = false;
+                    f14.Visible = false;
+                    f15.Visible = false;
+                    f16.Visible = false;
+                    f17.Visible = false;
+                    f18.Visible = false;
+                    f19.Visible = false;
+                    f20.Visible = false;
+                    f21.Visible = false;
+                    f22.Visible = false;
+                    f23.Visible = false;
+                    f24.Visible = false;
+                    f25.Visible = false;
+                    f26.Visible = true;
+                }
+            }
+            catch (Exception)
+            {
+                Response.Redirect("../Index/Index.aspx");
+            }
         }
 
         protected void mtdEditarFase1(object sender, EventArgs e)

@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="col-md-12">
         <form action="ListaFases.aspx" method="post" runat="server">
-            <div id="0" class="card">
+            <div id="f0" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/Caracteristicas.jpg" height="90">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div id="1" class="card">
+            <div id="f1" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/151.jpg" height="90">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div id="2" class="card">
+            <div id="f2" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/153.jpg" height="90">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
             </div>
-            <div id="3" class="card">
+            <div id="f3" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/155.jpg" height="90">
@@ -128,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            <div id="4" class="card">
+            <div id="f4" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/159.jpg" height="90">
@@ -162,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <div id="5" class="card">
+            <div id="f5" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/301.jpg" height="90">
@@ -196,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <div id="6" class="card">
+            <div id="f6" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/305.jpg" height="90">
@@ -230,7 +230,7 @@
                     </div>
                 </div>
             </div>
-            <div id="7" class="card">
+            <div id="f7" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/309.jpg" height="90">
@@ -264,7 +264,7 @@
                     </div>
                 </div>
             </div>
-            <div id="8" class="card">
+            <div id="f8" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/500.jpg" height="90">
@@ -298,7 +298,7 @@
                     </div>
                 </div>
             </div>
-            <div id="9" class="card">
+            <div id="f9" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/501.jpg" height="90">
@@ -333,7 +333,7 @@
                     </div>
                 </div>
             </div>
-            <div id="10" class="card">
+            <div id="f10" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/503.jpg" height="90">
@@ -367,7 +367,7 @@
                     </div>
                 </div>
             </div>
-            <div id="11" class="card">
+            <div id="f11" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/505.jpg" height="90">
@@ -401,7 +401,7 @@
                     </div>
                 </div>
             </div>
-            <div id="12" class="card">
+            <div id="f12" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/509.jpg" height="90">
@@ -435,7 +435,7 @@
                     </div>
                 </div>
             </div>
-            <div id="13" class="card">
+            <div id="f13" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/601.jpg" height="90">
@@ -469,7 +469,7 @@
                     </div>
                 </div>
             </div>
-            <div id="14" class="card">
+            <div id="f14" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/602.jpg" height="90">
@@ -503,7 +503,7 @@
                     </div>
                 </div>
             </div>
-            <div id="15" class="card">
+            <div id="f15" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/603.jpg" height="90">
@@ -537,7 +537,7 @@
                     </div>
                 </div>
             </div>
-            <div id="16" class="card">
+            <div id="f16" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/607.jpg" height="90">
@@ -571,7 +571,7 @@
                     </div>
                 </div>
             </div>
-            <div id="17" class="card">
+            <div id="f17" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/609.jpg" height="90">
@@ -605,7 +605,7 @@
                     </div>
                 </div>
             </div>
-            <div id="18" class="card">
+            <div id="f18" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/700.jpg" height="90">
@@ -639,7 +639,7 @@
                     </div>
                 </div>
             </div>
-            <div id="19" class="card">
+            <div id="f19" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/703.jpg" height="90">
@@ -673,7 +673,7 @@
                     </div>
                 </div>
             </div>
-            <div id="20" class="card">
+            <div id="f20" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/708.jpg" height="90">
@@ -707,7 +707,7 @@
                     </div>
                 </div>
             </div>
-            <div id="21" class="card">
+            <div id="f21" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/709.jpg" height="90">
@@ -741,7 +741,7 @@
                     </div>
                 </div>
             </div>
-            <div id="22" class="card">
+            <div id="f22" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/800.jpg" height="90">
@@ -775,7 +775,7 @@
                     </div>
                 </div>
             </div>
-            <div id="23" class="card">
+            <div id="f23" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/805.jpg" height="90">
@@ -809,7 +809,7 @@
                     </div>
                 </div>
             </div>
-            <div id="24" class="card">
+            <div id="f24" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/807.jpg" height="90">
@@ -843,7 +843,7 @@
                     </div>
                 </div>
             </div>
-            <div id="25" class="card">
+            <div id="f25" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/809.jpg" height="90">
@@ -877,7 +877,7 @@
                     </div>
                 </div>
             </div>
-            <div id="26" class="card">
+            <div id="f26" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/909.jpg" height="90">
