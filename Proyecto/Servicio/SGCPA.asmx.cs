@@ -187,5 +187,22 @@ namespace Servicio
             return dsEtapa;
         }
 
+        [WebMethod]
+        public DataSet mtdListarInsumos()
+        {
+            DataSet dsInsumos = new DataSet();
+            clInsumo objInsumo = new clInsumo();
+            dsInsumos = objInsumo.mtdlistarInsumo();
+            return dsInsumos;
+        }
+
+        [WebMethod]
+        public int mtdRegistrarInsumo(clInsumo objIns)
+        {
+            clInsumo objInsumo = new clInsumo();
+            int resultado = objInsumo.mtdRegistraInsumo(objIns);
+            return resultado;
+        }
+
     }
 }

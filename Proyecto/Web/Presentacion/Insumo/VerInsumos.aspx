@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Master/Site1.Master" AutoEventWireup="true" CodeBehind="VerInsumos.aspx.cs" Inherits="Web.Presentacion.Insumo.VerInsumos" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -19,28 +20,38 @@
                         <tr>
                             <th hidden="hidden">Id</th>
                             <th>Nombre</th>
-                            <th>Foto</th>
                             <th>Descripción</th>
                             <th>Tipo</th>
                             <th>Editar</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td hidden="hidden"><label id="idInsumo" runat="server"></label></td>
-                            <td><label id="Nombre" runat="server"></label></td>
-                            <td><label id="Foto" runat="server"></label></td>
-                            <td><label id="Descripcion" runat="server"></label></td>
-                            <td><label id="TipoInsu" runat="server"></label></td>
-                            <td align="center" id="Editar" runat="server">
-                                <div>
-                                    <button type="button" id="btnEditar" name="btnEditar" runat="server" class="btn btn-secondary btn-sm"> 
-                                        <i class="fa fa-pencil-square-o"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
+                    <asp:Repeater ID="repeater1" runat="server">
+                        <ItemTemplate>
+                            <tbody>
+                                <tr>
+                                    <td hidden="hidden">
+                                        <label id="idInsumo" runat="server"><%#Eval("IdInsumos") %></label>
+                                    </td>
+                                    <td>
+                                        <label id="Nombre" runat="server"><%#Eval("Nombre") %></label>
+                                    </td>                                   
+                                    <td>
+                                        <label id="Descripcion" runat="server"><%#Eval("Descripcion") %></label>
+                                    </td>
+                                    <td>
+                                        <label id="TipoInsu" runat="server"><%#Eval("Tipo") %></label>
+                                    </td>
+                                    <td align="center" id="Editar" runat="server">
+                                        <div>
+                                            <button type="button" id="btnEditar" name="btnEditar" runat="server" class="btn btn-secondary btn-sm">
+                                                <i class="fa fa-pencil-square-o"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </table>
             </div>
         </form>
