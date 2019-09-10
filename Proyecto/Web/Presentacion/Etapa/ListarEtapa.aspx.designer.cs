@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Web.Presentacion.Master {
+namespace Web.Presentacion.Etapa {
     
     
-    public partial class Formulario_web13 {
+    public partial class ListarEtapa {
         
         /// <summary>
         /// Control Repeater1.

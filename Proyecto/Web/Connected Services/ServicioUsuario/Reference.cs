@@ -71,10 +71,94 @@ namespace Web.ServicioUsuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEnviarID", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdEnviarIDAsync(int x);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdBuscar", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdBuscar(Web.ServicioUsuario.clUsuario objUsua);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdBuscar", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdBuscarAsync(Web.ServicioUsuario.clUsuario objUsua);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarProducto", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdRegistrarProducto(Web.ServicioUsuario.clProducto objPro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarProducto", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdRegistrarProductoAsync(Web.ServicioUsuario.clProducto objPro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarFases", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarFases();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarFases", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarFasesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarFase", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdEditarFase(Web.ServicioUsuario.clFases objFas);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarFase", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdEditarFaseAsync(Web.ServicioUsuario.clFases objFas);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarTerreno", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdEditarTerreno(Web.ServicioUsuario.clTerreno objT);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarTerreno", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdEditarTerrenoAsync(Web.ServicioUsuario.clTerreno objT);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdBuscarTerreno", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdBuscarTerreno(Web.ServicioUsuario.clTerreno objTerreno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdBuscarTerreno", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdBuscarTerrenoAsync(Web.ServicioUsuario.clTerreno objTerreno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdfecha", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdfecha();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdfecha", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdfechaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarTipoInsumo", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarTipoInsumo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarTipoInsumo", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarTipoInsumoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarPregunta", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdRegistrarPregunta(Web.ServicioUsuario.clPregunta objPre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarPregunta", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdRegistrarPreguntaAsync(Web.ServicioUsuario.clPregunta objPre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPregunta", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarPregunta();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPregunta", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPreguntaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarRespuesta", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdRegistrarRespuesta(Web.ServicioUsuario.clRespuesta objRes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarRespuesta", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdRegistrarRespuestaAsync(Web.ServicioUsuario.clRespuesta objRes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarEtapa", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarEtapa();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarEtapa", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarEtapaAsync();
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -204,7 +288,373 @@ namespace Web.ServicioUsuario {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class clRespuesta : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idRespuestaField;
+        
+        private string respuestaField;
+        
+        private string fechaRField;
+        
+        private int idUsuarioField;
+        
+        private int idPreguntaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int IdRespuesta {
+            get {
+                return this.idRespuestaField;
+            }
+            set {
+                this.idRespuestaField = value;
+                this.RaisePropertyChanged("IdRespuesta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Respuesta {
+            get {
+                return this.respuestaField;
+            }
+            set {
+                this.respuestaField = value;
+                this.RaisePropertyChanged("Respuesta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string FechaR {
+            get {
+                return this.fechaRField;
+            }
+            set {
+                this.fechaRField = value;
+                this.RaisePropertyChanged("FechaR");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public int IdUsuario {
+            get {
+                return this.idUsuarioField;
+            }
+            set {
+                this.idUsuarioField = value;
+                this.RaisePropertyChanged("IdUsuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public int IdPregunta {
+            get {
+                return this.idPreguntaField;
+            }
+            set {
+                this.idPreguntaField = value;
+                this.RaisePropertyChanged("IdPregunta");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class clPregunta : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idPreguntaField;
+        
+        private string preguntaField;
+        
+        private string fechaPField;
+        
+        private int idUsuarioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int IdPregunta {
+            get {
+                return this.idPreguntaField;
+            }
+            set {
+                this.idPreguntaField = value;
+                this.RaisePropertyChanged("IdPregunta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Pregunta {
+            get {
+                return this.preguntaField;
+            }
+            set {
+                this.preguntaField = value;
+                this.RaisePropertyChanged("Pregunta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string FechaP {
+            get {
+                return this.fechaPField;
+            }
+            set {
+                this.fechaPField = value;
+                this.RaisePropertyChanged("FechaP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public int IdUsuario {
+            get {
+                return this.idUsuarioField;
+            }
+            set {
+                this.idUsuarioField = value;
+                this.RaisePropertyChanged("IdUsuario");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class clFases : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idFaseField;
+        
+        private string nombreField;
+        
+        private string descripcionField;
+        
+        private string fotoField;
+        
+        private string duracionField;
+        
+        private string fechaInicioField;
+        
+        private string fechaFinalField;
+        
+        private int idEtapasField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int IdFase {
+            get {
+                return this.idFaseField;
+            }
+            set {
+                this.idFaseField = value;
+                this.RaisePropertyChanged("IdFase");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("Nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("Descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Foto {
+            get {
+                return this.fotoField;
+            }
+            set {
+                this.fotoField = value;
+                this.RaisePropertyChanged("Foto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Duracion {
+            get {
+                return this.duracionField;
+            }
+            set {
+                this.duracionField = value;
+                this.RaisePropertyChanged("Duracion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string FechaInicio {
+            get {
+                return this.fechaInicioField;
+            }
+            set {
+                this.fechaInicioField = value;
+                this.RaisePropertyChanged("FechaInicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string FechaFinal {
+            get {
+                return this.fechaFinalField;
+            }
+            set {
+                this.fechaFinalField = value;
+                this.RaisePropertyChanged("FechaFinal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public int IdEtapas {
+            get {
+                return this.idEtapasField;
+            }
+            set {
+                this.idEtapasField = value;
+                this.RaisePropertyChanged("IdEtapas");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class clProducto : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idProductoField;
+        
+        private string nombrePField;
+        
+        private int cantidadField;
+        
+        private int idEtapaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int IdProducto {
+            get {
+                return this.idProductoField;
+            }
+            set {
+                this.idProductoField = value;
+                this.RaisePropertyChanged("IdProducto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string NombreP {
+            get {
+                return this.nombrePField;
+            }
+            set {
+                this.nombrePField = value;
+                this.RaisePropertyChanged("NombreP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int Cantidad {
+            get {
+                return this.cantidadField;
+            }
+            set {
+                this.cantidadField = value;
+                this.RaisePropertyChanged("Cantidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public int IdEtapa {
+            get {
+                return this.idEtapaField;
+            }
+            set {
+                this.idEtapaField = value;
+                this.RaisePropertyChanged("IdEtapa");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -432,7 +882,7 @@ namespace Web.ServicioUsuario {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -441,7 +891,7 @@ namespace Web.ServicioUsuario {
         
         private int idTerrenoField;
         
-        private double nombreTerrenoField;
+        private string nombreTerrenoField;
         
         private double largoField;
         
@@ -463,7 +913,7 @@ namespace Web.ServicioUsuario {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public double NombreTerreno {
+        public string NombreTerreno {
             get {
                 return this.nombreTerrenoField;
             }
@@ -608,6 +1058,102 @@ namespace Web.ServicioUsuario {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdEnviarIDAsync(int x) {
             return base.Channel.mtdEnviarIDAsync(x);
+        }
+        
+        public System.Data.DataSet mtdBuscar(Web.ServicioUsuario.clUsuario objUsua) {
+            return base.Channel.mtdBuscar(objUsua);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdBuscarAsync(Web.ServicioUsuario.clUsuario objUsua) {
+            return base.Channel.mtdBuscarAsync(objUsua);
+        }
+        
+        public int mtdRegistrarProducto(Web.ServicioUsuario.clProducto objPro) {
+            return base.Channel.mtdRegistrarProducto(objPro);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdRegistrarProductoAsync(Web.ServicioUsuario.clProducto objPro) {
+            return base.Channel.mtdRegistrarProductoAsync(objPro);
+        }
+        
+        public System.Data.DataSet mtdListarFases() {
+            return base.Channel.mtdListarFases();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarFasesAsync() {
+            return base.Channel.mtdListarFasesAsync();
+        }
+        
+        public int mtdEditarFase(Web.ServicioUsuario.clFases objFas) {
+            return base.Channel.mtdEditarFase(objFas);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdEditarFaseAsync(Web.ServicioUsuario.clFases objFas) {
+            return base.Channel.mtdEditarFaseAsync(objFas);
+        }
+        
+        public int mtdEditarTerreno(Web.ServicioUsuario.clTerreno objT) {
+            return base.Channel.mtdEditarTerreno(objT);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdEditarTerrenoAsync(Web.ServicioUsuario.clTerreno objT) {
+            return base.Channel.mtdEditarTerrenoAsync(objT);
+        }
+        
+        public System.Data.DataSet mtdBuscarTerreno(Web.ServicioUsuario.clTerreno objTerreno) {
+            return base.Channel.mtdBuscarTerreno(objTerreno);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdBuscarTerrenoAsync(Web.ServicioUsuario.clTerreno objTerreno) {
+            return base.Channel.mtdBuscarTerrenoAsync(objTerreno);
+        }
+        
+        public System.Data.DataSet mtdfecha() {
+            return base.Channel.mtdfecha();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdfechaAsync() {
+            return base.Channel.mtdfechaAsync();
+        }
+        
+        public System.Data.DataSet mtdListarTipoInsumo() {
+            return base.Channel.mtdListarTipoInsumo();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarTipoInsumoAsync() {
+            return base.Channel.mtdListarTipoInsumoAsync();
+        }
+        
+        public int mtdRegistrarPregunta(Web.ServicioUsuario.clPregunta objPre) {
+            return base.Channel.mtdRegistrarPregunta(objPre);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdRegistrarPreguntaAsync(Web.ServicioUsuario.clPregunta objPre) {
+            return base.Channel.mtdRegistrarPreguntaAsync(objPre);
+        }
+        
+        public System.Data.DataSet mtdListarPregunta() {
+            return base.Channel.mtdListarPregunta();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPreguntaAsync() {
+            return base.Channel.mtdListarPreguntaAsync();
+        }
+        
+        public int mtdRegistrarRespuesta(Web.ServicioUsuario.clRespuesta objRes) {
+            return base.Channel.mtdRegistrarRespuesta(objRes);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdRegistrarRespuestaAsync(Web.ServicioUsuario.clRespuesta objRes) {
+            return base.Channel.mtdRegistrarRespuestaAsync(objRes);
+        }
+        
+        public System.Data.DataSet mtdListarEtapa() {
+            return base.Channel.mtdListarEtapa();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarEtapaAsync() {
+            return base.Channel.mtdListarEtapaAsync();
         }
     }
 }

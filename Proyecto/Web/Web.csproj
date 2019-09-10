@@ -161,13 +161,16 @@
     <Content Include="Global.asax" />
     <Content Include="images\icon\logo1.jpg" />
     <Content Include="Presentacion\Etapa\ListarEtapa.aspx" />
-    <Content Include="Presentacion\Etapa\VerEtapa.aspx" />
+    <Content Include="Presentacion\Fases\ListaFases.aspx" />
     <Content Include="Presentacion\Foro\cssForo\styleForo.css" />
-    <Content Include="Presentacion\Foro\Foro.html" />
+    <Content Include="Presentacion\Foro\Foro.aspx" />
     <Content Include="Presentacion\Foro\ImagenesForo\fondo.jpg" />
     <Content Include="Presentacion\Foro\jsForo\jquery.js" />
     <Content Include="Presentacion\Foro\jsForo\script.js" />
+    <Content Include="Presentacion\Insumo\Insumos.aspx" />
+    <Content Include="Presentacion\Insumo\VerInsumos.aspx" />
     <Content Include="Presentacion\Login\Login.aspx" />
+    <Content Include="Presentacion\Producto\Producto.aspx" />
     <Content Include="Presentacion\Suelos\EstudioSuelos.aspx" />
     <Content Include="Presentacion\Terreno\Terreno.aspx" />
     <Content Include="Presentacion\Index\Index.aspx" />
@@ -350,12 +353,32 @@
     <Compile Include="Presentacion\Etapa\ListarEtapa.aspx.designer.cs">
       <DependentUpon>ListarEtapa.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Etapa\VerEtapa.aspx.cs">
-      <DependentUpon>VerEtapa.aspx</DependentUpon>
+    <Compile Include="Presentacion\Fases\ListaFases.aspx.cs">
+      <DependentUpon>ListaFases.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\Etapa\VerEtapa.aspx.designer.cs">
-      <DependentUpon>VerEtapa.aspx</DependentUpon>
+    <Compile Include="Presentacion\Fases\ListaFases.aspx.designer.cs">
+      <DependentUpon>ListaFases.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Foro\Foro.aspx.cs">
+      <DependentUpon>Foro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Foro\Foro.aspx.designer.cs">
+      <DependentUpon>Foro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Insumo\Insumos.aspx.cs">
+      <DependentUpon>Insumos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Insumo\Insumos.aspx.designer.cs">
+      <DependentUpon>Insumos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Insumo\VerInsumos.aspx.cs">
+      <DependentUpon>VerInsumos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Insumo\VerInsumos.aspx.designer.cs">
+      <DependentUpon>VerInsumos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -363,6 +386,13 @@
     </Compile>
     <Compile Include="Presentacion\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Producto\Producto.aspx.cs">
+      <DependentUpon>Producto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Producto\Producto.aspx.designer.cs">
+      <DependentUpon>Producto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Suelos\EstudioSuelos.aspx.cs">
       <DependentUpon>EstudioSuelos.aspx</DependentUpon>

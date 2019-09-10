@@ -11,23 +11,17 @@
                         <label for="text-input" class=" form-control-label">Fecha</label>
                     </div>
                    <div class="col-4 col-md-1">
-                        <asp:Label ID="Label1" runat="server" Text="---"></asp:Label>
+                        <asp:Label ID="lblFecha" runat="server" Text="---"></asp:Label>
                     </div>
                 </div>
 
-                <asp:Repeater ID ="Repeater" runat="server">
-                        <ItemTemplate>
-                    <div class="row form-group">
-                    <div class="col col-md-1">
-                        <label for="text-input" class=" form-control-label">FechaInicio</label>
-                    </div>
-                   <div class="col-4 col-md-1">
-                        <asp:Label ID="FechaInicio"<%#Eval("FechaInicio")  %> runat="server" Text="---"></asp:Label>
-                    </div>
-                </div>
-                        </ItemTemplate>
-                            </asp:Repeater>
+                  <div class="col-12 col-md-4">
+                            <input type="text" id="FechaInicio" name="FechaInicio" class="form-control" required="required" runat="server">
+                        </div>
                    
+                <div class="col-12 col-md-4">
+                            <input type="Text" id="FechaFinal" name="FechaFinal" class="form-control" required="required" runat="server">
+                        </div> 
             </form>
         </div>
     </div>

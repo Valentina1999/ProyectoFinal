@@ -40,7 +40,7 @@ namespace Servicio.Datos
 
         public DataSet mtdfecha()
         {
-            string consulta = "select top 1 IdFase from Fase where FechaInicio Is Not NULL  order by IdFase desc";
+            string consulta = "select top 1 FechaInicio, FechaFinal from Fase where FechaInicio Is Not NULL";
             DataSet dsFase = new DataSet();
             clConexion objConexion = new clConexion();
             dsFase = objConexion.mtdDesconectado(consulta);

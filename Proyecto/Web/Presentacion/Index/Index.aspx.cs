@@ -13,17 +13,15 @@ namespace Web
         int dia = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string txtFech = System.DateTime.Now.ToShortDateString();
-
-            Label1.Text = txtFech;
-            string a = Label1.Text;
-
-
             // Fertilizacion
 
+        }
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            mtdfecha();
+            mtdFertilizantes();
 
         }
-
 
         ServicioUsuario.WebService1SoapClient miServicio = new ServicioUsuario.WebService1SoapClient();
         public void mtdfecha()
@@ -31,22 +29,43 @@ namespace Web
             DataSet dsListar = new DataSet();
             ServicioUsuario.clFases objClFases = new ServicioUsuario.clFases();
             dsListar = miServicio.mtdfecha();
-            Repeater.DataSource = dsListar;
-            Repeater.DataBind();
+            FechaInicio.Value = dsListar.Tables["tblDatos"].Rows[0]["FechaInicio"].ToString();
+            FechaFinal.Value = dsListar.Tables["tblDatos"].Rows[0]["FechaFinal"].ToString();
+
 
         }
-      
+        public void mtdFertilizantes()
+        {
 
-        public void mtdFertilizantes() {
 
-            int año = 365;
-            int semestre = año / 2;
 
-            for (int i = 0; i <= año; i++)
+            DateTime Fecha = System.DateTime.Now;
+            lblFecha.Text = Fecha.ToString();
+            DateTime fechaInicio = DateTime.Parse(FechaInicio.Value);
+            DateTime fechaFinal = DateTime.Parse(FechaFinal.Value);
+
+
+            Fecha = DateTime.Now;
+
+            // Difference in days, hours, and minutes.
+            TimeSpan ts = fechaInicio - Fecha;
+
+            // Difference in days.
+            int Dias = ts.Days;
+            if (Dias == 0)
             {
-               
+
             }
 
+            //int año = 365;
+            //int semestre = año / 2;
+
+            //for (int i = 0; i <= año; i++)
+            //{
+
+            //    if)
+
+            //}
         }
     }
 }

@@ -29,7 +29,7 @@
             <div id="f1" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                        <img class="card-img-top" src="../../images/FENOLOGIA/151.jpg" height="90">
+                        <%--<img class="card-img-top" src="../../images/FENOLOGIA/151.jpg" height="90">--%>
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
@@ -165,7 +165,7 @@
             <div id="f5" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                        <img class="card-img-top" src="../../images/FENOLOGIA/301.jpg" height="90">
+                     <%--   <img class="card-img-top" src="../../images/FENOLOGIA/301.jpg" height="90">--%>
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
@@ -199,7 +199,7 @@
             <div id="f6" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                        <img class="card-img-top" src="../../images/FENOLOGIA/305.jpg" height="90">
+                       <%-- <img class="card-img-top" src="../../images/FENOLOGIA/305.jpg" height="90">--%>
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
@@ -233,7 +233,7 @@
             <div id="f7" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                        <img class="card-img-top" src="../../images/FENOLOGIA/309.jpg" height="90">
+<%--                        <img class="card-img-top" src="../../images/FENOLOGIA/309.jpg" height="90">--%>
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
@@ -301,7 +301,7 @@
             <div id="f9" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                        <img class="card-img-top" src="../../images/FENOLOGIA/501.jpg" height="90">
+<%--                        <img class="card-img-top" src="../../images/FENOLOGIA/501.jpg" height="90">--%>
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
@@ -404,7 +404,7 @@
             <div id="f12" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                        <img class="card-img-top" src="../../images/FENOLOGIA/509.jpg" height="90">
+                    <%--    <img class="card-img-top" src="../../images/FENOLOGIA/509.jpg" height="90">--%>
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
@@ -469,12 +469,12 @@
                     </div>
                 </div>
             </div>
-            <div id="f14" runat="server" class="card">
+<%--<%--<%--            <div id="f14" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                        <img class="card-img-top" src="../../images/FENOLOGIA/602.jpg" height="90">
-                    </div>
-                    <div class="col-4 col-md-8">
+                   <%--     <img class="card-img-top" src="../../images/FENOLOGIA/602.jpg" height="90">
+                   --%> </div>
+                  <%--  <div class="col-4 col-md-8">
                         <div class="card-body">
                             <input name="id14" id="id14" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo14" name="Titulo14" runat="server"></h2>
@@ -501,14 +501,14 @@
                             <input id="Etapa14" runat="server" name="Etapa14" placeholder="Etapa" hidden />
                         </div>
                     </div>
-                </div>
-            </div>
-            <div id="f15" runat="server" class="card">
+             --%>  <%-- </div>
+            </div>--%>
+            <%--<div id="f15" runat="server" class="card">
                 <div class="row form-group">
-                    <div class="col-1 col-lg-4 col-md-4">
-                        <img class="card-img-top" src="../../images/FENOLOGIA/603.jpg" height="90">
-                    </div>
-                    <div class="col-4 col-md-8">
+                    <div class="col-1 col-lg-4 col-md-4">--%>--%>--%>
+                       <%-- <img class="card-img-top" src="../../images/FENOLOGIA/603.jpg" height="90">--%>
+                    <%--</div>--%>
+            --%>      <%--  <div class="col-4 col-md-8">
                         <div class="card-body">
                             <input name="id15" id="id15" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo15" name="Titulo15" runat="server"></h2>
@@ -536,9 +536,9 @@
                         <input id="Etapa15" runat="server" name="Etapa15" placeholder="Etapa" hidden />
                     </div>
                 </div>
-            </div>
-            <div id="f16" runat="server" class="card">
-                <div class="row form-group">
+            </div>--%>
+           <%-- <div id="f16" runat="server" class="card">
+           --%>    <%--<%-- <<%--div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/607.jpg" height="90">
                     </div>
@@ -566,7 +566,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <input id="Etapa16" runat="server" name="Etapa16" placeholder="Etapa" hidden />
+                 --%> --%>--%>          <%--<input id="Etapa16" runat="server" name="Etapa16" placeholder="Etapa" hidden />
                         </div>
                     </div>
                 </div>
@@ -644,7 +644,7 @@
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/703.jpg" height="90">
                     </div>
-                    <div class="col-4 col-md-8">
+                    <div>
                         <div class="card-body">
                             <input name="id19" id="id19" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo19" name="Titulo19" runat="server"></h2>
@@ -910,7 +910,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--%>
         </form>
     </div>
 </asp:Content>

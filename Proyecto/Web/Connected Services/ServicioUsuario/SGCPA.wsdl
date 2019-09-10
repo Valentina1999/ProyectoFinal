@@ -289,6 +289,119 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdfecha">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdfechaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdfechaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarTipoInsumo">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarTipoInsumoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarTipoInsumoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdRegistrarPregunta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objPre" type="tns:clPregunta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clPregunta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdPregunta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pregunta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUsuario" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mtdRegistrarPreguntaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdRegistrarPreguntaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarPregunta">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarPreguntaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarPreguntaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdRegistrarRespuesta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objRes" type="tns:clRespuesta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clRespuesta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdRespuesta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Respuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUsuario" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdPregunta" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mtdRegistrarRespuestaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdRegistrarRespuestaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarEtapa">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarEtapaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarEtapaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="mtdListarRolSoapIn">
@@ -375,6 +488,42 @@
   <wsdl:message name="mtdBuscarTerrenoSoapOut">
     <wsdl:part name="parameters" element="tns:mtdBuscarTerrenoResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdfechaSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdfecha" />
+  </wsdl:message>
+  <wsdl:message name="mtdfechaSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdfechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarTipoInsumoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarTipoInsumo" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarTipoInsumoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarTipoInsumoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarPreguntaSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarPregunta" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarPreguntaSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarPreguntaResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPreguntaSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarPregunta" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPreguntaSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarPreguntaResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarRespuestaSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarRespuesta" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarRespuestaSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarRespuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarEtapaSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarEtapa" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarEtapaSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarEtapaResponse" />
+  </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="mtdListarRol">
       <wsdl:input message="tns:mtdListarRolSoapIn" />
@@ -431,6 +580,30 @@
     <wsdl:operation name="mtdBuscarTerreno">
       <wsdl:input message="tns:mtdBuscarTerrenoSoapIn" />
       <wsdl:output message="tns:mtdBuscarTerrenoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdfecha">
+      <wsdl:input message="tns:mtdfechaSoapIn" />
+      <wsdl:output message="tns:mtdfechaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarTipoInsumo">
+      <wsdl:input message="tns:mtdListarTipoInsumoSoapIn" />
+      <wsdl:output message="tns:mtdListarTipoInsumoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarPregunta">
+      <wsdl:input message="tns:mtdRegistrarPreguntaSoapIn" />
+      <wsdl:output message="tns:mtdRegistrarPreguntaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPregunta">
+      <wsdl:input message="tns:mtdListarPreguntaSoapIn" />
+      <wsdl:output message="tns:mtdListarPreguntaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarRespuesta">
+      <wsdl:input message="tns:mtdRegistrarRespuestaSoapIn" />
+      <wsdl:output message="tns:mtdRegistrarRespuestaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarEtapa">
+      <wsdl:input message="tns:mtdListarEtapaSoapIn" />
+      <wsdl:output message="tns:mtdListarEtapaSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -561,6 +734,60 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdfecha">
+      <soap:operation soapAction="http://tempuri.org/mtdfecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarTipoInsumo">
+      <soap:operation soapAction="http://tempuri.org/mtdListarTipoInsumo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarPregunta">
+      <soap:operation soapAction="http://tempuri.org/mtdRegistrarPregunta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPregunta">
+      <soap:operation soapAction="http://tempuri.org/mtdListarPregunta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarRespuesta">
+      <soap:operation soapAction="http://tempuri.org/mtdRegistrarRespuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarEtapa">
+      <soap:operation soapAction="http://tempuri.org/mtdListarEtapa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -683,6 +910,60 @@
     </wsdl:operation>
     <wsdl:operation name="mtdBuscarTerreno">
       <soap12:operation soapAction="http://tempuri.org/mtdBuscarTerreno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdfecha">
+      <soap12:operation soapAction="http://tempuri.org/mtdfecha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarTipoInsumo">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarTipoInsumo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarPregunta">
+      <soap12:operation soapAction="http://tempuri.org/mtdRegistrarPregunta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPregunta">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarPregunta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarRespuesta">
+      <soap12:operation soapAction="http://tempuri.org/mtdRegistrarRespuesta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarEtapa">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarEtapa" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

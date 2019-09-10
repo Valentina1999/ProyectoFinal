@@ -1,10 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Master/Site1.Master" AutoEventWireup="true" CodeBehind="ListarEtapa.aspx.cs"  EnableEventValidation="false" Inherits="Web.Presentacion.Master.Formulario_web13" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Master/Site1.Master" AutoEventWireup="true" CodeBehind="ListarEtapa.aspx.cs" Inherits="Web.Presentacion.Etapa.ListarEtapa" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <style>
+        <style>
         #ico{
             float:left;
         }
@@ -14,7 +12,7 @@
         }
     </style>
         <form action="ListarEtapa.aspx" method="post" runat="server">
-    <div class="col-lg-8" id="cont">
+    <div class="col-lg-12" id="cont">
         <div>
             <h3><strong>Lista de Etapas</strong></h3>
             <br/>
@@ -25,6 +23,7 @@
                 <thead>
                     <tr>
                         <th>Nombre</th>
+                        <th>Descripcion</th>
                         <th>Ver</th>
                     </tr>
                 </thead>
@@ -38,6 +37,10 @@
                      <asp:Label ID="Etapa" Text='<%# Eval("Etapa") %>' runat="server"/>
                                 </td>
                         
+                         <th >
+                             <asp:Label ID="Label2" Text='<%# Eval("Descripcion") %>' runat="server"/>
+
+                              </th>
                         <td >
                             <div class="table-data-feature" id="ico">
                             
