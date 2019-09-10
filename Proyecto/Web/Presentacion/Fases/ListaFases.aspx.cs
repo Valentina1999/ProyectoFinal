@@ -31,7 +31,7 @@ namespace Web.Presentacion.Fases
             {
                 if (IdE == 1)
                 {
-                    f0.Visible = true;
+                    //f0.Visible = true;
                     f1.Visible = true;
                     f2.Visible = true;
                     f3.Visible = true;
@@ -61,7 +61,7 @@ namespace Web.Presentacion.Fases
                 }
                 else if (IdE == 2)
                 {
-                    f0.Visible = false;
+                    //f0.Visible = false;
                     f1.Visible = false;
                     f2.Visible = false;
                     f3.Visible = false;
@@ -91,7 +91,7 @@ namespace Web.Presentacion.Fases
                 }
                 else if (IdE == 11)
                 {
-                    f0.Visible = false;
+                    //f0.Visible = false;
                     f1.Visible = false;
                     f2.Visible = false;
                     f3.Visible = false;
@@ -121,7 +121,7 @@ namespace Web.Presentacion.Fases
                 }
                 else if (IdE == 13)
                 {
-                    f0.Visible = false;
+                    //f0.Visible = false;
                     f1.Visible = false;
                     f2.Visible = false;
                     f3.Visible = false;
@@ -280,7 +280,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id1.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio1.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal1.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal1.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -308,7 +308,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id2.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio2.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal2.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal2.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -336,7 +336,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id3.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio3.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal3.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal3.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -364,7 +364,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id4.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio4.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal4.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal4.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -392,7 +392,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id5.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio5.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal5.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal5.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -420,7 +420,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id6.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio6.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal6.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal6.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -448,7 +448,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id7.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio7.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal7.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal7.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -476,7 +476,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id8.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio8.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal8.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal8.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -504,7 +504,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id9.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio9.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal9.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal9.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -532,7 +532,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id10.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio10.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal10.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal10.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -560,7 +560,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id11.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio11.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal11.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal11.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -588,7 +588,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id12.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio12.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal12.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal12.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -616,7 +616,7 @@ namespace Web.Presentacion.Fases
         {
             objFases.IdFase = int.Parse(Request.Form[id13.UniqueID]);
             objFases.FechaInicio = Request.Form[fechaInicio13.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal13.UniqueID].ToString();
+            //objFases.FechaFinal = Request.Form[fechaFinal13.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
 
@@ -1010,10 +1010,10 @@ namespace Web.Presentacion.Fases
             DataSet dsListar = new DataSet();
             dsListar = servicioU.mtdListarFases();
 
-            id0.InnerText = dsListar.Tables["tblDatos"].Rows[0]["IdFase"].ToString();
-            Titulo0.InnerText = dsListar.Tables["tblDatos"].Rows[0]["Nombre"].ToString();
-            des0.InnerText = dsListar.Tables["tblDatos"].Rows[0]["Descripcion"].ToString();
-            Etapa0.Value = dsListar.Tables["tblDatos"].Rows[0]["IdEtapa"].ToString();
+            //id0.InnerText = dsListar.Tables["tblDatos"].Rows[0]["IdFase"].ToString();
+            //Titulo0.InnerText = dsListar.Tables["tblDatos"].Rows[0]["Nombre"].ToString();
+            //des0.InnerText = dsListar.Tables["tblDatos"].Rows[0]["Descripcion"].ToString();
+            //Etapa0.Value = dsListar.Tables["tblDatos"].Rows[0]["IdEtapa"].ToString();
 
             id1.Value = dsListar.Tables["tblDatos"].Rows[1]["IdFase"].ToString();
             Titulo1.InnerText = dsListar.Tables["tblDatos"].Rows[1]["Nombre"].ToString();

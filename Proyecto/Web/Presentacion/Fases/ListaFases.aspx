@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="col-md-12">
         <form action="ListaFases.aspx" method="post" runat="server">
-            <div id="f0" runat="server" class="card">
+            <%--<div id="f0" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
                         <img class="card-img-top" src="../../images/FENOLOGIA/Caracteristicas.jpg" height="90">
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--%>
             <div id="f1" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
