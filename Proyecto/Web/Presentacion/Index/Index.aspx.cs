@@ -29,7 +29,7 @@ namespace Web
             DataSet dsListar = new DataSet();
             ServicioUsuario.clFases objClFases = new ServicioUsuario.clFases();
             dsListar = miServicio.mtdfecha();
-            FechaInicio.Value = dsListar.Tables["tblDatos"].Rows[0]["FechaInicio"].ToString();
+            //FechaInicio.Value = dsListar.Tables["tblDatos"].Rows[0]["FechaInicio"].ToString();
             FechaFinal.Value = dsListar.Tables["tblDatos"].Rows[0]["FechaFinal"].ToString();
 
 
@@ -39,22 +39,27 @@ namespace Web
 
 
 
-            DateTime Fecha = System.DateTime.Now;
-            lblFecha.Text = Fecha.ToString();
-            DateTime fechaInicio = DateTime.Parse(FechaInicio.Value);
-            DateTime fechaFinal = DateTime.Parse(FechaFinal.Value);
+           DateTime Fecha = System.DateTime.Now;
+           lblFecha.Text = Fecha.ToString();
+            //DateTime fechaInicio = DateTime.Parse(FechaInicio.Value);
+           DateTime fechaFinal = DateTime.Parse(FechaFinal.Value);
 
 
             Fecha = DateTime.Now;
 
-            // Difference in days, hours, and minutes.
-            TimeSpan ts = fechaInicio - Fecha;
+            //// Difference in days, hours, and minutes.
+            //TimeSpan ts = Fecha - fechaInicio;
 
-            // Difference in days.
-            int Dias = ts.Days;
-            if (Dias == 0)
+            //// Difference in days.
+            //int Dias = ts.Days;
+
+            //DateTime v = fechaInicio;
+            if (Fecha <=  fechaFinal)
             {
+                string a = "hola";
 
+                Riegoo.Text = a;
+               
             }
 
             //int año = 365;

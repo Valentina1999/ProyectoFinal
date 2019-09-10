@@ -37,10 +37,11 @@ namespace Servicio.Datos
 
             return resultado;
         }
-
+        //select top 1 FechaInicio, FechaFinal from Fase where FechaInicio Is Not NULL
+        
         public DataSet mtdfecha()
         {
-            string consulta = "select top 1 FechaInicio, FechaFinal from Fase where FechaInicio Is Not NULL";
+            string consulta = "select FechaFinal from Fase where IdFase = 7;";
             DataSet dsFase = new DataSet();
             clConexion objConexion = new clConexion();
             dsFase = objConexion.mtdDesconectado(consulta);
