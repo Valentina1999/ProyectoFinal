@@ -31,6 +31,15 @@ namespace Web {
         protected global::System.Web.UI.HtmlControls.HtmlButton guardarT;
         
         /// <summary>
+        /// Control editarT.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton editarT;
+        
+        /// <summary>
         /// Control calcular.
         /// </summary>
         /// <remarks>
@@ -38,5 +47,23 @@ namespace Web {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton calcular;
+        
+        /// <summary>
+        /// Control alert.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert;
+        
+        /// <summary>
+        /// Control danger.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl danger;
     }
 }

@@ -47,7 +47,7 @@
                         <button id="guardarT" onserverclick="btnRegistrarTerreno" runat="server" type="submit" class="btn btn-success btn-sm">
                             <i class="fa fa-check"></i>Guardar
                         </button>
-                        <button id="editarT" name="editarT" type="button" class="btn btn-secondary btn-sm">
+                        <button id="editarT" name="editarT" onserverclick="editarT_ServerClick" runat="server" type="button" class="btn btn-secondary btn-sm">
                             <i class="fa fa-pencil-square-o"></i>Editar
                         </button>
                         <button id="calcular" onserverclick="BtnCalculo_Click" runat="server" type="button" class="btn btn-primary btn-sm">
@@ -55,6 +55,24 @@
                         </button>
                     </div>
                 </form>
+                <div id="alert" runat="server" visible="false">
+                    <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
+                        <span class="badge badge-pill badge-success">Corrrecto</span>
+                        Su terreno ha sido registrado correctamente.
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="danger" runat="server" visible="false">
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                        <span class="badge badge-pill badge-danger">Error</span>
+                        No se pudo registrar su terreno. Vuelve a intentar.
+						    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
