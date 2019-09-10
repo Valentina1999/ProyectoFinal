@@ -49,15 +49,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl des0;
         
         /// <summary>
-        /// Control siguiente0.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente0;
-        
-        /// <summary>
         /// Control Etapa0.
         /// </summary>
         /// <remarks>
@@ -112,15 +103,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio1;
         
         /// <summary>
-        /// Control fechaFinal1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal1;
-        
-        /// <summary>
         /// Control Editar1.
         /// </summary>
         /// <remarks>
@@ -128,15 +110,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton Editar1;
-        
-        /// <summary>
-        /// Control siguiente1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente1;
         
         /// <summary>
         /// Control Etapa1.
@@ -193,15 +166,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio2;
         
         /// <summary>
-        /// Control fechaFinal2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal2;
-        
-        /// <summary>
         /// Control Editar2.
         /// </summary>
         /// <remarks>
@@ -209,15 +173,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton Editar2;
-        
-        /// <summary>
-        /// Control siguiente2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente2;
         
         /// <summary>
         /// Control Etapa2.
@@ -274,15 +229,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio3;
         
         /// <summary>
-        /// Control fechaFinal3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal3;
-        
-        /// <summary>
         /// Control Editar3.
         /// </summary>
         /// <remarks>
@@ -290,15 +236,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton Editar3;
-        
-        /// <summary>
-        /// Control siguiente3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente3;
         
         /// <summary>
         /// Control Etapa3.
@@ -355,15 +292,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio4;
         
         /// <summary>
-        /// Control fechaFinal4.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal4;
-        
-        /// <summary>
         /// Control Editar4.
         /// </summary>
         /// <remarks>
@@ -371,15 +299,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton Editar4;
-        
-        /// <summary>
-        /// Control siguiente4.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente4;
         
         /// <summary>
         /// Control Etapa4.
@@ -434,15 +353,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio5;
-        
-        /// <summary>
-        /// Control fechaFinal5.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal5;
         
         /// <summary>
         /// Control Editar5.
@@ -517,15 +427,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio6;
         
         /// <summary>
-        /// Control fechaFinal6.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal6;
-        
-        /// <summary>
         /// Control Editar6.
         /// </summary>
         /// <remarks>
@@ -533,15 +434,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton Editar6;
-        
-        /// <summary>
-        /// Control siguiente6.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente6;
         
         /// <summary>
         /// Control Etapa6.
@@ -598,15 +490,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio7;
         
         /// <summary>
-        /// Control fechaFinal7.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal7;
-        
-        /// <summary>
         /// Control Editar7.
         /// </summary>
         /// <remarks>
@@ -614,15 +497,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton Editar7;
-        
-        /// <summary>
-        /// Control siguiente7.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente7;
         
         /// <summary>
         /// Control Etapa7.
@@ -677,15 +551,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio8;
-        
-        /// <summary>
-        /// Control fechaFinal8.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal8;
         
         /// <summary>
         /// Control Editar8.
@@ -760,15 +625,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio9;
         
         /// <summary>
-        /// Control fechaFinal9.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal9;
-        
-        /// <summary>
         /// Control Editar9.
         /// </summary>
         /// <remarks>
@@ -776,15 +632,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton Editar9;
-        
-        /// <summary>
-        /// Control siguiente9.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente9;
         
         /// <summary>
         /// Control Etapa9.
@@ -839,15 +686,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio10;
-        
-        /// <summary>
-        /// Control fechaFinal10.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal10;
         
         /// <summary>
         /// Control Editar10.
@@ -922,15 +760,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio11;
         
         /// <summary>
-        /// Control fechaFinal11.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal11;
-        
-        /// <summary>
         /// Control Editar11.
         /// </summary>
         /// <remarks>
@@ -938,15 +767,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton Editar11;
-        
-        /// <summary>
-        /// Control siguiente11.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente11;
         
         /// <summary>
         /// Control Etapa11.
@@ -1003,15 +823,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio12;
         
         /// <summary>
-        /// Control fechaFinal12.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal12;
-        
-        /// <summary>
         /// Control Editar12.
         /// </summary>
         /// <remarks>
@@ -1019,15 +830,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton Editar12;
-        
-        /// <summary>
-        /// Control siguiente12.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente12;
         
         /// <summary>
         /// Control Etapa12.
@@ -1082,15 +884,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaInicio13;
-        
-        /// <summary>
-        /// Control fechaFinal13.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFinal13;
         
         /// <summary>
         /// Control Editar13.

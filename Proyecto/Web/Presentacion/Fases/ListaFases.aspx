@@ -16,11 +16,6 @@
                             <h2 id="Titulo0" name="Titulo0" runat="server"></h2>
                             <p id="des0" name="des0" runat="server"></p>
                             <br />
-                            <div class="row form-row">
-                                <button id="siguiente0" type="submit" runat="server" name="siguiente0" class="btn btn-success btn-sm">
-                                    Siguiente <i class="fa  fa-arrow-right"></i>
-                                </button>
-                            </div>
                             <input id="Etapa0" runat="server" name="Etapa0" placeholder="Etapa" hidden />
                         </div>
                     </div>
@@ -40,19 +35,11 @@
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" type="date" id="fechaInicio1" runat="server" name="fechaInicio1" />
                                 </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" type="date" id="fechaFinal1" runat="server" name="fechaFinal1" />
-                                </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <button id="Editar1" type="submit" onserverclick="mtdEditarFase1" runat="server" name="Editar1" class="btn btn-primary btn-sm">
                                         <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente1" type="button" runat="server" name="siguiente1" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
                                 </div>
                             </div>
                             <input id="Etapa1" runat="server" name="Etapa1" placeholder="Etapa" hidden />
@@ -74,19 +61,11 @@
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio2" name="fechaInicio2" />
                                 </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal2" name="fechaFinal2" />
-                                </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <button id="Editar2" type="submit" runat="server" onserverclick="mtdEditarFase2" name="Editar2" class="btn btn-primary btn-sm">
                                         <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente2" type="button" runat="server" name="siguiente2" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
                                 </div>
                             </div>
                             <input id="Etapa2" runat="server" name="Etapa2" placeholder="Etapa" hidden />
@@ -108,19 +87,11 @@
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" type="date" runat="server" id="fechaInicio3" name="fechaInicio3" />
                                 </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" type="date" runat="server" id="fechaFinal3" name="fechaFinal3" />
-                                </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <button id="Editar3" type="submit" runat="server" onserverclick="mtdEditarFase3" name="Editar3" class="btn btn-primary btn-sm">
                                         <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente3" type="button" runat="server" name="siguiente3" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
                                 </div>
                             </div>
                             <input id="Etapa3" runat="server" name="Etapa3" placeholder="Etapa" hidden />
@@ -142,19 +113,11 @@
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio4" name="fechaInicio4" />
                                 </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal4" name="fechaFinal4" />
-                                </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <button id="Editar4" type="submit" runat="server" onserverclick="mtdEditarFase4" name="Editar4" class="btn btn-primary btn-sm">
                                         <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente4" type="button" runat="server" name="siguiente4" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
                                 </div>
                             </div>
                             <input id="Etapa4" runat="server" name="Etapa4" placeholder="Etapa" hidden />
@@ -175,9 +138,6 @@
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio5" name="fechaInicio5" />
-                                </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal5" name="fechaFinal5" />
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -210,19 +170,11 @@
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio6" name="fechaInicio6" />
                                 </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal6" name="fechaFinal6" />
-                                </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <button id="Editar6" type="submit" runat="server" onserverclick="mtdEditarFase6" name="Editar6" class="btn btn-primary btn-sm">
                                         <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente6" type="button" runat="server" name="siguiente6" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
                                 </div>
                             </div>
                             <input id="Etapa6" runat="server" name="Etapa6" placeholder="Etapa" hidden />
@@ -244,19 +196,11 @@
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio7" name="fechaInicio7" />
                                 </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal7" name="fechaFinal7" />
-                                </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <button id="Editar7" type="submit" runat="server" onserverclick="mtdEditarFase7" name="Editar7" class="btn btn-primary btn-sm">
                                         <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente7" type="button" runat="server" name="siguiente7" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
                                 </div>
                             </div>
                             <input id="Etapa7" runat="server" name="Etapa7" placeholder="Etapa" hidden />
@@ -277,9 +221,6 @@
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio8" name="fechaInicio8" />
-                                </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal8" name="fechaFinal8" />
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -313,19 +254,11 @@
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio9" name="fechaInicio9" />
                                 </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal9" name="fechaFinal9" />
-                                </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <button id="Editar9" type="submit" runat="server" onserverclick="mtdEditarFase9" name="Editar9" class="btn btn-primary btn-sm">
                                         <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente9" type="button" runat="server" name="siguiente9" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
                                 </div>
                             </div>
                             <input id="Etapa9" runat="server" name="Etapa9" placeholder="Etapa" hidden />
@@ -346,9 +279,6 @@
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio10" name="fechaInicio10" />
-                                </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal10" name="fechaFinal10" />
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -381,19 +311,11 @@
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio11" name="fechaInicio11" />
                                 </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal11" name="fechaFinal11" />
-                                </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <button id="Editar11" type="submit" runat="server" onserverclick="mtdEditarFase11" name="Editar11" class="btn btn-primary btn-sm">
                                         <i class="fa fa-check-square"></i>Registrar fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente11" type="button" runat="server" name="siguiente11" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
                                 </div>
                             </div>
                             <input id="Etapa11" runat="server" name="Etapa11" placeholder="Etapa" hidden />
@@ -415,19 +337,11 @@
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio12" name="fechaInicio12" />
                                 </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal12" name="fechaFinal12" />
-                                </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <button id="Editar12" type="submit" runat="server" onserverclick="mtdEditarFase12" name="Editar12" class="btn btn-primary btn-sm">
                                         <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente12" type="button" runat="server" name="siguiente12" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
                                 </div>
                             </div>
                             <input id="Etapa12" runat="server" name="Etapa12" placeholder="Etapa" hidden />
@@ -448,9 +362,6 @@
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
                                     <input class="form-control" runat="server" type="date" id="fechaInicio13" name="fechaInicio13" />
-                                </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal13" name="fechaFinal13" />
                                 </div>
                             </div>
                             <div class="row form-group">

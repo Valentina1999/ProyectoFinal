@@ -640,33 +640,33 @@ namespace Web.Presentacion.Fases
             }
         }
 
-        protected void mtdEditarFase14(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id14.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio14.UniqueID].ToString();
-            objFases.FechaFinal = Request.Form[fechaFinal14.UniqueID].ToString();
+        //protected void mtdEditarFase14(object sender, EventArgs e)
+        //{
+        //    objFases.IdFase = int.Parse(Request.Form[id14.UniqueID]);
+        //    objFases.FechaInicio = Request.Form[fechaInicio14.UniqueID].ToString();
+        //    objFases.FechaFinal = Request.Form[fechaFinal14.UniqueID].ToString();
 
-            int resultado = servicioU.mtdEditarFase(objFases);
+        //    int resultado = servicioU.mtdEditarFase(objFases);
 
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
+        //    if (resultado == 1)
+        //    {
+        //        string script = @"<script type='text/javascript'>
+        //                    alert('Se ha editado Exitosamente');
+        //                    window.location = 'ListaFases.aspx';
+        //                </script>";
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
 
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
+        //    }
+        //    else
+        //    {
+        //        string script = @"<script type='text/javascript'>
+        //                    alert('Error');
+        //                </script>";
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
+        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        //    }
+        //}
 
         //protected void mtdEditarFase15(object sender, EventArgs e)
         //{
