@@ -25,30 +25,38 @@ namespace Web.Presentacion.Usuario
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            
+
+
         }
         ServicioUsuario.WebService1SoapClient Servicioa = new ServicioUsuario.WebService1SoapClient();
         ServicioUsuario.clUsuario objclUsuario = new ServicioUsuario.clUsuario();
+
         protected void btnRegistrar(object sender, EventArgs e)
         {
-          
-            objclUsuario.Documento = Request.Form["Documento"];
-            objclUsuario.Nombre = Request.Form["Nombre"];
-            objclUsuario.Apellido = Request.Form["Apellido"];
-            objclUsuario.Correo = Request.Form["Correo"];
-            objclUsuario.Clave = Request.Form["Clave"];
-            objclUsuario.Numero = Request.Form["Telefono"];
-            objclUsuario.IdRol = int.Parse(hola.SelectedValue.ToString());
-            int resultado = Servicioa.mtdRegistrarUsuario(objclUsuario);
-
-            if (resultado == 1)
+            try
             {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha Registrado Exitosamente');
-                        </script>";
+                objclUsuario.Documento = Request.Form["Documento"];
+                objclUsuario.Nombre = Request.Form["Nombre"];
+                objclUsuario.Apellido = Request.Form["Apellido"];
+                objclUsuario.Correo = Request.Form["Correo"];
+                objclUsuario.Clave = Request.Form["Clave"];
+                objclUsuario.Numero = Request.Form["Telefono"];
+                objclUsuario.IdRol = int.Parse(hola.SelectedValue.ToString());
+                int resultado = Servicioa.mtdRegistrarUsuario(objclUsuario);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                if (resultado == 1)
+                {
+                    Response.Redirect("../Index/Index.aspx");
+                    //string script = @"<script type='text/javascript'>
+                    //            alert('Se ha Registrado Exitosamente');
+                    //        </script>";
+
+                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                }
+            }
+            catch (Exception)
+            {
+                danger.Visible = true;
             }
         }
 

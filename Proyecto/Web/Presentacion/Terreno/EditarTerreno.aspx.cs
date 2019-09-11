@@ -48,19 +48,27 @@ namespace Web.Presentacion.Terreno
 
         protected void BtnCalculo_Click(object sender, EventArgs e)
         {
-            double ancho = double.Parse(Request.Form[txtAncho.UniqueID]);
-            double largo = double.Parse(Request.Form[txtLargo.UniqueID]);
-            double distancia = 9;
-            double callejuela = 7.8;
+            try
+            {
+                double ancho = double.Parse(Request.Form[txtAncho.UniqueID]);
+                double largo = double.Parse(Request.Form[txtLargo.UniqueID]);
+                double distancia = 9;
+                double callejuela = 7.8;
 
-            double ResultAncho = ancho / callejuela;
-            double ResultLargo = largo / distancia;
+                double ResultAncho = ancho / callejuela;
+                double ResultLargo = largo / distancia;
 
-            double Result = ResultAncho * ResultLargo;
+                double Result = ResultAncho * ResultLargo;
 
-            int res = (int)Result;
+                int res = (int)Result;
 
-            Label1.Text = res.ToString();
+                Label1.Text = res.ToString();
+            }
+            catch (Exception)
+            {
+                alerta.Visible = true;
+            }
+
         }
 
 
@@ -71,31 +79,41 @@ namespace Web.Presentacion.Terreno
 
         protected void btnEditarT(object sender, EventArgs e)
         {
-            objT.NombreTerreno = Request.Form[txtNombreTerreno.UniqueID];
-            objT.Largo = double.Parse(Request.Form[txtLargo.UniqueID]);
-            objT.Ancho = double.Parse(Request.Form[txtAncho.UniqueID]);
-            objT.IdUsuario = Id;
-
-            int resultado = SerT.mtdEditarTerreno(objT);
-
-            if (resultado > 0)
+            try
             {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'EditarUsuario.aspx';
-                        </script>";
+                objT.NombreTerreno = Request.Form[txtNombreTerreno.UniqueID];
+                objT.Largo = double.Parse(Request.Form[txtLargo.UniqueID]);
+                objT.Ancho = double.Parse(Request.Form[txtAncho.UniqueID]);
+                objT.IdUsuario = Id;
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                int resultado = SerT.mtdEditarTerreno(objT);
 
+                if (resultado > 0)
+                {
+                    alert.Visible = true;
+                    //string script = @"<script type='text/javascript'>
+                    //        alert('Se ha editado Exitosamente');
+                    //        window.location = 'EditarUsuario.aspx';
+                    //    </script>";
+
+                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+
+                }
+                else
+                {
+                    danger.Visible = true;
+                    //string script = @"<script type='text/javascript'>
+                    //        alert('Error');
+                    //    </script>";
+
+                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                }
             }
-            else
+            catch (Exception)
             {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                danger.Visible = true;
             }
+
         }
 
 

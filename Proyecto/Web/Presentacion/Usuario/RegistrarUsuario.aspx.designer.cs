@@ -13,6 +13,15 @@ namespace Web.Presentacion.Usuario {
     public partial class WebForm1 {
         
         /// <summary>
+        /// Control danger.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl danger;
+        
+        /// <summary>
         /// Control form1.
         /// </summary>
         /// <remarks>

@@ -50,6 +50,15 @@
                                 <h3>REGISTRAR USUARIO</h3>
                             </div>
                         </div>
+                        <div id="danger" runat="server" visible="false">
+                            <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                                <span class="badge badge-pill badge-danger">Error</span>
+                                No se pudo registrar El usuario. Vuelve a intentar.
+						    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                        </div>
                         <div class="login-form">
                             <form id="form1" runat="server">
                                 <div class="form-group">

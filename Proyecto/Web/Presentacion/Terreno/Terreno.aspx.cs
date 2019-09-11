@@ -43,7 +43,7 @@ namespace Web
             }
             catch (Exception)
             {
-                danger.Visible = true;
+                alerta.Visible = true;
             }
 
         }
@@ -76,16 +76,17 @@ namespace Web
                 else
                 {
                     danger.Visible = true;
-                    //string script = @"<script type='text/javascript'>
-                    //            alert('Hubo un error en el Registro');
-                    //        </script>";
-
-                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                    
                 }
             }
             catch (Exception)
             {
                 danger.Visible = true;
+                //string script = @"<script type='text/javascript'>
+                //            alert('Hubo un error en el Registro');
+                //        </script>";
+
+                //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
 
             }
 

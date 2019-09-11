@@ -6,12 +6,13 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <strong>Foro</strong>
+                <h1><strong>Foro</strong></h1>
             </div>
-        </div>
-        <div class="card-body card-block">
+            <div class="card-body card-block">
             <div class="fb-comments" data-href="http://localhost:50900/Presentacion/Foro/foro2.aspx" data-width="100%" data-numposts="1"></div>
         </div>
+        </div>
+        
     </div>
 
 </asp:Content>

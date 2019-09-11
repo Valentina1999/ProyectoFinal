@@ -60,12 +60,5 @@ namespace Web
                 menForo1.Attributes["style"] = "visibility:hidden";
             }
         }
-
-        protected void lnkLogOut_Click(object sender, EventArgs e)
-        {
-            System.Web.Security.FormsAuthentication.SignOut();
-            Session.Abandon();
-            Response.Redirect("../Login/Login.aspx");
-        }
     }
 }
