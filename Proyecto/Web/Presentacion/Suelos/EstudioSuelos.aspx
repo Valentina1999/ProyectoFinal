@@ -7,9 +7,12 @@
             <div class="card-header">
                 <strong>ESTUDIO DE SUELOS</strong> 
             </div>
+            
             <div class="card-body card-block">
                 <form action="" method="post" enctype="multipart/form-data" class="form-horizontal" runat="server">
-                   
+                   <div>
+                <h6>   Como Aumentar o Disminuir los valores de mi suelo</h6> <asp:LinkButton ID="PDF" runat="server">Descargar</asp:LinkButton>
+            </div>
                     <div class="row form-group">
                         <div class="col col-md-1">
                             <label for="text-input" class=" form-control-label">Acidez y Alcanidad</label>
@@ -18,9 +21,7 @@
                             <input type="number" id="AcidezAl" name="AcidezAl"  class="form-control" required>
                         </div>
                          <div class="col-18 col-md-4">
-                         <asp:TextBox ID="RAcidezAl" runat="server" CssClass="form-control" Visible="false" ReadOnly="true" ValidationGroup="N1"></asp:TextBox>
-                             <%--<asp:RequiredFieldValidator ID="Val1" runat="server" ErrorMessage="Valor Numerico Requerido" ControlToValidate="RAcidezAl" CssClass="mensajeError"></asp:RequiredFieldValidator>--%>
-                        
+                         <asp:TextBox ID="RAcidezAl" runat="server" CssClass="form-control" Visible="false" ReadOnly="true"></asp:TextBox>                      
                     </div>
                     </div>
 
@@ -195,6 +196,7 @@
                     <asp:Button ID="btnRedir" OnClick="btnRedir_Click" runat="server" Text="TABLA RANGOS" CssClass="btn btn-danger btn-sm" />
                    <%-- <i class="fa fa-ban"></i> Calcular--%>
                <%-- </button>--%>
+                   
             </div>
                 </form>
             </div>

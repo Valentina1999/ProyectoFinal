@@ -27,6 +27,7 @@ namespace Web.Presentacion.Suelos
             Response.Write("<script> window.open('tblrangos.aspx ','_blank'); </script>");
         }
 
+       
 
 
         protected void Page_Init(object sender, EventArgs e) {
