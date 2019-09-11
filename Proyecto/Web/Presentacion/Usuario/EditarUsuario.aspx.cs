@@ -57,7 +57,7 @@ namespace Web.Presentacion.Master
                     //    </script>";
 
                     //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
+                    Response.Redirect("EditarUsuario.aspx");
                 }
                 else
                 {

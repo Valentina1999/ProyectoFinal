@@ -33,7 +33,8 @@ namespace Web.Presentacion.Usuario
 
         protected void btnRegistrar(object sender, EventArgs e)
         {
-            try
+            if (Request.Form["Documento"] != "" || Request.Form["Nombre"] != "" || Request.Form["Apellido"] != "" ||
+                Request.Form["Correo"] != "" || Request.Form["Clave"] != "" || Request.Form["Telefono"] != "")
             {
                 objclUsuario.Documento = Request.Form["Documento"];
                 objclUsuario.Nombre = Request.Form["Nombre"];
@@ -58,7 +59,7 @@ namespace Web.Presentacion.Usuario
                     danger.Visible = true;
                 }
             }
-            catch (Exception)
+            else
             {
                 danger.Visible = true;
             }

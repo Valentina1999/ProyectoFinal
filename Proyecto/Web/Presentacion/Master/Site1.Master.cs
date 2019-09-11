@@ -46,7 +46,7 @@ namespace Web
                 alarm.Attributes["style"] = "visibility:visible";
                 terr.Attributes["style"] = "visibility:visible";
                 menEta1.Attributes["style"] = "visibility:visible";
-                menInsu1.Attributes["style"] = "visibility:visible";
+                
                 menForo1.Attributes["style"] = "visibility:visible";
             }
             else
@@ -56,7 +56,7 @@ namespace Web
                 alarm.Attributes["style"] = "visibility:hidden";
                 terr.Attributes["style"] = "visibility:hidden";
                 menEta1.Attributes["style"] = "visibility:hidden";
-                menInsu1.Attributes["style"] = "visibility:hidden";
+               
                 menForo1.Attributes["style"] = "visibility:hidden";
             }
         }

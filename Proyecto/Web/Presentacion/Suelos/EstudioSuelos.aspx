@@ -169,14 +169,24 @@
                        
                     </div>
                         </div>
-                              <div class="form-group">
-                                    <asp:DropDownList class="au-input au-input--full" ID="Terreno" runat="server" Height="40px" Width="300px">
-                                    </asp:DropDownList>
+                              <div class=" row form-group">
+                                  <div class="col-13 col-md-1">
+                                      <label for="text-input" class=" form-control-label">Terreno</label>
+                                  </div>
+                                  <div class="col-20 col-md-4">
+                                      <asp:DropDownList class="au-input au-input--full" ID="Terreno" runat="server" Height="40px" Width="300px">
+                                      </asp:DropDownList>
+                                  </div>
                                 </div>
 
-                             <div class="form-group">
-                                    <asp:DropDownList class="au-input au-input--full" ID="TipoSuelo" runat="server" Height="40px" Width="300px">
-                                    </asp:DropDownList>
+                             <div class=" row form-group">
+                                 <div class="col-13 col-md-1">
+                                     <label for="text-input" class=" form-control-label">Suelo</label>
+                                 </div>
+                                 <div class="col-20 col-md-4">
+                                     <asp:DropDownList class="au-input au-input--full" ID="TipoSuelo" runat="server" Height="40px" Width="300px">
+                                     </asp:DropDownList>
+                                 </div>
                                 </div>
 
                         <div class="row form-group">

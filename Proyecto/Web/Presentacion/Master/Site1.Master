@@ -41,6 +41,9 @@
 </head>
 
 <body class="animsition">
+     <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0"></script>
+
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
@@ -160,12 +163,8 @@
                             <a href="../Etapa/ListarEtapa.aspx">
                                 <i class="fas fa-table"></i>Etapas</a>
                         </li>
-                        <li id="menInsu1" runat="server">
-                            <a href="#">
-                                <i class="fa fa-plus-circle"></i>Insumos</a>
-                        </li>
                         <li id="menForo1" runat="server">
-                            <a href="../Foro/Foro.aspx">
+                            <a href="../Foro/foro2.aspx">
                                 <i class="fa fa-pencil-square-o"></i>Foro</a>
                         </li>
                         <%--<li>
@@ -192,7 +191,7 @@
                                 </button>--%>
                             </form>
                             <div class="header-button">
-                                <div id="alarm" runat="server" class="noti-wrap">                              
+                                <div hidden="hidden" id="alarm" runat="server" class="noti-wrap">                              
                                     <div class="noti__item js-item-menu">
                                         <i class="zmdi zmdi-notifications"></i>
                                         <span class="quantity">3</span>
