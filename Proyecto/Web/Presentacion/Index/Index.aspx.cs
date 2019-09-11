@@ -56,9 +56,9 @@ namespace Web
             //DateTime v = fechaInicio;
             if (Fecha <=  fechaFinal)
             {
-                string a = "hola";
+                string a = "En ausencia de lluvia, se debe  aplicar  el equivalente  de  4 mm de agua cada 2 días. Se debe utilizar un chorro relativamente fino, para no desenterrar las plántulas. En los pre-viveros pequeños es recomendado usar una regadera, en los primeros 3 meses";
 
-                Riegoo.Text = a;
+                Riego.Text = a;
                
             }
 

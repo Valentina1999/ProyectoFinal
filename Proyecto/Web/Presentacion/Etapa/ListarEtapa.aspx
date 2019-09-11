@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <style>
+    
+    <style>
         #ico{
             float:left;
         }
@@ -12,6 +13,7 @@
         }
     </style>
         <form action="ListarEtapa.aspx" method="post" runat="server">
+             
     <div class="col-lg-12" id="cont">
         <div>
             <h3><strong>Lista de Etapas</strong></h3>
@@ -44,7 +46,7 @@
                         <td >
                             <div class="table-data-feature" id="ico">
                             
-            <asp:Button ID="btn" CommandName="Click" Text="ver" runat="server"
+            <asp:Button ID="btn" CommandName="Click" Text="ver" class="btn btn-success btn-sm" runat="server"
                         CommandArgument='<%# Eval("IdEtapa") %>' />
                         </button>               
                                     </i>

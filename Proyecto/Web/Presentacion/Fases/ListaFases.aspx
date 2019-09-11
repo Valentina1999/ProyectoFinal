@@ -21,27 +21,21 @@
                     </div>
                 </div>
             </div>--%>
+             <div id="Div1" runat="server" class="card">
+             <button id="Interno" type="button" runat="server" onserverclick="Interno_ServerClick" name="Interno" class="btn btn-success btn-sm">
+                                        Procesos <i class="fa  fa-arrow-right"></i>
+                                    </button>
+            </div>
             <div id="f1" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                        <%--<img class="card-img-top" src="../../images/FENOLOGIA/151.jpg" height="90">--%>
+                        <img class="card-img-top" src="../../images/FENOLOGIA/151.jpg" height="90">
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
                             <input id="id1" name="id1" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo1" name="Titulo1" runat="server"></h2>
                             <p id="des1" name="des1" runat="server"></p>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" type="date" id="fechaInicio1" runat="server" name="fechaInicio1" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar1" type="submit" onserverclick="mtdEditarFase1" runat="server" name="Editar1" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                            </div>
                             <input id="Etapa1" runat="server" name="Etapa1" placeholder="Etapa" hidden />
                         </div>
                     </div>
@@ -57,17 +51,6 @@
                             <input name="id2" id="id2" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo2" name="Titulo2" runat="server"></h2>
                             <p id="des2" name="des2" runat="server"></p>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio2" name="fechaInicio2" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar2" type="submit" runat="server" onserverclick="mtdEditarFase2" name="Editar2" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                            </div>
                             <input id="Etapa2" runat="server" name="Etapa2" placeholder="Etapa" hidden />
                         </div>
                     </div>
@@ -83,17 +66,6 @@
                             <input name="id3" id="id3" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo3" name="Titulo3" runat="server"></h2>
                             <p id="des3" name="des3" runat="server"></p>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" type="date" runat="server" id="fechaInicio3" name="fechaInicio3" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar3" type="submit" runat="server" onserverclick="mtdEditarFase3" name="Editar3" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                            </div>
                             <input id="Etapa3" runat="server" name="Etapa3" placeholder="Etapa" hidden />
                         </div>
                     </div>
@@ -109,17 +81,6 @@
                             <input name="id4" id="id4" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo4" name="Titulo4" runat="server"></h2>
                             <p id="des4" name="des4" runat="server"></p>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio4" name="fechaInicio4" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar4" type="submit" runat="server" onserverclick="mtdEditarFase4" name="Editar4" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                            </div>
                             <input id="Etapa4" runat="server" name="Etapa4" placeholder="Etapa" hidden />
                         </div>
                     </div>
@@ -128,7 +89,7 @@
             <div id="f5" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                     <%--   <img class="card-img-top" src="../../images/FENOLOGIA/301.jpg" height="90">--%>
+<%--                     <img class="card-img-top" src="../../images/FENOLOGIA/301.jpg" height="90">--%>
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
@@ -137,16 +98,7 @@
                             <p id="des5" name="des5" runat="server"></p>
                             <div class="row form-group">
                                 <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio5" name="fechaInicio5" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar5" type="submit" runat="server" name="Editar5" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente5" type="button" runat="server" name="siguiente5" class="btn btn-success btn-sm">
+                                    <button id="siguiente1" type="button" runat="server" name="siguiente1" onserverclick="siguiente1_ServerClick" class="btn btn-success btn-sm">
                                         Siguiente <i class="fa  fa-arrow-right"></i>
                                     </button>
                                 </div>
@@ -159,24 +111,13 @@
             <div id="f6" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                       <%-- <img class="card-img-top" src="../../images/FENOLOGIA/305.jpg" height="90">--%>
+                       <img class="card-img-top" src="../../images/FENOLOGIA/304.jpg" height="90">
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
                             <input name="id6" id="id6" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo6" name="Titulo6" runat="server"></h2>
                             <p id="des6" name="des6" runat="server"></p>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio6" name="fechaInicio6" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar6" type="submit" runat="server" onserverclick="mtdEditarFase6" name="Editar6" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                            </div>
                             <input id="Etapa6" runat="server" name="Etapa6" placeholder="Etapa" hidden />
                         </div>
                     </div>
@@ -185,24 +126,13 @@
             <div id="f7" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-<%--                        <img class="card-img-top" src="../../images/FENOLOGIA/309.jpg" height="90">--%>
+                       <img class="card-img-top" src="../../images/FENOLOGIA/309.jpg" height="90">
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
                             <input name="id7" id="id7" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo7" name="Titulo7" runat="server"></h2>
                             <p id="des7" name="des7" runat="server"></p>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio7" name="fechaInicio7" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar7" type="submit" runat="server" onserverclick="mtdEditarFase7" name="Editar7" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                            </div>
                             <input id="Etapa7" runat="server" name="Etapa7" placeholder="Etapa" hidden />
                         </div>
                     </div>
@@ -218,18 +148,8 @@
                             <input name="id8" id="id8" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo8" name="Titulo8" runat="server"></h2>
                             <p id="des8" name="des8" runat="server"></p>
-                            <div class="row form-group">
                                 <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio8" name="fechaInicio8" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar8" type="submit" runat="server" onserverclick="mtdEditarFase8" name="Editar8" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente8" type="button" runat="server" name="siguiente8" class="btn btn-success btn-sm">
+                                    <button id="siguiente2" type="button" runat="server" name="siguiente8" onserverclick="siguiente2_ServerClick" class="btn btn-success btn-sm">
                                         Siguiente <i class="fa  fa-arrow-right"></i>
                                     </button>
                                 </div>
@@ -242,7 +162,7 @@
             <div id="f9" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-<%--                        <img class="card-img-top" src="../../images/FENOLOGIA/501.jpg" height="90">--%>
+                        <img class="card-img-top" src="../../images/FENOLOGIA/501.jpg" height="90">
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
@@ -250,17 +170,7 @@
                             <h2 id="Titulo9" name="Titulo9" runat="server"></h2>
                             <p id="des9" name="des9" runat="server"></p>
 
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio9" name="fechaInicio9" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar9" type="submit" runat="server" onserverclick="mtdEditarFase9" name="Editar9" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                            </div>
+                            
                             <input id="Etapa9" runat="server" name="Etapa9" placeholder="Etapa" hidden />
                         </div>
                     </div>
@@ -277,20 +187,7 @@
                             <h2 id="Titulo10" name="Titulo0" runat="server"></h2>
                             <p id="des10" name="des10" runat="server"></p>
                             <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio10" name="fechaInicio10" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar10" type="submit" runat="server" onserverclick="mtdEditarFase10" name="Editar10" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente10" type="button" runat="server" name="siguiente10" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
-                                </div>
+                            
                             </div>
                             <input id="Etapa10" runat="server" name="Etapa10" placeholder="Etapa" hidden />
                         </div>
@@ -300,50 +197,34 @@
             <div id="f11" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                        <img class="card-img-top" src="../../images/FENOLOGIA/505.jpg" height="90">
+                      <img class="card-img-top" src="../../images/FENOLOGIA/504.jpg" height="90">  
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
                             <input name="id11" id="id11" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo11" name="Titulo11" runat="server"></h2>
                             <p id="des11" name="des11" runat="server"></p>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio11" name="fechaInicio11" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar11" type="submit" runat="server" onserverclick="mtdEditarFase11" name="Editar11" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar fecha</button>
+                            <div class="col-4 col-md-4">
+                                    <button id="siguiente3" type="button" runat="server" name="siguiente3" onserverclick="siguiente3_ServerClick" class="btn btn-success btn-sm">
+                                        Siguiente <i class="fa  fa-arrow-right"></i>
+                                    </button>
                                 </div>
                             </div>
                             <input id="Etapa11" runat="server" name="Etapa11" placeholder="Etapa" hidden />
                         </div>
                     </div>
                 </div>
-            </div>
+            
             <div id="f12" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                    <%--    <img class="card-img-top" src="../../images/FENOLOGIA/509.jpg" height="90">--%>
+                    <img class="card-img-top" src="../../images/FENOLOGIA/505.jpg" height="90">
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
                             <input name="id12" id="id12" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo12" name="Titulo12" runat="server"></h2>
                             <p id="des12" name="des12" runat="server"></p>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio12" name="fechaInicio12" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar12" type="submit" runat="server" onserverclick="mtdEditarFase12" name="Editar12" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                            </div>
                             <input id="Etapa12" runat="server" name="Etapa12" placeholder="Etapa" hidden />
                         </div>
                     </div>
@@ -352,68 +233,33 @@
             <div id="f13" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                        <img class="card-img-top" src="../../images/FENOLOGIA/601.jpg" height="90">
+                         <img class="card-img-top" src="../../images/FENOLOGIA/509.jpg" height="90">
                     </div>
                     <div class="col-4 col-md-8">
                         <div class="card-body">
                             <input name="id13" id="id13" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo13" name="Titulo13" runat="server"></h2>
                             <p id="des13" name="des13" runat="server"></p>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio13" name="fechaInicio13" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar13" type="submit" runat="server" onserverclick="mtdEditarFase13" name="Editar13" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente13" type="button" runat="server" name="siguiente13" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
                             <input id="Etapa13" runat="server" name="Etapa13" placeholder="Etapa" hidden />
                         </div>
                     </div>
                 </div>
             </div>
-<%--<%--<%--            <div id="f14" runat="server" class="card">
+            <div id="f14" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">
-                   <%--     <img class="card-img-top" src="../../images/FENOLOGIA/602.jpg" height="90">
-                   --%> </div>
-                  <%--  <div class="col-4 col-md-8">
+                    <img class="card-img-top" src="../../images/FENOLOGIA/602.jpg" height="90">
+                        </div>
+                    <div class="col-4 col-md-8">
                         <div class="card-body">
                             <input name="id14" id="id14" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo14" name="Titulo14" runat="server"></h2>
                             <p id="des14" name="des14" runat="server"></p>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaInicio14" name="fechaInicio14" />
-                                </div>
-                                <div class="col-8 col-md-4">
-                                    <input class="form-control" runat="server" type="date" id="fechaFinal14" name="fechaFinal14" />
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="Editar14" type="submit" runat="server" onserverclick="mtdEditarFase14" name="Editar14" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check-square"></i>Registrar Fecha</button>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente14" type="button" runat="server" name="siguiente14" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
                             <input id="Etapa14" runat="server" name="Etapa14" placeholder="Etapa" hidden />
                         </div>
                     </div>
-             --%>  <%-- </div>
-            </div>--%>
+             </div>
+            </div>
             <%--<div id="f15" runat="server" class="card">
                 <div class="row form-group">
                     <div class="col-1 col-lg-4 col-md-4">--%>--%>--%>
@@ -822,6 +668,7 @@
                     </div>
                 </div>
             </div>--%>
+        
         </form>
     </div>
 </asp:Content>

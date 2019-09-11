@@ -204,5 +204,20 @@ namespace Servicio
             return resultado;
         }
 
+        [WebMethod]
+        public DataSet mtdListarInterno(clInterno ObjInterno)
+        {
+            DataSet dsInterno = new DataSet();
+            clInterno objInternoo = new clInterno();
+            dsInterno = objInternoo.mtdListar(ObjInterno);
+            return dsInterno;
+        }
+        [WebMethod]
+        public int mtdRegistrarInterno(clInterno objIns)
+        {
+            clInterno objInterno = new clInterno();
+            int resultado = objInterno.mtdCheckear(objIns);
+            return resultado;
+        }
     }
 }

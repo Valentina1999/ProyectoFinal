@@ -25,6 +25,7 @@ namespace Web.Presentacion.Fases
             mostrarFase();
         }
 
+
         protected void mostrarFase()
         {
             try
@@ -45,7 +46,7 @@ namespace Web.Presentacion.Fases
                     f11.Visible = false;
                     f12.Visible = false;
                     f13.Visible = false;
-                    //f14.Visible = false;
+                    f14.Visible = false;
                     //f15.Visible = false;
                 //    f16.Visible = false;
                 //    f17.Visible = false;
@@ -75,7 +76,7 @@ namespace Web.Presentacion.Fases
                     f11.Visible = false;
                     f12.Visible = false;
                     f13.Visible = false;
-                    //f14.Visible = false;
+                    f14.Visible = false;
                     //f15.Visible = false;
                 //    f16.Visible = false;
                 //    f17.Visible = false;
@@ -102,10 +103,10 @@ namespace Web.Presentacion.Fases
                     f8.Visible = false;
                     f9.Visible = true;
                     f10.Visible = true;
-                    f11.Visible = false;
+                    f11.Visible = true;
                     f12.Visible = false;
                     f13.Visible = false;
-                    //f14.Visible = false;
+                    f14.Visible = false;
                     //f15.Visible = false;
                     ////f16.Visible = false;
                     //f17.Visible = false;
@@ -132,10 +133,10 @@ namespace Web.Presentacion.Fases
                     f8.Visible = false;
                     f9.Visible = false;
                     f10.Visible = false;
-                    f11.Visible = true;
+                    f11.Visible = false;
                     f12.Visible = true;
                     f13.Visible = true;
-                    //f14.Visible = true;
+                    f14.Visible = true;
                     //f15.Visible = true;
                     ////f16.Visible = false;
                     //f17.Visible = false;
@@ -279,7 +280,7 @@ namespace Web.Presentacion.Fases
         protected void mtdEditarFase1(object sender, EventArgs e)
         {
             objFases.IdFase = int.Parse(Request.Form[id1.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio1.UniqueID].ToString();
+            objFases.FechaInicio = (DateTime.Now).ToString();
             //objFases.FechaFinal = Request.Form[fechaFinal1.UniqueID].ToString();
 
             int resultado = servicioU.mtdEditarFase(objFases);
@@ -303,372 +304,10 @@ namespace Web.Presentacion.Fases
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
             }
         }
-
-        protected void mtdEditarFase2(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id2.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio2.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal2.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase3(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id3.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio3.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal3.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase4(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id4.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio4.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal4.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase5(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id5.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio5.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal5.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase6(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id6.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio6.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal6.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase7(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id7.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio7.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal7.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase8(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id8.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio8.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal8.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase9(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id9.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio9.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal9.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase10(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id10.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio10.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal10.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase11(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id11.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio11.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal11.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase12(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id12.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio12.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal12.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        protected void mtdEditarFase13(object sender, EventArgs e)
-        {
-            objFases.IdFase = int.Parse(Request.Form[id13.UniqueID]);
-            objFases.FechaInicio = Request.Form[fechaInicio13.UniqueID].ToString();
-            //objFases.FechaFinal = Request.Form[fechaFinal13.UniqueID].ToString();
-
-            int resultado = servicioU.mtdEditarFase(objFases);
-
-            if (resultado == 1)
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'ListaFases.aspx';
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-            }
-            else
-            {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-            }
-        }
-
-        //protected void mtdEditarFase14(object sender, EventArgs e)
-        //{
-        //    objFases.IdFase = int.Parse(Request.Form[id14.UniqueID]);
-        //    objFases.FechaInicio = Request.Form[fechaInicio14.UniqueID].ToString();
-        //    objFases.FechaFinal = Request.Form[fechaFinal14.UniqueID].ToString();
-
-        //    int resultado = servicioU.mtdEditarFase(objFases);
-
-        //    if (resultado == 1)
-        //    {
-        //        string script = @"<script type='text/javascript'>
-        //                    alert('Se ha editado Exitosamente');
-        //                    window.location = 'ListaFases.aspx';
-        //                </script>";
-
-        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-        //    }
-        //    else
-        //    {
-        //        string script = @"<script type='text/javascript'>
-        //                    alert('Error');
-        //                </script>";
-
-        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-        //    }
-        //}
-
-        //protected void mtdEditarFase15(object sender, EventArgs e)
+        
+       
+       
+         //protected void mtdEditarFase15(object sender, EventArgs e)
         //{
         //    objFases.IdFase = int.Parse(Request.Form[id15.UniqueID]);
         //    objFases.FechaInicio = Request.Form[fechaInicio15.UniqueID].ToString();
@@ -1015,75 +654,75 @@ namespace Web.Presentacion.Fases
             //des0.InnerText = dsListar.Tables["tblDatos"].Rows[0]["Descripcion"].ToString();
             //Etapa0.Value = dsListar.Tables["tblDatos"].Rows[0]["IdEtapa"].ToString();
 
-            id1.Value = dsListar.Tables["tblDatos"].Rows[1]["IdFase"].ToString();
-            Titulo1.InnerText = dsListar.Tables["tblDatos"].Rows[1]["Nombre"].ToString();
-            des1.InnerText = dsListar.Tables["tblDatos"].Rows[1]["Descripcion"].ToString();
-            Etapa1.Value = dsListar.Tables["tblDatos"].Rows[1]["IdEtapa"].ToString();
+            id1.Value = dsListar.Tables["tblDatos"].Rows[0]["IdFase"].ToString();
+            Titulo1.InnerText = dsListar.Tables["tblDatos"].Rows[0]["Nombre"].ToString();
+            des1.InnerText = dsListar.Tables["tblDatos"].Rows[0]["Descripcion"].ToString();
+            Etapa1.Value = dsListar.Tables["tblDatos"].Rows[0]["IdEtapa"].ToString();
 
-            id2.Value = dsListar.Tables["tblDatos"].Rows[2]["IdFase"].ToString();
-            Titulo2.InnerText = dsListar.Tables["tblDatos"].Rows[2]["Nombre"].ToString();
-            des2.InnerText = dsListar.Tables["tblDatos"].Rows[2]["Descripcion"].ToString();
-            Etapa2.Value = dsListar.Tables["tblDatos"].Rows[2]["IdEtapa"].ToString();
+            id2.Value = dsListar.Tables["tblDatos"].Rows[1]["IdFase"].ToString();
+            Titulo2.InnerText = dsListar.Tables["tblDatos"].Rows[1]["Nombre"].ToString();
+            des2.InnerText = dsListar.Tables["tblDatos"].Rows[1]["Descripcion"].ToString();
+            Etapa2.Value = dsListar.Tables["tblDatos"].Rows[1]["IdEtapa"].ToString();
 
-            id3.Value = dsListar.Tables["tblDatos"].Rows[3]["IdFase"].ToString();
-            Titulo3.InnerText = dsListar.Tables["tblDatos"].Rows[3]["Nombre"].ToString();
-            des3.InnerText = dsListar.Tables["tblDatos"].Rows[3]["Descripcion"].ToString();
-            Etapa3.Value = dsListar.Tables["tblDatos"].Rows[3]["IdEtapa"].ToString();
+            id3.Value = dsListar.Tables["tblDatos"].Rows[2]["IdFase"].ToString();
+            Titulo3.InnerText = dsListar.Tables["tblDatos"].Rows[2]["Nombre"].ToString();
+            des3.InnerText = dsListar.Tables["tblDatos"].Rows[2]["Descripcion"].ToString();
+            Etapa3.Value = dsListar.Tables["tblDatos"].Rows[2]["IdEtapa"].ToString();
 
-            id4.Value = dsListar.Tables["tblDatos"].Rows[4]["IdFase"].ToString();
-            Titulo4.InnerText = dsListar.Tables["tblDatos"].Rows[4]["Nombre"].ToString();
-            des4.InnerText = dsListar.Tables["tblDatos"].Rows[4]["Descripcion"].ToString();
-            Etapa4.Value = dsListar.Tables["tblDatos"].Rows[4]["IdEtapa"].ToString();
+            id4.Value = dsListar.Tables["tblDatos"].Rows[3]["IdFase"].ToString();
+            Titulo4.InnerText = dsListar.Tables["tblDatos"].Rows[3]["Nombre"].ToString();
+            des4.InnerText = dsListar.Tables["tblDatos"].Rows[3]["Descripcion"].ToString();
+            Etapa4.Value = dsListar.Tables["tblDatos"].Rows[3]["IdEtapa"].ToString();
 
-            id5.Value = dsListar.Tables["tblDatos"].Rows[5]["IdFase"].ToString();
-            Titulo5.InnerText = dsListar.Tables["tblDatos"].Rows[5]["Nombre"].ToString();
-            des5.InnerText = dsListar.Tables["tblDatos"].Rows[5]["Descripcion"].ToString();
-            Etapa5.Value = dsListar.Tables["tblDatos"].Rows[5]["IdEtapa"].ToString();
+            id5.Value = dsListar.Tables["tblDatos"].Rows[4]["IdFase"].ToString();
+            Titulo5.InnerText = dsListar.Tables["tblDatos"].Rows[4]["Nombre"].ToString();
+            des5.InnerText = dsListar.Tables["tblDatos"].Rows[4]["Descripcion"].ToString();
+            Etapa5.Value = dsListar.Tables["tblDatos"].Rows[4]["IdEtapa"].ToString();
 
-            id6.Value = dsListar.Tables["tblDatos"].Rows[6]["IdFase"].ToString();
-            Titulo6.InnerText = dsListar.Tables["tblDatos"].Rows[6]["Nombre"].ToString();
-            des6.InnerText = dsListar.Tables["tblDatos"].Rows[6]["Descripcion"].ToString();
-            Etapa6.Value = dsListar.Tables["tblDatos"].Rows[6]["IdEtapa"].ToString();
+            id6.Value = dsListar.Tables["tblDatos"].Rows[5]["IdFase"].ToString();
+            Titulo6.InnerText = dsListar.Tables["tblDatos"].Rows[5]["Nombre"].ToString();
+            des6.InnerText = dsListar.Tables["tblDatos"].Rows[5]["Descripcion"].ToString();
+            Etapa6.Value = dsListar.Tables["tblDatos"].Rows[5]["IdEtapa"].ToString();
 
-            id7.Value = dsListar.Tables["tblDatos"].Rows[7]["IdFase"].ToString();
-            Titulo7.InnerText = dsListar.Tables["tblDatos"].Rows[7]["Nombre"].ToString();
-            des7.InnerText = dsListar.Tables["tblDatos"].Rows[7]["Descripcion"].ToString();
-            Etapa7.Value = dsListar.Tables["tblDatos"].Rows[7]["IdEtapa"].ToString();
+            id7.Value = dsListar.Tables["tblDatos"].Rows[6]["IdFase"].ToString();
+            Titulo7.InnerText = dsListar.Tables["tblDatos"].Rows[6]["Nombre"].ToString();
+            des7.InnerText = dsListar.Tables["tblDatos"].Rows[6]["Descripcion"].ToString();
+            Etapa7.Value = dsListar.Tables["tblDatos"].Rows[6]["IdEtapa"].ToString();
 
-            id8.Value = dsListar.Tables["tblDatos"].Rows[8]["IdFase"].ToString();
-            Titulo8.InnerText = dsListar.Tables["tblDatos"].Rows[8]["Nombre"].ToString();
-            des8.InnerText = dsListar.Tables["tblDatos"].Rows[8]["Descripcion"].ToString();
-            Etapa8.Value = dsListar.Tables["tblDatos"].Rows[8]["IdEtapa"].ToString();
+            id8.Value = dsListar.Tables["tblDatos"].Rows[7]["IdFase"].ToString();
+            Titulo8.InnerText = dsListar.Tables["tblDatos"].Rows[7]["Nombre"].ToString();
+            des8.InnerText = dsListar.Tables["tblDatos"].Rows[7]["Descripcion"].ToString();
+            Etapa8.Value = dsListar.Tables["tblDatos"].Rows[7]["IdEtapa"].ToString();
 
-            id9.Value = dsListar.Tables["tblDatos"].Rows[9]["IdFase"].ToString();
-            Titulo9.InnerText = dsListar.Tables["tblDatos"].Rows[9]["Nombre"].ToString();
-            des9.InnerText = dsListar.Tables["tblDatos"].Rows[9]["Descripcion"].ToString();
-            Etapa9.Value = dsListar.Tables["tblDatos"].Rows[9]["IdEtapa"].ToString();
+            id9.Value = dsListar.Tables["tblDatos"].Rows[8]["IdFase"].ToString();
+            Titulo9.InnerText = dsListar.Tables["tblDatos"].Rows[8]["Nombre"].ToString();
+            des9.InnerText = dsListar.Tables["tblDatos"].Rows[8]["Descripcion"].ToString();
+            Etapa9.Value = dsListar.Tables["tblDatos"].Rows[8]["IdEtapa"].ToString();
 
-            id10.Value = dsListar.Tables["tblDatos"].Rows[10]["IdFase"].ToString();
-            Titulo10.InnerText = dsListar.Tables["tblDatos"].Rows[10]["Nombre"].ToString();
-            des10.InnerText = dsListar.Tables["tblDatos"].Rows[10]["Descripcion"].ToString();
-            Etapa10.Value = dsListar.Tables["tblDatos"].Rows[10]["IdEtapa"].ToString();
+            id10.Value = dsListar.Tables["tblDatos"].Rows[9]["IdFase"].ToString();
+            Titulo10.InnerText = dsListar.Tables["tblDatos"].Rows[9]["Nombre"].ToString();
+            des10.InnerText = dsListar.Tables["tblDatos"].Rows[9]["Descripcion"].ToString();
+            Etapa10.Value = dsListar.Tables["tblDatos"].Rows[9]["IdEtapa"].ToString();
 
-            id11.Value = dsListar.Tables["tblDatos"].Rows[11]["IdFase"].ToString();
-            Titulo11.InnerText = dsListar.Tables["tblDatos"].Rows[11]["Nombre"].ToString();
-            des11.InnerText = dsListar.Tables["tblDatos"].Rows[11]["Descripcion"].ToString();
-            Etapa11.Value = dsListar.Tables["tblDatos"].Rows[11]["IdEtapa"].ToString();
+            id11.Value = dsListar.Tables["tblDatos"].Rows[10]["IdFase"].ToString();
+            Titulo11.InnerText = dsListar.Tables["tblDatos"].Rows[10]["Nombre"].ToString();
+            des11.InnerText = dsListar.Tables["tblDatos"].Rows[10]["Descripcion"].ToString();
+            Etapa11.Value = dsListar.Tables["tblDatos"].Rows[10]["IdEtapa"].ToString();
 
-            id12.Value = dsListar.Tables["tblDatos"].Rows[12]["IdFase"].ToString();
-            Titulo12.InnerText = dsListar.Tables["tblDatos"].Rows[12]["Nombre"].ToString();
-            des12.InnerText = dsListar.Tables["tblDatos"].Rows[12]["Descripcion"].ToString();
-            Etapa12.Value = dsListar.Tables["tblDatos"].Rows[12]["IdEtapa"].ToString();
+            id12.Value = dsListar.Tables["tblDatos"].Rows[11]["IdFase"].ToString();
+            Titulo12.InnerText = dsListar.Tables["tblDatos"].Rows[11]["Nombre"].ToString();
+            des12.InnerText = dsListar.Tables["tblDatos"].Rows[11]["Descripcion"].ToString();
+            Etapa12.Value = dsListar.Tables["tblDatos"].Rows[11]["IdEtapa"].ToString();
 
-            id13.Value = dsListar.Tables["tblDatos"].Rows[13]["IdFase"].ToString();
-            Titulo13.InnerText = dsListar.Tables["tblDatos"].Rows[13]["Nombre"].ToString();
-            des13.InnerText = dsListar.Tables["tblDatos"].Rows[13]["Descripcion"].ToString();
-            Etapa13.Value = dsListar.Tables["tblDatos"].Rows[13]["IdEtapa"].ToString();
+            id13.Value = dsListar.Tables["tblDatos"].Rows[12]["IdFase"].ToString();
+            Titulo13.InnerText = dsListar.Tables["tblDatos"].Rows[12]["Nombre"].ToString();
+            des13.InnerText = dsListar.Tables["tblDatos"].Rows[12]["Descripcion"].ToString();
+            Etapa13.Value = dsListar.Tables["tblDatos"].Rows[12]["IdEtapa"].ToString();
 
-            //id14.Value = dsListar.Tables["tblDatos"].Rows[14]["IdFase"].ToString();
-            //Titulo14.InnerText = dsListar.Tables["tblDatos"].Rows[14]["Nombre"].ToString();
-            //des14.InnerText = dsListar.Tables["tblDatos"].Rows[14]["Descripcion"].ToString();
-            //Etapa14.Value = dsListar.Tables["tblDatos"].Rows[14]["IdEtapa"].ToString();
+            id14.Value = dsListar.Tables["tblDatos"].Rows[13]["IdFase"].ToString();
+            Titulo14.InnerText = dsListar.Tables["tblDatos"].Rows[13]["Nombre"].ToString();
+            des14.InnerText = dsListar.Tables["tblDatos"].Rows[13]["Descripcion"].ToString();
+            Etapa14.Value = dsListar.Tables["tblDatos"].Rows[13]["IdEtapa"].ToString();
 
             //id15.Value = dsListar.Tables["tblDatos"].Rows[15]["IdFase"].ToString();
             //Titulo15.InnerText = dsListar.Tables["tblDatos"].Rows[15]["Nombre"].ToString();
@@ -1150,6 +789,42 @@ namespace Web.Presentacion.Fases
             //{
             //    Response.Write(string.Format("<img src='../../images/FENOLOGIA/{0}' alt='Ver{0}' height='100' width='100'/>", fi.Name));
             //}
+        }
+
+        protected void Interno_ServerClick(object sender, EventArgs e)
+        {
+            Response.Redirect("/Presentacion/Interno/Interno.aspx");
+        }
+
+        protected void siguiente1_ServerClick(object sender, EventArgs e)
+        {
+            if (IdE ==1)
+            {
+                Presentacion.Etapa.ListarEtapa.somedata = 2.ToString();
+                Response.Redirect("/Presentacion/Fases/ListaFases.aspx");
+            }
+            
+            
+        }
+
+        protected void siguiente2_ServerClick(object sender, EventArgs e)
+        {
+            if (IdE == 2)
+            {
+                Presentacion.Etapa.ListarEtapa.somedata = 11.ToString();
+                Response.Redirect("/Presentacion/Fases/ListaFases.aspx");
+            }
+        }
+
+        protected void siguiente3_ServerClick(object sender, EventArgs e)
+        {
+
+            if (IdE == 11)
+            {
+                Presentacion.Etapa.ListarEtapa.somedata = 13.ToString();
+                Response.Redirect("/Presentacion/Fases/ListaFases.aspx");
+            }
+
         }
     }
 }
