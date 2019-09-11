@@ -36,33 +36,42 @@ namespace Web.Presentacion.Master
 
         protected void btnEditar(object sender, EventArgs e)
         {
-            objUsu.Documento = Request.Form[txtDocumento.UniqueID];
-            objUsu.Nombre = Request.Form[txtNombre.UniqueID];
-            objUsu.Apellido = Request.Form[txtApellido.UniqueID];
-            objUsu.Correo = Request.Form[txtCorreo.UniqueID];
-            objUsu.Clave = Request.Form[txtClave.UniqueID];
-            objUsu.Numero = Request.Form[txtTelefono.UniqueID];
-            objUsu.IdUsuario = Id;
-
-            int resultado = ServicioU.mtdEditarUsuarios(objUsu);
-
-            if (resultado == 1)
+            try
             {
-                string script = @"<script type='text/javascript'>
-                            alert('Se ha editado Exitosamente');
-                            window.location = 'EditarUsuario.aspx';
-                        </script>";
+                objUsu.Documento = Request.Form[txtDocumento.UniqueID];
+                objUsu.Nombre = Request.Form[txtNombre.UniqueID];
+                objUsu.Apellido = Request.Form[txtApellido.UniqueID];
+                objUsu.Correo = Request.Form[txtCorreo.UniqueID];
+                objUsu.Clave = Request.Form[txtClave.UniqueID];
+                objUsu.Numero = Request.Form[txtTelefono.UniqueID];
+                objUsu.IdUsuario = Id;
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                int resultado = ServicioU.mtdEditarUsuarios(objUsu);
 
+                if (resultado == 1)
+                {
+                    alert.Visible = true;
+                    //string script = @"<script type='text/javascript'>
+                    //        alert('Se ha editado Exitosamente');
+                    //        window.location = 'EditarUsuario.aspx';
+                    //    </script>";
+
+                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+
+                }
+                else
+                {
+                    danger.Visible = true;
+                    //string script = @"<script type='text/javascript'>
+                    //        alert('Error');
+                    //    </script>";
+
+                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                }
             }
-            else
+            catch (Exception)
             {
-                string script = @"<script type='text/javascript'>
-                            alert('Error');
-                        </script>";
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                danger.Visible = true;
             }
         }
     }

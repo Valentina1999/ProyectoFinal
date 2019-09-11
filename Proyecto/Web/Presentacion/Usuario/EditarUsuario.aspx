@@ -9,6 +9,26 @@
                 <strong>EDITAR USUARIO</strong>
             </div>
             <div class="card-body card-block">
+                <div id="alert" runat="server" visible="false">
+                    <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
+                        <span class="badge badge-pill badge-success">Corrrecto</span>
+                        Su Datos han sido registrado correctamente.
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="danger" runat="server" visible="false">
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                        <span class="badge badge-pill badge-danger">Error</span>
+                        No se pudo Editar sus Datos. Vuelve a intentar.
+						    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                </div>
+
                 <form action="EditarUsuario.aspx" method="post" runat="server">
                     <div class="row form-group">
                         <div class="col col-md-1">
@@ -71,7 +91,7 @@
                         </button>
                     </div>
                 </form>
-          </div>
+            </div>
         </div>
     </div>
 </asp:Content>

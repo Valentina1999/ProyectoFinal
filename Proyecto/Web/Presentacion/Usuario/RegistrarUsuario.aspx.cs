@@ -53,6 +53,10 @@ namespace Web.Presentacion.Usuario
 
                     //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
                 }
+                else
+                {
+                    danger.Visible = true;
+                }
             }
             catch (Exception)
             {
