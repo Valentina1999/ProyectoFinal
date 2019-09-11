@@ -11,7 +11,7 @@
             <div class="card-body card-block">
                 <form action="" method="post" enctype="multipart/form-data" class="form-horizontal" runat="server">
                    <div>
-                <h6>   Como Aumentar o Disminuir los valores de mi suelo</h6> <asp:LinkButton ID="PDF" runat="server">Descargar</asp:LinkButton>
+                <%--<h6>   Como Aumentar o Disminuir los valores de mi suelo</h6> <asp:LinkButton ID="PDF" runat="server">Descargar</asp:LinkButton>--%>
             </div>
                     <div class="row form-group">
                         <div class="col col-md-1">

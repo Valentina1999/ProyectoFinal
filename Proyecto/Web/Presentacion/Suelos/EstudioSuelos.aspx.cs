@@ -38,6 +38,10 @@ namespace Web.Presentacion.Suelos
         }
 
 
+        protected void btnRedir_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script> window.open('tblRangos.aspx ','_blank'); </script>");
+        }
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -253,9 +257,5 @@ namespace Web.Presentacion.Suelos
 
         }
 
-        protected void btnRedir_Click(object sender, EventArgs e)
-        {
-            Response.Write("<script> window.open('tblRangos.aspx ','_blank'); </script>");
-        }
     }
  }
