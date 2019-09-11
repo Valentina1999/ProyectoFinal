@@ -191,9 +191,10 @@
                 <button type="submit" id="btnRegistrar" name="btnRegistrar" class="btn btn-primary btn-sm" runat="server" onserverclick="btnRegistrarSuelos">
                     <i class="fa fa-dot-circle-o"></i> Registrar
                 </button>
-                <button type="reset" id="btnCalcular" name="btnCalcular" class="btn btn-danger btn-sm">
-                    <i class="fa fa-ban"></i> Calcular
-                </button>
+               <%-- <button type="reset" id="btnCalcular" name="btnCalcular" onclick="" class="btn btn-danger btn-sm">--%>
+                    <asp:Button ID="btnRedir" OnClick="btnRedir_Click" runat="server" Text="TABLA RANGOS" CssClass="btn btn-danger btn-sm" />
+                   <%-- <i class="fa fa-ban"></i> Calcular--%>
+               <%-- </button>--%>
             </div>
                 </form>
             </div>

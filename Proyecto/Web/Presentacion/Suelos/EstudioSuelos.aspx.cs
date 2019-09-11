@@ -13,19 +13,6 @@ namespace Web.Presentacion.Suelos
     public partial class EstudioSuelos : System.Web.UI.Page
     {
 
-        bool a;
-        bool b;
-        bool c;
-        bool d;
-        bool f;
-        bool g;
-        bool h;
-        bool i;
-        bool j;
-        bool k;
-        bool l;
-        bool m;
-
         int Id;
         ServicioUsuario.WebService1SoapClient Servicio = new ServicioUsuario.WebService1SoapClient();
         ServicioUsuario.clTerreno obj = new ServicioUsuario.clTerreno();
@@ -35,6 +22,12 @@ namespace Web.Presentacion.Suelos
            
 
         }
+        protected void btnRedir_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script> window.open('tblrangos.aspx ','_blank'); </script>");
+        }
+
+
 
         protected void Page_Init(object sender, EventArgs e) {
 
@@ -86,162 +79,74 @@ namespace Web.Presentacion.Suelos
             objSuelos.IdCultivo = 1;
             objSuelos.IdTerreno = int.Parse(Terreno.SelectedValue);
 
-          
 
-            if (objSuelos.AcidezOalcalinidad == 5.5 || objSuelos.AcidezOalcalinidad <= 5.9)
+            int resultado = ServicioJ.mtdRegistrarSuelos(objSuelos);
+
+            if (objSuelos.AcidezOalcalinidad == 5.5 && 5.5 <= 5.9)
             {
-                a = true;
-            }
-            else
-            {
-                RAcidezAl.Visible = true;
-                RAcidezAl.Text = "Nivel de Acidez o Alcalinidad Erroneo";
-            }
-
-
-            if (objSuelos.Aluminio < 0.2)
-            {
-                 b = true;
-            }
-            else {
-                RAluminio.Visible = true;
-                RAluminio.Text = "Nivel de Aluminio Erroneo ";
-            }
-
-        
-            if (objSuelos.Nitrógeno == 2.1 || objSuelos.Nitrógeno <= 2.4)
-            {
-
-                 c = true;
-            }
-            else
-            {
-                RNitrogeno.Visible = true;
-                RNitrogeno.Text = "Nivel de Nitrogeno Erroneo";
-            }
-
-
-            if (objSuelos.Potasio == 0.03 || objSuelos.Potasio <= 0.80)
-            {
-                 d = true;
-            }
-            else {
-                RPotasion.Visible = true;
-                RPotasion.Text = "Nivel de Potasio Erroneo";
-            }
-
-
-            if (objSuelos.Fósforo == 15 || objSuelos.Fósforo <= 20)
-            {
-                 f = true;
-            }
-            else
-            {
-                RFosforo.Visible = true;
-                RFosforo.Text = "Nivel de Fosforo Erroneo";
-            }
-
-
-            if (objSuelos.Calcio == 0.10 || objSuelos.Calcio <= 0.30)
-            {
-                 g = true;
-            }
-            else {
-                RCalcio.Visible = true;
-                RCalcio.Text = "Nivel de Calcio Erroneo";
-            }
-
-
-            if (objSuelos.Magnesio == 0.05 || objSuelos.Magnesio <= 0.20)
-            {
-                 h = true;
-            }
-            else {
-                    RMagnesion.Visible = true;
-                    RMagnesion.Text = "Nivel de Magnesio Erroneo";
-                }
-
-            
-            if (objSuelos.Azufre == 20 || objSuelos.Azufre <= 80)
-            {
-                 i = true;
-
-            }
-            else {
-                RAzufre.Visible = true;
-                RAzufre.Text = "Nivel de Azufre Erroneo";
-            }
-
-
-            if (objSuelos.Cobre == 3 || objSuelos.Cobre <= 20)
-            {
-                 j = true;
-            }
-            else {
-                RCobre.Visible = true;
-                RCobre.Text = "Nivel de Cobre Erroneo";
-            }
-
-
-            if (objSuelos.Cinc == 6 || objSuelos.Cinc <= 36)
-            {
-                 k = true;
-            }
-            else
-            {
-                RCinc.Visible = true;
-                RCinc.Text = "Nivel de Cinc Erroneo";
-            }
-
-
-            if (objSuelos.Manganeso == 60 || objSuelos.Manganeso <= 100)
-            {
-                 l = true;
-            }
-            else
-            {
-                RManganeso.Visible = true;
-                RManganeso.Text = "Nivel de Manganeso Erroneo";
-            }
-
-
-            if (objSuelos.Boro == 1.2 || objSuelos.Boro <= 5.73)
-            {
-                 m = true;
-            }
-            else {
-                RBoro.Visible = true;
-                RBoro.Text = "Nivel de Boro Erroneo";
-            }
-               string script;
-
-            if (a == true && b == true && c == true && d == true && f == true && g == true && h == true && i == true && j == true && k == true && l == true && m == true)
-            {
-                int resultado = ServicioJ.mtdRegistrarSuelos(objSuelos);
-
-             
-
-                if (resultado == 1)
+                if (objSuelos.Aluminio < 0.2)
                 {
-                     script = @"<script type='text/javascript'>
+                    if (objSuelos.Nitrógeno == 2.1 && 2.1 <= 2.4)
+                    {
+                        if (objSuelos.Potasio == 0.03 && 0.03 <= 0.80)
+                        {
+                            if (objSuelos.Fósforo == 15 && 15 <= 20)
+                            {
+                                if (objSuelos.Calcio == 0.10 && 0.10 <= 0.30)
+                                {
+                                    if (objSuelos.Magnesio == 0.05 && 0.05 <= 0.20)
+                                    {
+                                        if (objSuelos.Azufre == 20 && 20 <= 80)
+                                        {
+                                            if (objSuelos.Cobre == 3 && 3 <= 20)
+                                            {
+                                                if (objSuelos.Cinc == 6 && 6 <= 36)
+                                                {
+                                                    if (objSuelos.Manganeso == 60 && 60 <= 100)
+                                                    {
+                                                        if (objSuelos.Boro == 1.2 && 1.2 <= 5.73)
+                                                        {
+                                                            if (resultado == 1)
+                                                            {
+                                                                string script = @"<script type='text/javascript'>
                                                                 alert('Se ha Registrado Exitosamente El Suelo');
                                                                 </script>";
 
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                                                                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                                                            }
+                                                        }
+                                                        else {RBoro.Visible = true; RBoro.Text = "El nivel de Boro debe comprender valores de 1.2meq/100g a 5.73meq/100g para iniciar con el proceso";
+                                                        }
+                                                    }
+                                                    else { RManganeso.Text = "El nivel de Manganeso debe comprender valores de 60ppm a 100ppm para iniciar con el proceso"; }
+                                                 }
+                                                else { RCinc.Text = "El nivel de Cinc debe comprender valores de 6ppm a 36ppm para iniciar con el proceso"; }
+                                            }
+                                            else { RCobre.Text = "El nivel de Cobre debe comprender valores de 3ppm a 20ppm para iniciar con el proceso"; }
+                                        }
+                                        else { RAzufre.Text = "El nivel de Azufre debe comprender valores de 20ppm a 80ppm para iniciar con el proceso"; }
+                                    }
+                                    else { RMagnesion.Text = "El nivel de Magnesio debe comprender valores de 60ppm a 100ppm para iniciar con el proceso"; }
+                                }
+                                else { RCalcio.Text = "El nivel de Calcio debe comprender valores de 0.10meq/100g a 0.30ppm para iniciar con el proceso"; }
+                            }
+                            else
+                            { RFosforo.Text = "El nivel de Fosforo debe comprender valores de 15ppm a 20ppm para iniciar con el proceso"; }
+                        }
+                        else
+                        { RPotasion.Text = "El nivel de Potasio debe comprender valores de 0,3meq/100g a 80meq/100 para iniciar con el proceso"; }  
+                    }
+                    else
+                    { RNitrogeno.Text = "El nivel de Nitrogeno debe comprender valores de 2.1N a 2.4N para iniciar con el proceso"; }
                 }
-
+                else
+                { RAluminio.Text = "El nivel de Aluminio debe comprender valores de <0.2 meq/100g para iniciar con el proceso"; }
             }
-            else {
-                script = @"<script type='text/javascript'>
-                                                                alert('Error de registro datos Incorrectos');
-                                                                </script>";
-                
-            } 
-            
-              
-            
-
-
+            else
+            { RAcidezAl.Text = "El nivel de Aluminio debe comprender valores de 5.5 PH a 5.9 PH para iniciar con el proceso"; }
+                    
         }
+
+        
     }
 }
