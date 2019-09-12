@@ -10,9 +10,10 @@
             
             <div class="card-body card-block">
                 <form action="" method="post" enctype="multipart/form-data" class="form-horizontal" runat="server">
-                   <div>
-                <%--<h6>   Como Aumentar o Disminuir los valores de mi suelo</h6> <asp:LinkButton ID="PDF" runat="server">Descargar</asp:LinkButton>--%>
+                   <div runat="server"> 
+                <a href="https://drive.google.com/file/d/1Blku3GYRegTGSP42YHAcSFnLPHHicBYY/view?usp=sharing" class="alert-link">Como aumentar o disminuir los valores? has click aqui</a>
             </div>
+                    
                     <div class="row form-group">
                         <div class="col col-md-1">
                             <label for="text-input" class=" form-control-label">Acidez y Alcanidad</label>
@@ -169,24 +170,14 @@
                        
                     </div>
                         </div>
-                              <div class=" row form-group">
-                                  <div class="col-13 col-md-1">
-                                      <label for="text-input" class=" form-control-label">Terreno</label>
-                                  </div>
-                                  <div class="col-20 col-md-4">
-                                      <asp:DropDownList class="au-input au-input--full" ID="Terreno" runat="server" Height="40px" Width="300px">
-                                      </asp:DropDownList>
-                                  </div>
+                              <div class="form-group">
+                                    <asp:DropDownList class="au-input au-input--full" ID="Terreno" runat="server" Height="40px" Width="300px">
+                                    </asp:DropDownList>
                                 </div>
 
-                             <div class=" row form-group">
-                                 <div class="col-13 col-md-1">
-                                     <label for="text-input" class=" form-control-label">Suelo</label>
-                                 </div>
-                                 <div class="col-20 col-md-4">
-                                     <asp:DropDownList class="au-input au-input--full" ID="TipoSuelo" runat="server" Height="40px" Width="300px">
-                                     </asp:DropDownList>
-                                 </div>
+                             <div class="form-group">
+                                    <asp:DropDownList class="au-input au-input--full" ID="TipoSuelo" runat="server" Height="40px" Width="300px">
+                                    </asp:DropDownList>
                                 </div>
 
                         <div class="row form-group">

@@ -31,12 +31,16 @@ namespace Web.Presentacion.Suelos
         ServicioUsuario.WebService1SoapClient Servicio = new ServicioUsuario.WebService1SoapClient();
         ServicioUsuario.clTerreno obj = new ServicioUsuario.clTerreno();
 
+        string path = HttpContext.Current.Request.Url.AbsoluteUri.Replace(HttpContext.Current.Request.Url.PathAndQuery, "/") + "doc.pdf";
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
         }
 
+        protected void PDF_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         protected void btnRedir_Click(object sender, EventArgs e)
         {
