@@ -26,6 +26,7 @@ namespace Web.Presentacion.Terreno
             DataSet enviar = SerT.mtdEnviarID(Id);
             DataSet listar = new DataSet();
             listar = enviar;
+
             TipoTerreno.DataSource = listar.Tables["tblDatos"];
             TipoTerreno.DataTextField = "NombreTerreno";
             TipoTerreno.DataValueField = "IdTerreno";

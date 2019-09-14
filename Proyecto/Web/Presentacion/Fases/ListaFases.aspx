@@ -97,12 +97,7 @@
                             <h2 id="Titulo5" name="Titulo5" runat="server"></h2>
                             <p id="des5" name="des5" runat="server"></p>
                             <div class="row form-group">
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente1" type="button" runat="server" name="siguiente1" onserverclick="siguiente1_ServerClick" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
+                               </div>
                             <input id="Etapa5" runat="server" name="Etapa5" placeholder="Etapa" hidden />
                         </div>
                     </div>
@@ -148,11 +143,6 @@
                             <input name="id8" id="id8" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo8" name="Titulo8" runat="server"></h2>
                             <p id="des8" name="des8" runat="server"></p>
-                                <div class="col-4 col-md-4">
-                                    <button id="siguiente2" type="button" runat="server" name="siguiente8" onserverclick="siguiente2_ServerClick" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
-                                </div>
                             </div>
                             <input id="Etapa8" runat="server" name="Etapa8" placeholder="Etapa" hidden />
                         </div>
@@ -204,11 +194,6 @@
                             <input name="id11" id="id11" runat="server" placeholder="Id" hidden />
                             <h2 id="Titulo11" name="Titulo11" runat="server"></h2>
                             <p id="des11" name="des11" runat="server"></p>
-                            <div class="col-4 col-md-4">
-                                    <button id="siguiente3" type="button" runat="server" name="siguiente3" onserverclick="siguiente3_ServerClick" class="btn btn-success btn-sm">
-                                        Siguiente <i class="fa  fa-arrow-right"></i>
-                                    </button>
-                                </div>
                             </div>
                             <input id="Etapa11" runat="server" name="Etapa11" placeholder="Etapa" hidden />
                         </div>

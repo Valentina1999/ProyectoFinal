@@ -306,23 +306,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="mtdListarTipoInsumo">
-        <s:complexType />
-      </s:element>
-      <s:element name="mtdListarTipoInsumoResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="mtdListarTipoInsumoResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="mtdRegistrarPregunta">
         <s:complexType>
           <s:sequence>
@@ -386,12 +369,158 @@
         </s:complexType>
       </s:element>
       <s:element name="mtdListarEtapa">
-        <s:complexType />
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+          </s:sequence>
+        </s:complexType>
       </s:element>
       <s:element name="mtdListarEtapaResponse">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="mtdListarEtapaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarInsumos">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarInsumosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarInsumosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdRegistrarInsumo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objIns" type="tns:clInsumo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clInsumo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdInsumo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Foto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdTipoInsumo" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mtdRegistrarInsumoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdRegistrarInsumoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarInterno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjInterno" type="tns:clInterno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clInterno">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ch" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdInterno" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdEtapa" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fase" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dias" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Check" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdTerreno" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mtdListarInternoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarInternoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdRegistrarInterno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objIns" type="tns:clInterno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdRegistrarInternoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdRegistrarInternoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdTerrenoEtapas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objTe" type="tns:clTerreno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdTerrenoEtapasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdTerrenoEtapasResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEtapaTerreno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEtapaTerrenoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdEtapaTerrenoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdInternoCultivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdInternoCultivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdInternoCultivoResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -494,12 +623,6 @@
   <wsdl:message name="mtdfechaSoapOut">
     <wsdl:part name="parameters" element="tns:mtdfechaResponse" />
   </wsdl:message>
-  <wsdl:message name="mtdListarTipoInsumoSoapIn">
-    <wsdl:part name="parameters" element="tns:mtdListarTipoInsumo" />
-  </wsdl:message>
-  <wsdl:message name="mtdListarTipoInsumoSoapOut">
-    <wsdl:part name="parameters" element="tns:mtdListarTipoInsumoResponse" />
-  </wsdl:message>
   <wsdl:message name="mtdRegistrarPreguntaSoapIn">
     <wsdl:part name="parameters" element="tns:mtdRegistrarPregunta" />
   </wsdl:message>
@@ -523,6 +646,48 @@
   </wsdl:message>
   <wsdl:message name="mtdListarEtapaSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarEtapaResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarInsumosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarInsumos" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarInsumosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarInsumosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarInsumoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarInsumo" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarInsumoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarInsumoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarInternoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarInterno" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarInternoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarInternoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarInternoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarInterno" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarInternoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarInternoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdTerrenoEtapasSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdTerrenoEtapas" />
+  </wsdl:message>
+  <wsdl:message name="mtdTerrenoEtapasSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdTerrenoEtapasResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdEtapaTerrenoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdEtapaTerreno" />
+  </wsdl:message>
+  <wsdl:message name="mtdEtapaTerrenoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdEtapaTerrenoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdInternoCultivoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdInternoCultivo" />
+  </wsdl:message>
+  <wsdl:message name="mtdInternoCultivoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdInternoCultivoResponse" />
   </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="mtdListarRol">
@@ -585,10 +750,6 @@
       <wsdl:input message="tns:mtdfechaSoapIn" />
       <wsdl:output message="tns:mtdfechaSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="mtdListarTipoInsumo">
-      <wsdl:input message="tns:mtdListarTipoInsumoSoapIn" />
-      <wsdl:output message="tns:mtdListarTipoInsumoSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="mtdRegistrarPregunta">
       <wsdl:input message="tns:mtdRegistrarPreguntaSoapIn" />
       <wsdl:output message="tns:mtdRegistrarPreguntaSoapOut" />
@@ -604,6 +765,34 @@
     <wsdl:operation name="mtdListarEtapa">
       <wsdl:input message="tns:mtdListarEtapaSoapIn" />
       <wsdl:output message="tns:mtdListarEtapaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarInsumos">
+      <wsdl:input message="tns:mtdListarInsumosSoapIn" />
+      <wsdl:output message="tns:mtdListarInsumosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarInsumo">
+      <wsdl:input message="tns:mtdRegistrarInsumoSoapIn" />
+      <wsdl:output message="tns:mtdRegistrarInsumoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarInterno">
+      <wsdl:input message="tns:mtdListarInternoSoapIn" />
+      <wsdl:output message="tns:mtdListarInternoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarInterno">
+      <wsdl:input message="tns:mtdRegistrarInternoSoapIn" />
+      <wsdl:output message="tns:mtdRegistrarInternoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdTerrenoEtapas">
+      <wsdl:input message="tns:mtdTerrenoEtapasSoapIn" />
+      <wsdl:output message="tns:mtdTerrenoEtapasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdEtapaTerreno">
+      <wsdl:input message="tns:mtdEtapaTerrenoSoapIn" />
+      <wsdl:output message="tns:mtdEtapaTerrenoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdInternoCultivo">
+      <wsdl:input message="tns:mtdInternoCultivoSoapIn" />
+      <wsdl:output message="tns:mtdInternoCultivoSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -743,15 +932,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="mtdListarTipoInsumo">
-      <soap:operation soapAction="http://tempuri.org/mtdListarTipoInsumo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="mtdRegistrarPregunta">
       <soap:operation soapAction="http://tempuri.org/mtdRegistrarPregunta" style="document" />
       <wsdl:input>
@@ -781,6 +961,69 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarEtapa">
       <soap:operation soapAction="http://tempuri.org/mtdListarEtapa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarInsumos">
+      <soap:operation soapAction="http://tempuri.org/mtdListarInsumos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarInsumo">
+      <soap:operation soapAction="http://tempuri.org/mtdRegistrarInsumo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarInterno">
+      <soap:operation soapAction="http://tempuri.org/mtdListarInterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarInterno">
+      <soap:operation soapAction="http://tempuri.org/mtdRegistrarInterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdTerrenoEtapas">
+      <soap:operation soapAction="http://tempuri.org/mtdTerrenoEtapas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdEtapaTerreno">
+      <soap:operation soapAction="http://tempuri.org/mtdEtapaTerreno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdInternoCultivo">
+      <soap:operation soapAction="http://tempuri.org/mtdInternoCultivo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -926,15 +1169,6 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="mtdListarTipoInsumo">
-      <soap12:operation soapAction="http://tempuri.org/mtdListarTipoInsumo" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="mtdRegistrarPregunta">
       <soap12:operation soapAction="http://tempuri.org/mtdRegistrarPregunta" style="document" />
       <wsdl:input>
@@ -964,6 +1198,69 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarEtapa">
       <soap12:operation soapAction="http://tempuri.org/mtdListarEtapa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarInsumos">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarInsumos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarInsumo">
+      <soap12:operation soapAction="http://tempuri.org/mtdRegistrarInsumo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarInterno">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarInterno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarInterno">
+      <soap12:operation soapAction="http://tempuri.org/mtdRegistrarInterno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdTerrenoEtapas">
+      <soap12:operation soapAction="http://tempuri.org/mtdTerrenoEtapas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdEtapaTerreno">
+      <soap12:operation soapAction="http://tempuri.org/mtdEtapaTerreno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdInternoCultivo">
+      <soap12:operation soapAction="http://tempuri.org/mtdInternoCultivo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

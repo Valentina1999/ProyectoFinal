@@ -60,5 +60,10 @@ namespace Web
                 menForo1.Attributes["style"] = "visibility:hidden";
             }
         }
+        protected void salir(object sender, EventArgs e)
+        {
+            Application["IdUsuario"] = 0;
+            Response.Redirect("../Index/Index.aspx");
+        }
     }
 }

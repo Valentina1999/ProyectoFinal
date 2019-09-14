@@ -87,6 +87,7 @@
     <Compile Include="Datos\clEtapas.cs" />
     <Compile Include="Datos\clFases.cs" />
     <Compile Include="Datos\clInsumo.cs" />
+    <Compile Include="Datos\clInterno.cs" />
     <Compile Include="Datos\clPregunta.cs" />
     <Compile Include="Datos\clProducto.cs" />
     <Compile Include="Datos\clRespuesta.cs" />

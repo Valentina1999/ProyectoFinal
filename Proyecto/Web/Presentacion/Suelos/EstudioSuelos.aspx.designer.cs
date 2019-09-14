@@ -148,12 +148,30 @@ namespace Web.Presentacion.Suelos {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnRegistrar;
         
         /// <summary>
-        /// Control btnRedir.
+        /// Control btnRendir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRedir;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnRendir;
+        
+        /// <summary>
+        /// Control alert.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert;
+        
+        /// <summary>
+        /// Control danger.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl danger;
     }
 }

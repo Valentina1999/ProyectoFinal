@@ -27,7 +27,7 @@ namespace Servicio.Datos
 
         public int mtdRegistrarSuelo(clSuelos objSuelos)
         {
-            string consulta = "Insert Into Suelos(AcidezOAlcalinidad, Aluminio, Nitrógeno, Potasio, Fósforo, Calcio, Magnesio, Azufre, Cobre, Cinc, Manganeso, Boro, IdTipoSuelo, IdCultivo, IdTerreno)values(" +objSuelos.AcidezOalcalinidad+ " , " +objSuelos.Aluminio+ " , " +objSuelos.Nitrógeno+ " , " +objSuelos.Potasio+ " , " +objSuelos.Fósforo+ " , " +objSuelos.Calcio+ " , " +objSuelos.Magnesio+ " , " +objSuelos.Azufre+ " , " +objSuelos.Cobre+ " , " +objSuelos.Cinc+ " , " +objSuelos.Manganeso+ " , " +objSuelos.Boro+ " , " +objSuelos.IdTipoSuelo+" , "+objSuelos.IdCultivo+ " , "+objSuelos.IdTerreno+ " )";
+            string consulta = "Insert Into Suelos(AcidezOAlcalinidad, Aluminio, Nitrógeno, Potasio, Fósforo, Calcio, Magnesio, Azufre, Cobre, Cinc, Manganeso, Boro, IdTipoSuelo, IdTerreno)values(" +objSuelos.AcidezOalcalinidad+ " , " +objSuelos.Aluminio+ " , " +objSuelos.Nitrógeno+ " , " +objSuelos.Potasio+ " , " +objSuelos.Fósforo+ " , " +objSuelos.Calcio+ " , " +objSuelos.Magnesio+ " , " +objSuelos.Azufre+ " , " +objSuelos.Cobre+ " , " +objSuelos.Cinc+ " , " +objSuelos.Manganeso+ " , " +objSuelos.Boro+ " , " +objSuelos.IdTipoSuelo+" , "+objSuelos.IdTerreno+ " )";
             clConexion clConexion = new clConexion();
             int resultado = clConexion.mtdConectado(consulta);
             return resultado;

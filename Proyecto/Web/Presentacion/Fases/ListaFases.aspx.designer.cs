@@ -247,15 +247,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl des5;
         
         /// <summary>
-        /// Control siguiente1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente1;
-        
-        /// <summary>
         /// Control Etapa5.
         /// </summary>
         /// <remarks>
@@ -391,15 +382,6 @@ namespace Web.Presentacion.Fases {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl des8;
         
         /// <summary>
-        /// Control siguiente2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente2;
-        
-        /// <summary>
         /// Control Etapa8.
         /// </summary>
         /// <remarks>
@@ -533,15 +515,6 @@ namespace Web.Presentacion.Fases {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl des11;
-        
-        /// <summary>
-        /// Control siguiente3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton siguiente3;
         
         /// <summary>
         /// Control Etapa11.

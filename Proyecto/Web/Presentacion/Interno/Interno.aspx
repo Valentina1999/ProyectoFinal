@@ -72,6 +72,12 @@
             </table>
         </div>
     </div>
+            
+            <div class="col-5 col-md-1">
+                            <input type="number" id="IdE" name="IdE"  runat="server" class="form-control" hidden />
+                        </div>
+                   
+ 
             <div class="table-data-feature" id="ico">
                             
             <asp:Button ID="fases" Text="Devolver" OnClick="fases_Click" class="btn btn-success btn-sm" runat="server"> </asp:Button>

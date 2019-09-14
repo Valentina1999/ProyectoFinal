@@ -95,12 +95,11 @@ namespace Web.Presentacion.Suelos
             objSuelos.Manganeso = double.Parse(Request.Form["Manganeso"]);
             objSuelos.Boro = double.Parse(Request.Form["Boro"]);
             objSuelos.IdTipoSuelo = int.Parse(TipoSuelo.SelectedValue);
-            objSuelos.IdCultivo = 1;
             objSuelos.IdTerreno = int.Parse(Terreno.SelectedValue);
 
 
 
-            if (objSuelos.AcidezOalcalinidad == 5.5 || objSuelos.AcidezOalcalinidad <= 5.9)
+            if (objSuelos.AcidezOalcalinidad >= 5.5 && objSuelos.AcidezOalcalinidad <= 5.9)
             {
                 a = true;
             }
@@ -122,7 +121,7 @@ namespace Web.Presentacion.Suelos
             }
 
 
-            if (objSuelos.Nitrógeno == 2.1 || objSuelos.Nitrógeno <= 2.4)
+            if (objSuelos.Nitrógeno >= 2.1 && objSuelos.Nitrógeno <= 2.4)
             {
 
                 c = true;
@@ -134,7 +133,7 @@ namespace Web.Presentacion.Suelos
             }
 
 
-            if (objSuelos.Potasio == 0.03 || objSuelos.Potasio <= 0.80)
+            if (objSuelos.Potasio >= 0.03 && objSuelos.Potasio <= 0.80)
             {
                 d = true;
             }
@@ -145,7 +144,7 @@ namespace Web.Presentacion.Suelos
             }
 
 
-            if (objSuelos.Fósforo == 15 || objSuelos.Fósforo <= 20)
+            if (objSuelos.Fósforo >= 15 && objSuelos.Fósforo <= 20)
             {
                 f = true;
             }
@@ -156,7 +155,7 @@ namespace Web.Presentacion.Suelos
             }
 
 
-            if (objSuelos.Calcio == 0.10 || objSuelos.Calcio <= 0.30)
+            if (objSuelos.Calcio >= 0.10 && objSuelos.Calcio <= 0.30)
             {
                 g = true;
             }
@@ -167,7 +166,7 @@ namespace Web.Presentacion.Suelos
             }
 
 
-            if (objSuelos.Magnesio >= 0.05 || objSuelos.Magnesio <= 0.20)
+            if (objSuelos.Magnesio <= 0.21 && objSuelos.Magnesio >= 0.05)
             {
                 h = true;
             }
@@ -178,7 +177,7 @@ namespace Web.Presentacion.Suelos
             }
 
 
-            if (objSuelos.Azufre == 20 || objSuelos.Azufre <= 80)
+            if (objSuelos.Azufre >= 20 && objSuelos.Azufre <= 80)
             {
                 i = true;
 
@@ -190,7 +189,7 @@ namespace Web.Presentacion.Suelos
             }
 
 
-            if (objSuelos.Cobre == 3 || objSuelos.Cobre <= 20)
+            if (objSuelos.Cobre >= 3 && objSuelos.Cobre <= 20)
             {
                 j = true;
             }
@@ -201,7 +200,7 @@ namespace Web.Presentacion.Suelos
             }
 
 
-            if (objSuelos.Cinc == 6 || objSuelos.Cinc <= 36)
+            if (objSuelos.Cinc >= 6 && objSuelos.Cinc <= 36)
             {
                 k = true;
             }
@@ -212,7 +211,7 @@ namespace Web.Presentacion.Suelos
             }
 
 
-            if (objSuelos.Manganeso == 60 || objSuelos.Manganeso <= 100)
+            if (objSuelos.Manganeso >= 60 && objSuelos.Manganeso <= 100)
             {
                 l = true;
             }
@@ -223,7 +222,7 @@ namespace Web.Presentacion.Suelos
             }
 
 
-            if (objSuelos.Boro == 1.2 || objSuelos.Boro <= 5.73)
+            if (objSuelos.Boro >= 1.2 && objSuelos.Boro <= 5.73)
             {
                 m = true;
             }
@@ -232,7 +231,7 @@ namespace Web.Presentacion.Suelos
                 RBoro.Visible = true;
                 RBoro.Text = "Nivel de Boro Erroneo";
             }
-            string script;
+            
 
             if (a == true && b == true && c == true && d == true && f == true && g == true && h == true && i == true && j == true && k == true && l == true && m == true)
             {
@@ -242,24 +241,36 @@ namespace Web.Presentacion.Suelos
 
                 if (resultado == 1)
                 {
-                    script = @"<script type='text/javascript'>
-                                                                alert('Se ha Registrado Exitosamente El Suelo');
-                                                                </script>";
-
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                    alert.Visible = true;
+                    limpiar();
+                    danger.Visible = false;
                 }
 
             }
             else
             {
-                script = @"<script type='text/javascript'>
-                                                                alert('Error de registro datos Incorrectos');
-                                                                </script>";
-
+                danger.Visible = true;
+                alert.Visible = false;
             }
 
 
         }
 
+        public void limpiar()
+        {
+            RAcidezAl.Visible = false;
+            RAluminio.Visible = false;
+            RNitrogeno.Visible = false;
+            RPotasion.Visible = false;
+            RFosforo.Visible = false;
+            RCalcio.Visible = false;
+            RMagnesion.Visible = false;
+            RAzufre.Visible = false;
+            RCobre.Visible = false;
+            RCinc.Visible = false;
+            RManganeso.Visible = false;
+            RBoro.Visible = false;
+
+        }
     }
  }

@@ -18,15 +18,21 @@ namespace Web.Presentacion.Etapa
         {
 
         }
-
+        int Id;
         protected void Page_Init(object sender, EventArgs e)
         {
+            mtdCargar();
+        }
+
+        public void mtdCargar()
+        {
+            Id = int.Parse(Application["IdUsuario"].ToString());
             DataSet dsListar = new DataSet();
-            dsListar = miServicio.mtdListarEtapa();
+            dsListar = miServicio.mtdListarEtapa(Id);
             Repeater1.DataSource = dsListar;
             Repeater1.DataBind();
         }
-        
+
         //protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
         //{
 
@@ -65,7 +71,7 @@ namespace Web.Presentacion.Etapa
             }
 
         }
-
+        
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             Button btn = e.Item.FindControl("btn") as Button;

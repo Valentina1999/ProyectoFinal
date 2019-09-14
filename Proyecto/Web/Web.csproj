@@ -160,18 +160,21 @@
     <Content Include="form.html" />
     <Content Include="Global.asax" />
     <Content Include="images\icon\logo1.jpg" />
+    <Content Include="images\icon\user1.png" />
     <Content Include="Presentacion\Etapa\ListarEtapa.aspx" />
     <Content Include="Presentacion\Fases\ListaFases.aspx" />
     <Content Include="Presentacion\Foro\cssForo\styleForo.css" />
     <Content Include="Presentacion\Foro\Foro.aspx" />
+    <Content Include="Presentacion\Foro\foro2.aspx" />
     <Content Include="Presentacion\Foro\ImagenesForo\fondo.jpg" />
     <Content Include="Presentacion\Foro\jsForo\jquery.js" />
     <Content Include="Presentacion\Foro\jsForo\script.js" />
-    <Content Include="Presentacion\Insumo\Insumos.aspx" />
-    <Content Include="Presentacion\Insumo\VerInsumos.aspx" />
+    <Content Include="Presentacion\Interno\Interno.aspx" />
     <Content Include="Presentacion\Login\Login.aspx" />
     <Content Include="Presentacion\Producto\Producto.aspx" />
     <Content Include="Presentacion\Suelos\EstudioSuelos.aspx" />
+    <Content Include="Presentacion\Suelos\tblRangos.aspx" />
+    <Content Include="Presentacion\Terreno\EditarTerreno.aspx" />
     <Content Include="Presentacion\Terreno\Terreno.aspx" />
     <Content Include="Presentacion\Index\Index.aspx" />
     <Content Include="Presentacion\Usuario\EditarUsuario.aspx" />
@@ -367,18 +370,19 @@
     <Compile Include="Presentacion\Foro\Foro.aspx.designer.cs">
       <DependentUpon>Foro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Insumo\Insumos.aspx.cs">
-      <DependentUpon>Insumos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\Insumo\Insumos.aspx.designer.cs">
-      <DependentUpon>Insumos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\Insumo\VerInsumos.aspx.cs">
-      <DependentUpon>VerInsumos.aspx</DependentUpon>
+    <Compile Include="Presentacion\Foro\foro2.aspx.cs">
+      <DependentUpon>foro2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\Insumo\VerInsumos.aspx.designer.cs">
-      <DependentUpon>VerInsumos.aspx</DependentUpon>
+    <Compile Include="Presentacion\Foro\foro2.aspx.designer.cs">
+      <DependentUpon>foro2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Interno\Interno.aspx.cs">
+      <DependentUpon>Interno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Interno\Interno.aspx.designer.cs">
+      <DependentUpon>Interno.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -400,6 +404,20 @@
     </Compile>
     <Compile Include="Presentacion\Suelos\EstudioSuelos.aspx.designer.cs">
       <DependentUpon>EstudioSuelos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Suelos\tblRangos.aspx.cs">
+      <DependentUpon>tblRangos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Suelos\tblRangos.aspx.designer.cs">
+      <DependentUpon>tblRangos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Terreno\EditarTerreno.aspx.cs">
+      <DependentUpon>EditarTerreno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Terreno\EditarTerreno.aspx.designer.cs">
+      <DependentUpon>EditarTerreno.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Terreno\Terreno.aspx.cs">
       <DependentUpon>Terreno.aspx</DependentUpon>

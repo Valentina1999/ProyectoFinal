@@ -15,7 +15,7 @@
                             <label for="text-input" class=" form-control-label">Nombre</label>
                         </div>
                         <div class="col-12 col-md-4">
-                            <input type="text" id="NombreTerreno" name="NombreTerreno" class="form-control" required>
+                            <input type="text"   id="NombreTerreno" name="NombreTerreno" class="form-control" required>
                         </div>
                     </div>
                     <div class="row form-group">
@@ -42,9 +42,13 @@
                         <div class="col-5 col-md-1">
                             <input type="text" id="IdUsuario" name="IdUsuario" class="form-control" hidden />
                         </div>
+                        
+                        <div class="col-5 col-md-1">
+                            <input type="number" id="IdT" name="IdT"  runat="server" class="form-control" hidden />
+                        </div>
                     </div>
                     <div class="card-footer">
-                        <button id="guardarT" onserverclick="btnRegistrarTerreno" runat="server" type="submit" class="btn btn-success btn-sm">
+                        <button id="guardarT" onserverclick="btnRegistrarTerreno" runat="server" type="button" class="btn btn-success btn-sm">
                             <i class="fa fa-check"></i>Guardar
                         </button>
                         <button id="editarT" name="editarT" onserverclick="editarT_ServerClick" runat="server" type="button" class="btn btn-secondary btn-sm">

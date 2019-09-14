@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-
+using Servicio.Datos;
 namespace Servicio.Datos
 {
     public class clTerreno
@@ -17,6 +17,7 @@ namespace Servicio.Datos
         
 
         clConexion objConexion = new clConexion();
+       
 
         public int mtdRegistrarTerreno(clTerreno objTerreno)
         {
@@ -48,6 +49,24 @@ namespace Servicio.Datos
         public DataSet mtdBuscar(clTerreno objTerreno)
         {
             string consulta = "Select NombreTerreno,Largo,Ancho From Terreno Where IdUsuario = '" + objTerreno.IdUsuario + "' and IdTerreno = '"+objTerreno.IdTerreno+"' ";
+            DataSet dsTerreno = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsTerreno = objConexion.mtdDesconectado(consulta);
+            return dsTerreno;
+        }
+        int a = 1;
+        // No tacar esto
+        public int Etapas(clTerreno objTerreno)
+        {
+            string consulta = "Insert Into cultivo(IdTerreno, IdEtapa)values('" + objTerreno.IdTerreno + "'," + a + ")";
+            clConexion objConexion = new clConexion();
+            int resultado = objConexion.mtdConectado(consulta);
+            return resultado;
+        }
+
+        public DataSet EtapaTerreno(int x)
+        {
+            string consulta = "select Max(IdTerreno) as Id from Terreno inner join Usuario on Usuario.IdUsuario = Terreno.IdUsuario where Usuario.IdUsuario = '" + x + "'";
             DataSet dsTerreno = new DataSet();
             clConexion objConexion = new clConexion();
             dsTerreno = objConexion.mtdDesconectado(consulta);

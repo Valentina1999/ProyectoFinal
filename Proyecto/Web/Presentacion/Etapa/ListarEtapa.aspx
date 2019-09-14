@@ -24,7 +24,8 @@
                
                 <thead>
                     <tr>
-                        <th>Nombre</th>
+                        <th>Terreno</th>
+                        <th>Etapa</th>
                         <th>Descripcion</th>
                         <th>Ver</th>
                     </tr>
@@ -36,9 +37,12 @@
                 <tbody>
                     <tr>
                         <td class="property-title"   >
-                     <asp:Label ID="Etapa" Text='<%# Eval("Etapa") %>' runat="server"/>
+                     <asp:Label ID="Etapa" Text='<%# Eval("NombreTerreno") %>' runat="server"/>
                                 </td>
-                        
+                         <th >
+                             <asp:Label ID="Label1" Text='<%# Eval("Etapa") %>' runat="server"/>
+
+                              </th>
                          <th >
                              <asp:Label ID="Label2" Text='<%# Eval("Descripcion") %>' runat="server"/>
 

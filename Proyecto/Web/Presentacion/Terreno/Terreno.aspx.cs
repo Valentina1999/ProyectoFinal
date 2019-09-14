@@ -1,6 +1,7 @@
 ﻿using Servicio.Datos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,7 +13,8 @@ namespace Web
     {
         ServicioOscar.WebService1SoapClient servicio = new ServicioOscar.WebService1SoapClient();
         ServicioOscar.clTerreno objclTerreno = new ServicioOscar.clTerreno();
-
+        ServicioUsuario.WebService1SoapClient Servicio = new ServicioUsuario.WebService1SoapClient();
+        ServicioUsuario.clTerreno ObjclTerreno = new ServicioUsuario.clTerreno();
         string Ancho;
         string Largo;
 
@@ -52,8 +54,8 @@ namespace Web
 
         protected void btnRegistrarTerreno(object sender, EventArgs e)
         {
-            try
-            {
+           /* try
+            {*/
                 int IdUsuario = int.Parse(Application["IdUsuario"].ToString());
                 objclTerreno.NombreTerreno = Request.Form["NombreTerreno"];
                 objclTerreno.Ancho = double.Parse(Request.Form["Ancho"]);
@@ -61,7 +63,7 @@ namespace Web
                 objclTerreno.IdUsuario = IdUsuario;
 
                 int resultado = servicio.mtdRegistrarTerreno(objclTerreno);
-
+                mtdCargar();
                 if (resultado == 1)
                 {
                     alert.Visible = true;
@@ -78,7 +80,7 @@ namespace Web
                     danger.Visible = true;
                     
                 }
-            }
+            /*}
             catch (Exception)
             {
                 danger.Visible = true;
@@ -89,8 +91,25 @@ namespace Web
                 //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
 
             }
-
+            */
         }
+
+        int Id;
+        public void mtdCargar()
+        {
+            Id = int.Parse(Application["IdUsuario"].ToString());
+            DataSet enviar = Servicio.mtdEtapaTerreno(Id);
+             IdT.Value = enviar.Tables["tblDatos"].Rows[0]["Id"].ToString();
+
+            ObjclTerreno.IdTerreno = int.Parse(IdT.Value);
+            
+            int Re = Servicio.mtdTerrenoEtapas(ObjclTerreno);
+            if (Re == 1)
+            {
+                string hola = " funciono";
+            }
+        }
+
 
         protected void editarT_ServerClick(object sender, EventArgs e)
         {

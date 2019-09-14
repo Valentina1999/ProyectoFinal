@@ -145,15 +145,6 @@ namespace Servicio
         }
 
         [WebMethod]
-        public DataSet mtdListarTipoInsumo()
-        {
-            DataSet dsTipo = new DataSet();
-            clRol objTipo = new clRol();
-            dsTipo = objTipo.mtdListarRol();
-            return dsTipo;
-        }
-
-        [WebMethod]
         public int mtdRegistrarPregunta(clPregunta objPre)
         {
             clPregunta objPregunta = new clPregunta();
@@ -179,11 +170,11 @@ namespace Servicio
         }
 
         [WebMethod]
-        public DataSet mtdListarEtapa()
+        public DataSet mtdListarEtapa(int x)
         {
             DataSet dsEtapa = new DataSet();
             clEtapas objClEtapa = new clEtapas();
-            dsEtapa = objClEtapa.mtdListar();
+            dsEtapa = objClEtapa.mtdListar(x);
             return dsEtapa;
         }
 
@@ -218,6 +209,46 @@ namespace Servicio
             clInterno objInterno = new clInterno();
             int resultado = objInterno.mtdCheckear(objIns);
             return resultado;
+        }
+
+        [WebMethod]
+        public int mtdTerrenoEtapas(clTerreno objTe)
+        {
+            clTerreno objT = new clTerreno();
+            int result = objT.Etapas(objTe);
+            return result;
+        }
+
+
+        [WebMethod]
+        public DataSet mtdEtapaTerreno(int x)
+        {
+           
+            DataSet dsTerr = new DataSet();
+            clTerreno objTerr = new clTerreno();
+            dsTerr = objTerr.EtapaTerreno(x);
+            return dsTerr;
+        }
+
+
+        [WebMethod]
+        public DataSet mtdInternoCultivo(int x)
+        {
+
+            DataSet dsInterno = new DataSet();
+            clInterno objCultivo = new clInterno();
+            dsInterno = objCultivo.InternoCultivo(x);
+            return dsInterno;
+        }
+
+        [WebMethod]
+        public int mtdInternoC(clInterno objCultivo) {
+
+            clInterno objInterno = new clInterno();
+            int resultado = objInterno.Etapas(objCultivo);
+            return resultado;
+
+
         }
     }
 }
