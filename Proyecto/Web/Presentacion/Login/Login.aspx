@@ -64,7 +64,7 @@
                                 <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
                                 </div>
                                     <label>
-                                        <a href="#">Contrasela olvidada?</a>
+                                        <a href="#">Contraseña olvidada?</a>
                                     </label>
                                 </div>
                     
