@@ -31,7 +31,7 @@ namespace Web.Presentacion.Login
                 if (resultado > 0)
                 {
                 Application["IdUsuario"] = resultado;
-                Response.Redirect("../Index/Index.aspx");
+                Response.Redirect("../Producto/Producto.aspx");
                     
                 }else{
                     ScriptManager.RegisterStartupScript(Page, Page.GetType(), "popup", "alert('Correo y/o Contraseña Incorrecta')", true);

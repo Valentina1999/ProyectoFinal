@@ -95,14 +95,6 @@ namespace Servicio
         }
 
         [WebMethod]
-        public int mtdRegistrarProducto(clProducto objPro)
-        {
-            clProducto objClProducto = new clProducto();
-            int resul = objClProducto.mtdRegistrarProducto(objPro);
-            return resul;
-        }
-
-        [WebMethod]
         public DataSet mtdListarFases()
         {
             DataSet dsFase = new DataSet();
@@ -247,8 +239,14 @@ namespace Servicio
             clInterno objInterno = new clInterno();
             int resultado = objInterno.Etapas(objCultivo);
             return resultado;
+        }
 
-
+        [WebMethod]
+        public int mtdRegistrarProducto(clProducto objProduc)
+        {
+            clProducto objProd = new clProducto();
+            int resultado = objProduc.mtdRegistrarProducto(objProduc);
+            return resultado;
         }
     }
 }
