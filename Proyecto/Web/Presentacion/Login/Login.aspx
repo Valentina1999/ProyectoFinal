@@ -64,9 +64,6 @@
                                 <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
                                 </div>
                                     <label>
-                                        <input type="checkbox" name="remember">Recuerdame
-                                    </label>
-                                    <label>
                                         <a href="#">Contrasela olvidada?</a>
                                     </label>
                                 </div>
