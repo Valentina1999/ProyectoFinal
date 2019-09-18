@@ -248,5 +248,31 @@ namespace Servicio
             int resultado = objProduc.mtdRegistrarProducto(objProduc);
             return resultado;
         }
+
+        [WebMethod]
+        public DataSet mtdListarProductos()
+        {
+            clProducto objProducto = new clProducto();
+            DataSet dsProducto = new DataSet();
+            dsProducto = objProducto.mtdListarProductos();
+            return dsProducto;
+        }
+
+        [WebMethod]
+        public DataSet mtdProductosUsuarios(clProducto objPro)
+        {
+            clProducto objProducto = new clProducto();
+            DataSet dsProducto = new DataSet();
+            dsProducto = objProducto.mtdListarProductosUsuarios(objPro);
+            return dsProducto;
+        }
+
+        [WebMethod]
+        public int mtdEditarProducto(clProducto objPro)
+        {
+            clProducto objProducto = new clProducto();
+            int resultado = objProducto.mtdEditarProducto(objPro);
+            return resultado;
+        }
     }
 }

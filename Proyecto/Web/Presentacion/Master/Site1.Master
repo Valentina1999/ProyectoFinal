@@ -167,10 +167,10 @@
                             <a href="../Foro/foro2.aspx">
                                 <i class="fa fa-pencil-square-o"></i>Foro</a>
                         </li>
-                        <%--<li>
-                            <a id="menTien1" href="map.html">
+                        <li>
+                            <a id="menTien1" href="../Tienda/Tienda.aspx">
                                 <i class="fa fa-shopping-bag"></i>Tienda</a>
-                        </li>--%>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -264,6 +264,10 @@
                                                 <div class="account-dropdown__item">
                                                     <a href="../Usuario/EditarUsuario.aspx">
                                                         <i class="zmdi zmdi-account"></i>Cuenta</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="../Tienda/MisProductos.aspx">
+                                                        <i class="zmdi zmdi-money"></i>Mis Productos</a>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
